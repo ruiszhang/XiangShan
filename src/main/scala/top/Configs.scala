@@ -186,6 +186,7 @@ class MinimalConfig(n: Int = 1) extends Config(
           ways = 8,
           sets = 128,
           echoField = Seq(huancun.DirtyField()),
+          respKey = Seq(huancun.IsHitKey),
           prefetch = None
         )),
         L2NBanks = 2,
