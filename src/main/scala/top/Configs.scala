@@ -186,6 +186,7 @@ class MinimalConfig(n: Int = 1) extends Config(
           ways = 8,
           sets = 128,
           echoField = Seq(huancun.DirtyField()),
+          respKey = Seq(huancun.IsHitKey, huancun.HitLevelL3toL2Key),
           prefetch = None
         )),
         L2NBanks = 2,
@@ -265,6 +266,7 @@ class WithNKBL2
         )),
         reqField = Seq(utility.ReqSourceField()),
         echoField = Seq(huancun.DirtyField()),
+        respKey = Seq(huancun.IsHitKey, huancun.HitLevelL3toL2Key),
         prefetch = Some(coupledL2.prefetch.PrefetchReceiverParams())
       )),
       L2NBanks = banks
@@ -296,6 +298,7 @@ class WithNKBL3(n: Int, ways: Int = 8, inclusive: Boolean = true, banks: Int = 1
           numCores = tiles.size
         )),
         reqField = Seq(utility.ReqSourceField()),
+        respField = Seq(huancun.IsHitField(), huancun.HitLevelL3toL2Field()),
         sramClkDivBy2 = true,
         sramDepthDiv = 4,
         tagECC = Some("secded"),
@@ -325,7 +328,7 @@ class MinimalAliasDebugConfig(n: Int = 1) extends Config(
 )
 
 class MediumConfig(n: Int = 1) extends Config(
-  new WithNKBL3(4096, inclusive = false, banks = 4)
+  new WithNKBL3(2048, inclusive = false, banks = 4)
     ++ new WithNKBL2(512, inclusive = false)
     ++ new WithNKBL1D(128)
     ++ new BaseConfig(n)
