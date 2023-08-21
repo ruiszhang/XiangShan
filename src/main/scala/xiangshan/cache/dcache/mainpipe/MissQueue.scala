@@ -630,6 +630,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule {
   io.refill_pipe_req.valid := !s_refill && w_replace_resp && w_grantlast
   val refill = io.refill_pipe_req.bits
   refill.source := req.source
+  refill.vaddr := req.vaddr
   refill.addr := req.addr
   refill.way_en := req.way_en
   refill.wmask := Mux(
@@ -686,7 +687,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule {
   io.debug_early_replace.bits.idx := addr_to_dcache_set(req.vaddr)
   io.debug_early_replace.bits.tag := req.replace_tag
 
-  io.forwardInfo.apply(req_valid, req.addr, refill_data_raw, w_grantfirst, w_grantlast)
+  io.forwardInfo.apply(req_valid, req.addr, refill_and_store_data, w_grantfirst, w_grantlast)
 
   // refill latency monitor
   io.latency_monitor.load_miss_refilling  := req_valid && req_primary_fire.isFromLoad     && BoolStopWatch(io.mem_acquire.fire, io.mem_grant.fire && !refill_done, true)
@@ -762,6 +763,8 @@ class MissQueue(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule wi
     // forward missqueue
     val forward = Vec(LoadPipelineWidth, new LduToMissqueueForwardIO)
     val l2_pf_store_only = Input(Bool())
+
+    val mq_enq_cancel = Output(Bool())
   })
   
   // 128KBL1: FIXME: provide vaddr for l2
@@ -874,9 +877,11 @@ class MissQueue(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule wi
       e.io.main_pipe_resp := io.main_pipe_resp.valid && io.main_pipe_resp.bits.ack_miss_queue && io.main_pipe_resp.bits.miss_id === i.U
 
       io.debug_early_replace(i) := e.io.debug_early_replace
+      e.io.main_pipe_req.ready := io.main_pipe_req.ready
   }
 
   io.req.ready := accept
+  io.mq_enq_cancel := io.req.bits.cancel
   io.refill_to_ldq.valid := Cat(entries.map(_.io.refill_to_ldq.valid)).orR
   io.refill_to_ldq.bits := ParallelMux(entries.map(_.io.refill_to_ldq.valid) zip entries.map(_.io.refill_to_ldq.bits))
 
@@ -906,7 +911,11 @@ class MissQueue(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule wi
 
   arbiter_with_pipereg(entries.map(_.io.replace_pipe_req), io.replace_pipe_req, Some("replace_pipe_req"))
 
-  fastArbiter(entries.map(_.io.main_pipe_req), io.main_pipe_req, Some("main_pipe_req"))
+  // amo's main pipe req out
+  val main_pipe_req_vec = entries.map(_.io.main_pipe_req)
+  io.main_pipe_req.valid := VecInit(main_pipe_req_vec.map(_.valid)).asUInt.orR
+  io.main_pipe_req.bits := Mux1H(main_pipe_req_vec.map(_.valid), main_pipe_req_vec.map(_.bits))
+  assert(PopCount(VecInit(main_pipe_req_vec.map(_.valid))) <= 1.U, "multi main pipe req")
 
   io.probe_block := Cat(probe_block_vec).orR
 

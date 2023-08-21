@@ -96,7 +96,10 @@ class XSTile()(implicit p: Parameters) extends LazyModule
   private val misc = LazyModule(new XSTileMisc())
   private val l2cache = coreParams.L2CacheParamsOpt.map(l2param =>
     LazyModule(new CoupledL2()(new Config((_, _, _) => {
-      case L2ParamKey => l2param.copy(hartIds = Seq(p(XSCoreParamsKey).HartId))
+      case L2ParamKey => l2param.copy(
+        hartIds = Seq(p(XSCoreParamsKey).HartId),
+        FPGAPlatform = debugOpts.FPGAPlatform
+      )
     })))
   )
 
@@ -127,7 +130,7 @@ class XSTile()(implicit p: Parameters) extends LazyModule
 
   misc.misc_l2_pmu := TLLogger(s"L2_L1I_${coreParams.HartId}", !debugOpts.FPGAPlatform && debugOpts.AlwaysBasicDB) := core.frontend.icache.clientNode
   if (!coreParams.softPTW) {
-    misc.misc_l2_pmu := TLLogger(s"L2_PTW_${coreParams.HartId}", !debugOpts.FPGAPlatform && debugOpts.AlwaysBasicDB) := core.ptw_to_l2_buffer.node 
+    misc.misc_l2_pmu := TLLogger(s"L2_PTW_${coreParams.HartId}", !debugOpts.FPGAPlatform && debugOpts.AlwaysBasicDB) := core.memBlock.ptw_to_l2_buffer.node
   } 
 
   l2cache match {
