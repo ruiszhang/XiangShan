@@ -185,7 +185,8 @@ class MinimalConfig(n: Int = 1) extends Config(
           name = "L2",
           ways = 8,
           sets = 128,
-          echoField = Seq(huancun.DirtyField()),
+          echoField = Seq(huancun.DirtyField(), huancun.TripCountField(), huancun.UseCountField()),
+          respKey = Seq(huancun.HitLevelL3toL2Key),
           prefetch = None
         )),
         L2NBanks = 2,
@@ -265,7 +266,8 @@ class WithNKBL2
           vaddrBitsOpt = Some(p.VAddrBits - log2Up(p.dcacheParametersOpt.get.blockBytes))
         )),
         reqField = Seq(utility.ReqSourceField()),
-        echoField = Seq(huancun.DirtyField()),
+        echoField = Seq(huancun.DirtyField(), huancun.TripCountField(), huancun.UseCountField()),
+        respKey = Seq(huancun.HitLevelL3toL2Key),
         prefetch = Some(coupledL2.prefetch.PrefetchReceiverParams())
       )),
       L2NBanks = banks
@@ -297,6 +299,7 @@ class WithNKBL3(n: Int, ways: Int = 8, inclusive: Boolean = true, banks: Int = 1
           numCores = tiles.size
         )),
         reqField = Seq(utility.ReqSourceField()),
+        respField = Seq(huancun.HitLevelL3toL2Field()),
         sramClkDivBy2 = true,
         sramDepthDiv = 4,
         tagECC = Some("secded"),
