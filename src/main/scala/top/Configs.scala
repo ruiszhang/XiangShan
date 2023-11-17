@@ -22,7 +22,7 @@ import xiangshan._
 import utils._
 import utility._
 import system._
-import chipsalliance.rocketchip.config._
+import org.chipsalliance.cde.config._
 import freechips.rocketchip.tile.{BusErrorUnit, BusErrorUnitParams, XLen}
 import xiangshan.frontend.icache.ICacheParameters
 import freechips.rocketchip.devices.debug._
@@ -64,8 +64,8 @@ class MinimalConfig(n: Int = 1) extends Config(
         IssQueSize = 8,
         NRPhyRegs = 64,
         VirtualLoadQueueSize = 16,
-        LoadQueueRARSize = 16, 
-        LoadQueueRAWSize = 12, 
+        LoadQueueRARSize = 16,
+        LoadQueueRAWSize = 12,
         LoadQueueReplaySize = 8,
         LoadUncacheBufferSize = 8,
         LoadQueueNWriteBanks = 4, // NOTE: make sure that LoadQueue{RAR, RAW, Replay}Size is divided by LoadQueueNWriteBanks.
@@ -76,6 +76,7 @@ class MinimalConfig(n: Int = 1) extends Config(
         RobSize = 32,
         FtqSize = 8,
         IBufSize = 16,
+        IBufNBank = 2,
         StoreBufferSize = 4,
         StoreBufferThreshold = 3,
         dpParams = DispatchParameters(
@@ -105,9 +106,9 @@ class MinimalConfig(n: Int = 1) extends Config(
           nMissEntries = 2,
           nReleaseEntries = 1,
           nProbeEntries = 2,
-          nPrefetchEntries = 2,
-          nPrefBufferEntries = 32,
-          hasPrefetch = true
+          // fdip
+          enableICachePrefetch = true,
+          prefetchToL1 = false,
         ),
         dcacheParametersOpt = Some(DCacheParameters(
           nSets = 64, // 32KB DCache
@@ -118,6 +119,7 @@ class MinimalConfig(n: Int = 1) extends Config(
           nMissEntries = 4,
           nProbeEntries = 4,
           nReleaseEntries = 8,
+          nMaxPrefetchEntry = 2,
         )),
         EnableBPD = false, // disable TAGE
         EnableLoop = false,
@@ -125,53 +127,32 @@ class MinimalConfig(n: Int = 1) extends Config(
           name = "itlb",
           fetchi = true,
           useDmode = false,
-          normalReplacer = Some("plru"),
-          superReplacer = Some("plru"),
-          normalNWays = 4,
-          normalNSets = 1,
-          superNWays = 2
+          NWays = 4,
         ),
         ldtlbParameters = TLBParameters(
           name = "ldtlb",
-          normalNSets = 16, // when da or sa
-          normalNWays = 1, // when fa or sa
-          normalAssociative = "sa",
-          normalReplacer = Some("setplru"),
-          superNWays = 4,
-          normalAsVictim = true,
+          NWays = 4,
           partialStaticPMP = true,
           outsideRecvFlush = true,
           outReplace = false
         ),
         sttlbParameters = TLBParameters(
           name = "sttlb",
-          normalNSets = 16, // when da or sa
-          normalNWays = 1, // when fa or sa
-          normalAssociative = "sa",
-          normalReplacer = Some("setplru"),
-          normalAsVictim = true,
-          superNWays = 4,
+          NWays = 4,
           partialStaticPMP = true,
           outsideRecvFlush = true,
           outReplace = false
         ),
         pftlbParameters = TLBParameters(
           name = "pftlb",
-          normalNSets = 16, // when da or sa
-          normalNWays = 1, // when fa or sa
-          normalAssociative = "sa",
-          normalReplacer = Some("setplru"),
-          normalAsVictim = true,
-          superNWays = 4,
+          NWays = 4,
           partialStaticPMP = true,
           outsideRecvFlush = true,
           outReplace = false
         ),
         btlbParameters = TLBParameters(
           name = "btlb",
-          normalNSets = 1,
-          normalNWays = 8,
-          superNWays = 2
+          NWays = 4,
         ),
         l2tlbParameters = L2TLBParameters(
           l1Size = 4,
@@ -206,7 +187,8 @@ class MinimalConfig(n: Int = 1) extends Config(
             val l2params = core.L2CacheParamsOpt.get.toCacheParams
             l2params.copy(sets = 2 * clientDirBytes / core.L2NBanks / l2params.ways / 64)
           },
-          simulation = !site(DebugOptionsKey).FPGAPlatform
+          simulation = !site(DebugOptionsKey).FPGAPlatform,
+          prefetch = None
         )),
         L3NBanks = 1
       )
@@ -238,7 +220,8 @@ class WithNKBL1D(n: Int, ways: Int = 8) extends Config((site, here, up) => {
         replacer = Some("setplru"),
         nMissEntries = 16,
         nProbeEntries = 8,
-        nReleaseEntries = 18
+        nReleaseEntries = 18,
+        nMaxPrefetchEntry = 6,
       ))
     ))
 })
@@ -251,6 +234,7 @@ class WithNKBL2
   banks: Int = 1
 ) extends Config((site, here, up) => {
   case XSTileKey =>
+    require(inclusive, "L2 must be inclusive")
     val upParams = up(XSTileKey)
     val l2sets = n * 1024 / banks / ways / 64
     upParams.map(p => p.copy(
@@ -268,7 +252,9 @@ class WithNKBL2
         reqField = Seq(utility.ReqSourceField()),
         echoField = Seq(huancun.DirtyField(), huancun.TripCountField(), huancun.UseCountField()),
         respKey = Seq(huancun.HitLevelL3toL2Key),
-        prefetch = Some(coupledL2.prefetch.PrefetchReceiverParams())
+        prefetch = Some(coupledL2.prefetch.PrefetchReceiverParams()),
+        enablePerf = !site(DebugOptionsKey).FPGAPlatform,
+        elaboratedTopDown = !site(DebugOptionsKey).FPGAPlatform
       )),
       L2NBanks = banks
     ))
@@ -304,7 +290,9 @@ class WithNKBL3(n: Int, ways: Int = 8, inclusive: Boolean = true, banks: Int = 1
         sramDepthDiv = 4,
         tagECC = Some("secded"),
         dataECC = Some("secded"),
-        simulation = !site(DebugOptionsKey).FPGAPlatform
+        simulation = !site(DebugOptionsKey).FPGAPlatform,
+        prefetch = Some(huancun.prefetch.L3PrefetchReceiverParams()),
+        tpmeta = Some(huancun.prefetch.DefaultTPmetaParameters())
       ))
     )
 })
@@ -321,23 +309,46 @@ class DefaultL3DebugConfig(n: Int = 1) extends Config(
   new WithL3DebugConfig ++ new BaseConfig(n)
 )
 
+class WithFuzzer extends Config((site, here, up) => {
+  case DebugOptionsKey => up(DebugOptionsKey).copy(
+    EnablePerfDebug = false,
+  )
+  case SoCParamsKey => up(SoCParamsKey).copy(
+    L3CacheParamsOpt = Some(up(SoCParamsKey).L3CacheParamsOpt.get.copy(
+      enablePerf = false,
+    )),
+  )
+  case XSTileKey => up(XSTileKey).zipWithIndex.map{ case (p, i) =>
+    p.copy(
+      L2CacheParamsOpt = Some(up(XSTileKey)(i).L2CacheParamsOpt.get.copy(
+        enablePerf = false,
+      )),
+    )
+  }
+})
+
 class MinimalAliasDebugConfig(n: Int = 1) extends Config(
   new WithNKBL3(512, inclusive = false) ++
-    new WithNKBL2(256, inclusive = false) ++
+    new WithNKBL2(256, inclusive = true) ++
     new WithNKBL1D(128) ++
     new MinimalConfig(n)
 )
 
 class MediumConfig(n: Int = 1) extends Config(
   new WithNKBL3(4096, inclusive = false, banks = 4)
-    ++ new WithNKBL2(512, inclusive = false)
+    ++ new WithNKBL2(512, inclusive = true)
     ++ new WithNKBL1D(128)
     ++ new BaseConfig(n)
 )
 
+class FuzzConfig(dummy: Int = 0) extends Config(
+  new WithFuzzer
+    ++ new DefaultConfig(1)
+)
+
 class DefaultConfig(n: Int = 1) extends Config(
-  new WithNKBL3(6 * 1024, inclusive = false, banks = 4, ways = 6)
-    ++ new WithNKBL2(2 * 512, inclusive = false, banks = 4)
-    ++ new WithNKBL1D(128)
+  new WithNKBL3(16 * 1024, inclusive = false, banks = 4, ways = 16)
+    ++ new WithNKBL2(2 * 512, inclusive = true, banks = 4)
+    ++ new WithNKBL1D(64, ways = 4)
     ++ new BaseConfig(n)
 )

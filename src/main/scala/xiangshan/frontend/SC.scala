@@ -16,13 +16,12 @@
 
 package xiangshan.frontend
 
-import chipsalliance.rocketchip.config.Parameters
+import org.chipsalliance.cde.config.Parameters
 import chisel3._
 import chisel3.util._
 import xiangshan._
 import utils._
 import utility._
-import chisel3.experimental.chiselName
 
 import scala.math.min
 import scala.{Tuple2 => &}
@@ -64,7 +63,6 @@ class SCTableIO(val ctrBits: Int = 6)(implicit p: Parameters) extends SCBundle {
   val update = Input(new SCUpdate(ctrBits))
 }
 
-@chiselName
 class SCTable(val nRows: Int, val ctrBits: Int, val histLen: Int)(implicit p: Parameters)
   extends SCModule with HasFoldedHistory {
   val io = IO(new SCTableIO(ctrBits))
@@ -98,7 +96,7 @@ class SCTable(val nRows: Int, val ctrBits: Int, val histLen: Int)(implicit p: Pa
   val s0_idx = getIdx(io.req.bits.pc, io.req.bits.folded_hist)
   val s1_idx = RegEnable(s0_idx, io.req.valid)
 
-  val s1_pc = RegEnable(io.req.bits.pc, io.req.fire())
+  val s1_pc = RegEnable(io.req.bits.pc, io.req.fire)
   val s1_unhashed_idx = s1_pc >> instOffsetBits
 
   table.io.r.req.valid := io.req.valid
@@ -293,9 +291,7 @@ trait HasSC extends HasSCParameter with HasPerfEvents { this: Tage =>
         )
 
       val s3_disagree = RegEnable(s2_disagree, io.s2_fire(3))
-      // FIXME: not portable
-      io.out.last_stage_ftb_entry.brSlots(0).sc := RegEnable(s2_disagree(0), io.s2_fire(3))
-      io.out.last_stage_ftb_entry.tailSlot.sc := RegEnable(s2_disagree(1), io.s2_fire(3))
+      io.out.last_stage_spec_info.sc_disagree.map(_ := s3_disagree)
 
       scMeta.tageTakens(w) := RegEnable(s2_tageTakens_dup(3)(w), io.s2_fire(3))
       scMeta.scUsed(w)     := RegEnable(s2_provideds(w), io.s2_fire(3))

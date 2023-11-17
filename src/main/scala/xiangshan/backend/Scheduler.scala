@@ -16,10 +16,10 @@
 
 package xiangshan.backend
 
-import chipsalliance.rocketchip.config.Parameters
+import org.chipsalliance.cde.config.Parameters
 import chisel3._
 import chisel3.util._
-import difftest.{DifftestArchFpRegState, DifftestArchIntRegState}
+import difftest._
 import freechips.rocketchip.diplomacy.{LazyModule, LazyModuleImp}
 import utils._
 import utility._
@@ -32,7 +32,6 @@ import xiangshan.backend.regfile.{Regfile, RfReadPort}
 import xiangshan.backend.rename.{BusyTable, BusyTableReadIO}
 import xiangshan.backend.rob.RobPtr
 import xiangshan.mem.{LsqEnqCtrl, LsqEnqIO, MemWaitUpdateReq, SqPtr}
-import chisel3.ExcitingUtils
 
 class DispatchArbiter(func: Seq[MicroOp => Bool])(implicit p: Parameters) extends XSModule {
   val numTarget = func.length
@@ -47,7 +46,7 @@ class DispatchArbiter(func: Seq[MicroOp => Bool])(implicit p: Parameters) extend
     o.bits := io.in.bits
   }
 
-  io.in.ready := VecInit(io.out.map(_.fire())).asUInt.orR
+  io.in.ready := VecInit(io.out.map(_.fire)).asUInt.orR
 }
 
 object DispatchArbiter {
@@ -133,6 +132,7 @@ class Scheduler(
   val hasIntRf: Boolean,
   val hasFpRf: Boolean
 )(implicit p: Parameters) extends LazyModule with HasXSParameter with HasExuWbHelper {
+  override def shouldBeInlined: Boolean = false
   val numDpPorts = dpPorts.length
   val dpExuConfigs = dpPorts.map(port => port.map(_._1).map(configs(_)._1))
   def getDispatch2: Seq[Dispatch2Rs] = {
@@ -352,6 +352,8 @@ class SchedulerImp(outer: Scheduler) extends LazyModuleImp(outer) with HasXSPara
     } else None
     if (io.extra.fpStateReadIn.isDefined && numInFpStateRead > 0) {
       io.extra.fpStateReadIn.get <> readFpState.takeRight(numInFpStateRead)
+    } else if (io.extra.fpStateReadIn.isDefined) {
+      io.extra.fpStateReadIn.get <> DontCare
     }
     busyTable
   } else None
@@ -463,12 +465,14 @@ class SchedulerImp(outer: Scheduler) extends LazyModuleImp(outer) with HasXSPara
     val innerFpUop = outer.innerFpFastSources(i).map(_._2).map(rs_all(_).module.io.fastWakeup.get).fold(Seq())(_ ++ _)
     val innerUop = innerIntUop ++ innerFpUop
     val innerData = outer.innerFastPorts(i).map(io.writeback(_).bits.data)
-    node.connectFastWakeup(innerUop, innerData)
+    val innerDataValid = outer.innerFastPorts(i).map(io.writeback(_).valid)
+    node.connectFastWakeup(innerUop, innerData, innerDataValid)
     require(innerUop.length == innerData.length)
 
     val outerUop = outer.outFastPorts(i).map(io.fastUopIn(_))
     val outerData = outer.outFastPorts(i).map(io.writeback(_).bits.data)
-    node.connectFastWakeup(outerUop, outerData)
+    val outerDataValid = outer.outFastPorts(i).map(io.writeback(_).valid)
+    node.connectFastWakeup(outerUop, outerData, outerDataValid)
     require(outerUop.length == outerData.length)
   }
   require(issueIdx == io.issue.length)
@@ -516,11 +520,7 @@ class SchedulerImp(outer: Scheduler) extends LazyModuleImp(outer) with HasXSPara
         }
         else {
           val target = mod.io.srcRegValue(idx)
-          val isFp = RegNext(mod.io.fromDispatch(idx).bits.ctrl.srcType(0) === SrcType.fp)
-          val fromFp = if (numIntRfPorts > 0) isFp else false.B
-          when (fromFp) {
-            target := fpRfPorts.take(target.length)
-          }
+          target := fpRfPorts.take(target.length)
         }
       }
       fpReadPort += numFpRfPorts
@@ -531,16 +531,14 @@ class SchedulerImp(outer: Scheduler) extends LazyModuleImp(outer) with HasXSPara
   io.extra.robHeadLsIssue := lsRsDeqPorts.map(deq => deq.fire && deq.bits.uop.robIdx === io.extra.robDeqPtr).reduceOption(_ || _).getOrElse(false.B)
 
   if ((env.AlwaysBasicDiff || env.EnableDifftest) && intRfConfig._1) {
-    val difftest = Module(new DifftestArchIntRegState)
-    difftest.io.clock := clock
-    difftest.io.coreid := io.hartId
-    difftest.io.gpr := RegNext(RegNext(VecInit(intRfReadData.takeRight(32))))
+    val difftest = DifftestModule(new DiffArchIntRegState, delay = 2)
+    difftest.coreid := io.hartId
+    difftest.value  := VecInit(intRfReadData.takeRight(32))
   }
   if ((env.AlwaysBasicDiff || env.EnableDifftest) && fpRfConfig._1) {
-    val difftest = Module(new DifftestArchFpRegState)
-    difftest.io.clock := clock
-    difftest.io.coreid := io.hartId
-    difftest.io.fpr := RegNext(RegNext(VecInit(fpRfReadData.takeRight(32))))
+    val difftest = DifftestModule(new DiffArchFpRegState, delay = 2)
+    difftest.coreid := io.hartId
+    difftest.value  := VecInit(fpRfReadData.takeRight(32))
   }
 
   XSPerfAccumulate("allocate_valid", PopCount(allocate.map(_.valid)))

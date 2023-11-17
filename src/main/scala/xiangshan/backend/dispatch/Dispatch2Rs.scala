@@ -16,7 +16,7 @@
 
 package xiangshan.backend.dispatch
 
-import chipsalliance.rocketchip.config.Parameters
+import org.chipsalliance.cde.config.Parameters
 import chisel3._
 import chisel3.util._
 import freechips.rocketchip.diplomacy.{LazyModule, LazyModuleImp}
@@ -28,6 +28,7 @@ import xiangshan.backend.rename.BusyTableReadIO
 import xiangshan.mem.LsqEnqIO
 
 class Dispatch2Rs(val configs: Seq[Seq[ExuConfig]])(implicit p: Parameters) extends LazyModule with HasXSParameter {
+  override def shouldBeInlined: Boolean = false
   val numIn = dpParams.IntDqDeqWidth
 
   val numOut = configs.length

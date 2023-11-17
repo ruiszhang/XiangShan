@@ -14,31 +14,59 @@
 # See the Mulan PSL v2 for more details.
 #***************************************************************************************
 
-TOP = XSTop
-FPGATOP = top.TopMain
 BUILD_DIR = ./build
+
+TOP = XSTop
+SIM_TOP = SimTop
+
+FPGATOP = top.TopMain
+SIMTOP  = top.SimTop
+
 TOP_V = $(BUILD_DIR)/$(TOP).v
+SIM_TOP_V = $(BUILD_DIR)/$(SIM_TOP).v
+
 SCALA_FILE = $(shell find ./src/main/scala -name '*.scala')
 TEST_FILE = $(shell find ./src/test/scala -name '*.scala')
+
 MEM_GEN = ./scripts/vlsi_mem_gen
 MEM_GEN_SEP = ./scripts/gen_sep_mem.sh
+SPLIT_VERILOG = ./scripts/split_verilog.sh
 
-SIMTOP  = top.SimTop
 IMAGE  ?= temp
 CONFIG ?= DefaultConfig
 NUM_CORES ?= 1
 MFC ?= 0
 
-FPGA_MEM_ARGS = --infer-rw --repl-seq-mem -c:$(FPGATOP):-o:$(@D)/$(@F).conf --gen-mem-verilog full
-SIM_MEM_ARGS = --infer-rw --repl-seq-mem -c:$(SIMTOP):-o:$(@D)/$(@F).conf --gen-mem-verilog full
-
-# select firrtl compiler
+# firtool check and download
+FIRTOOL_VERSION = 1.57.1
+FIRTOOL_URL = https://github.com/llvm/circt/releases/download/firtool-$(FIRTOOL_VERSION)/firrtl-bin-linux-x64.tar.gz
+FIRTOOL_PATH = $(shell which firtool 2>/dev/null)
+CACHE_FIRTOOL_PATH = $(HOME)/.cache/xiangshan/firtool-$(FIRTOOL_VERSION)/bin/firtool
 ifeq ($(MFC),1)
-override FC_ARGS = --mfc
-override FPGA_MEM_ARGS = --infer-rw --firtool-opt -split-verilog --firtool-opt -o --firtool-opt build --firtool-opt -repl-seq-mem --firtool-opt -repl-seq-mem-circuit=$(FPGATOP) --firtool-opt -repl-seq-mem-file=XSTop.v.conf
-override SIM_MEM_ARGS = --infer-rw --firtool-opt -split-verilog --firtool-opt -o --firtool-opt build --firtool-opt -repl-seq-mem --firtool-opt -repl-seq-mem-circuit=$(SIMTOP) --firtool-opt -repl-seq-mem-file=SimTop.v.conf
+ifeq ($(FIRTOOL_PATH),)
+ifeq ($(wildcard $(CACHE_FIRTOOL_PATH)),)
+$(info [INFO] Firtool not found in your PATH.)
+$(info [INFO] Downloading from $(FIRTOOL_URL))
+$(shell mkdir -p $(HOME)/.cache/xiangshan && curl -L $(FIRTOOL_URL) | tar -xzC $(HOME)/.cache/xiangshan)
+endif
+FIRTOOL_ARGS = --firtool-binary-path $(CACHE_FIRTOOL_PATH)
+endif
 endif
 
+# common chisel args
+ifeq ($(MFC),1)
+CHISEL_VERSION = chisel
+FPGA_MEM_ARGS = --firtool-opt "--repl-seq-mem --repl-seq-mem-file=$(TOP).v.conf"
+SIM_MEM_ARGS = --firtool-opt "--repl-seq-mem --repl-seq-mem-file=$(SIM_TOP).v.conf"
+MFC_ARGS = --dump-fir $(FIRTOOL_ARGS) \
+           --firtool-opt "-O=release --disable-annotation-unknown --lowering-options=explicitBitcast,disallowLocalVariables,disallowPortDeclSharing"
+RELEASE_ARGS += $(MFC_ARGS)
+DEBUG_ARGS += $(MFC_ARGS)
+else
+CHISEL_VERSION = chisel3
+FPGA_MEM_ARGS = --infer-rw --repl-seq-mem -c:$(FPGATOP):-o:$(@D)/$(@F).conf --gen-mem-verilog full
+SIM_MEM_ARGS = --infer-rw --repl-seq-mem -c:$(SIMTOP):-o:$(@D)/$(@F).conf --gen-mem-verilog full
+endif
 
 # co-simulation with DRAMsim3
 ifeq ($(WITH_DRAMSIM3),1)
@@ -53,6 +81,11 @@ ifeq ($(WITH_CHISELDB),1)
 override SIM_ARGS += --with-chiseldb
 endif
 
+# run emu with chisel-db
+ifeq ($(WITH_ROLLINGDB),1)
+override SIM_ARGS += --with-rollingdb
+endif
+
 # dynamic switch CONSTANTIN
 ifeq ($(WITH_CONSTANTIN),0)
 $(info disable WITH_CONSTANTIN)
@@ -61,8 +94,8 @@ override SIM_ARGS += --with-constantin
 endif
 
 # emu for the release version
-RELEASE_ARGS = --disable-all --remove-assert --fpga-platform
-DEBUG_ARGS   = --enable-difftest
+RELEASE_ARGS += --disable-all --remove-assert --fpga-platform
+DEBUG_ARGS   += --enable-difftest
 ifeq ($(RELEASE),1)
 override SIM_ARGS += $(RELEASE_ARGS)
 else
@@ -77,18 +110,15 @@ SED_CMD = sed -i -e 's/_\(aw\|ar\|w\|r\|b\)_\(\|bits_\)/_\1/g'
 .DEFAULT_GOAL = verilog
 
 help:
-	mill -i XiangShan.runMain $(FPGATOP) --help
+	mill -i xiangshan[$(CHISEL_VERSION)].runMain $(FPGATOP) --help
 
 $(TOP_V): $(SCALA_FILE)
 	mkdir -p $(@D)
-	$(TIME_CMD) mill -i XiangShan.runMain $(FPGATOP) -td $(@D)  \
-		--config $(CONFIG)                                        \
-		$(FPGA_MEM_ARGS)                                          \
-		--num-cores $(NUM_CORES)                                  \
-		$(RELEASE_ARGS) $(FC_ARGS)
+	$(TIME_CMD) mill -i xiangshan[$(CHISEL_VERSION)].runMain $(FPGATOP)   \
+		-td $(@D) --config $(CONFIG) $(FPGA_MEM_ARGS)                    \
+		--num-cores $(NUM_CORES) $(RELEASE_ARGS)
 ifeq ($(MFC),1)
-	for file in $(BUILD_DIR)/*.sv; do $(SED_CMD) "$${file}"; mv "$${file}" "$${file%.sv}.v"; done
-	mv $(BUILD_DIR)/$(BUILD_DIR)/* $(BUILD_DIR)
+	$(SPLIT_VERILOG) $(BUILD_DIR) $(TOP).v
 	$(MEM_GEN_SEP) "$(MEM_GEN)" "$(TOP_V).conf" "$(BUILD_DIR)"
 endif
 	$(SED_CMD) $@
@@ -102,20 +132,15 @@ endif
 
 verilog: $(TOP_V)
 
-SIM_TOP   = SimTop
-SIM_TOP_V = $(BUILD_DIR)/$(SIM_TOP).v
 $(SIM_TOP_V): $(SCALA_FILE) $(TEST_FILE)
 	mkdir -p $(@D)
 	@echo "\n[mill] Generating Verilog files..." > $(TIMELOG)
 	@date -R | tee -a $(TIMELOG)
-	$(TIME_CMD) mill -i XiangShan.test.runMain $(SIMTOP) -td $(@D)  \
-		--config $(CONFIG)                                            \
-		$(SIM_MEM_ARGS)                                               \
-		--num-cores $(NUM_CORES)                                      \
-		$(SIM_ARGS) $(FC_ARGS)
+	$(TIME_CMD) mill -i xiangshan[$(CHISEL_VERSION)].test.runMain $(SIMTOP)    \
+		-td $(@D) --config $(CONFIG) $(SIM_MEM_ARGS)                          \
+		--num-cores $(NUM_CORES) $(SIM_ARGS)
 ifeq ($(MFC),1)
-	for file in $(BUILD_DIR)/*.sv; do $(SED_CMD) "$${file}"; mv "$${file}" "$${file%.sv}.v"; done
-	mv $(BUILD_DIR)/$(BUILD_DIR)/* $(BUILD_DIR)
+	$(SPLIT_VERILOG) $(BUILD_DIR) $(SIM_TOP).v
 	$(MEM_GEN_SEP) "$(MEM_GEN)" "$(SIM_TOP_V).conf" "$(BUILD_DIR)"
 endif
 	$(SED_CMD) $@
@@ -127,16 +152,19 @@ endif
 	@mv .__out__ $@
 	@rm .__head__ .__diff__
 	sed -i -e 's/$$fatal/xs_assert(`__LINE__)/g' $(SIM_TOP_V)
+ifeq ($(MFC),1)
+	sed -i -e "s/\$$error(/\$$fwrite(32\'h80000002, /g" $(SIM_TOP_V)
+endif
 
 sim-verilog: $(SIM_TOP_V)
 
 clean:
 	$(MAKE) -C ./difftest clean
-	rm -rf ./build
+	rm -rf $(BUILD_DIR)
 
 init:
 	git submodule update --init
-	cd rocket-chip && git submodule update --init api-config-chipsalliance hardfloat
+	cd rocket-chip && git submodule update --init cde hardfloat
 
 bump:
 	git submodule foreach "git fetch origin&&git checkout master&&git reset --hard origin/master"
@@ -148,10 +176,10 @@ idea:
 	mill -i mill.scalalib.GenIdea/idea
 
 # verilator simulation
-emu:
+emu: sim-verilog
 	$(MAKE) -C ./difftest emu SIM_TOP=SimTop DESIGN_DIR=$(NOOP_HOME) NUM_CORES=$(NUM_CORES)
 
-emu-run:
+emu-run: emu
 	$(MAKE) -C ./difftest emu-run SIM_TOP=SimTop DESIGN_DIR=$(NOOP_HOME) NUM_CORES=$(NUM_CORES)
 
 # vcs simulation

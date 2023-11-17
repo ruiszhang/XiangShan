@@ -15,10 +15,9 @@
 ***************************************************************************************/
 package xiangshan.frontend
 
-import chipsalliance.rocketchip.config.Parameters
+import org.chipsalliance.cde.config.Parameters
 import chisel3._
 import chisel3.util._
-import chisel3.experimental.chiselName
 import xiangshan._
 import xiangshan.frontend.icache._
 import utils._
@@ -31,7 +30,6 @@ class FrontendTopDownBundle(implicit p: Parameters) extends XSBundle {
   val stallWidth = UInt(log2Ceil(PredictWidth).W)
 }
 
-@chiselName
 class FetchRequestBundle(implicit p: Parameters) extends XSBundle with HasICacheParameters {
 
   //fast path: Timing critical
@@ -172,7 +170,7 @@ class ShiftingGlobalHistory(implicit p: Parameters) extends GlobalHistory {
   }
 
   // static read
-  def read(n: Int): Bool = predHist.asBools()(n)
+  def read(n: Int): Bool = predHist.asBools(n)
 
   final def === (that: ShiftingGlobalHistory): Bool = {
     predHist === that.predHist
@@ -279,14 +277,14 @@ class FoldedHistory(val len: Int, val compLen: Int, val max_update_num: Int)(imp
       }
       // if a bit does not wrap around, it should not be xored when it exits
       val oldest_bits_set = (0 until max_update_num).filter(oldest_bit_wrap_around).map(i => (oldest_bit_pos_in_folded(i), oldest_bits_masked(i)))
-      
+
       // println(f"old bits pos ${oldest_bits_set.map(_._1)}")
-  
+
       // only the last bit could be 1, as we have at most one taken branch at a time
       val newest_bits_masked = VecInit((0 until max_update_num).map(i => taken && ((i+1) == num).B)).asUInt
       // if a bit does not wrap around, newest bits should not be xored onto it either
       val newest_bits_set = (0 until max_update_num).map(i => (compLen-1-i, newest_bits_masked(i)))
-  
+
       // println(f"new bits set ${newest_bits_set.map(_._1)}")
       //
       val original_bits_masked = VecInit(folded_hist.asBools.zipWithIndex.map{
@@ -413,7 +411,18 @@ trait BasicPrediction extends HasXSParameter {
   def shouldShiftVec: Vec[Bool]
   def fallThruError: Bool
 }
-@chiselName
+
+// selectByTaken selects some data according to takenMask
+// allTargets should be in a Vec, like [taken0, taken1, ..., not taken, not hit]
+object selectByTaken {
+  def apply[T <: Data](takenMask: Vec[Bool], hit: Bool, allTargets: Vec[T]): T = {
+    val selVecOH =
+      takenMask.zipWithIndex.map { case (t, i) => !takenMask.take(i).fold(false.B)(_ || _) && t && hit } :+
+        (!takenMask.asUInt.orR && hit) :+ !hit
+    Mux1H(selVecOH, allTargets)
+  }
+}
+
 class FullBranchPrediction(implicit p: Parameters) extends XSBundle with HasBPUConst with BasicPrediction {
   val br_taken_mask = Vec(numBr, Bool())
 
@@ -435,6 +444,8 @@ class FullBranchPrediction(implicit p: Parameters) extends XSBundle with HasBPUC
   // val call_is_rvc = Bool()
   val hit = Bool()
 
+  val predCycle = if (!env.FPGAPlatform) Some(UInt(64.W)) else None
+
   def br_slot_valids = slot_valids.init
   def tail_slot_valid = slot_valids.last
 
@@ -455,7 +466,7 @@ class FullBranchPrediction(implicit p: Parameters) extends XSBundle with HasBPUC
   def real_slot_taken_mask(): Vec[Bool] = {
     VecInit(taken_mask_on_slot.map(_ && hit))
   }
-  
+
   // len numBr
   def real_br_taken_mask(): Vec[Bool] = {
     VecInit(
@@ -482,17 +493,21 @@ class FullBranchPrediction(implicit p: Parameters) extends XSBundle with HasBPUC
   def brTaken = (br_valids zip br_taken_mask).map{ case (a, b) => a && b && hit}.reduce(_||_)
 
   def target(pc: UInt): UInt = {
-    val targetVec = targets :+ fallThroughAddr :+ (pc + (FetchWidth * 4).U)
-    val tm = taken_mask_on_slot
-    val selVecOH =
-      tm.zipWithIndex.map{ case (t, i) => !tm.take(i).fold(false.B)(_||_) && t && hit} :+
-      (!tm.asUInt.orR && hit) :+ !hit
-    Mux1H(selVecOH, targetVec)
+    selectByTaken(taken_mask_on_slot, hit, allTarget(pc))
+  }
+
+  // allTarget return a Vec of all possible target of a BP stage
+  // in the following order: [taken_target0, taken_target1, ..., fallThroughAddr, not hit (plus fetch width)]
+  //
+  // This exposes internal targets for timing optimization,
+  // since usually targets are generated quicker than taken
+  def allTarget(pc: UInt): Vec[UInt] = {
+    VecInit(targets :+ fallThroughAddr :+ (pc + (FetchWidth * 4).U))
   }
 
   def fallThruError: Bool = hit && fallThroughErr
 
-  def hit_taken_on_jmp = 
+  def hit_taken_on_jmp =
     !real_slot_taken_mask().init.reduce(_||_) &&
     real_slot_taken_mask().last && !is_br_sharing
   def hit_taken_on_call = hit_taken_on_jmp && is_call
@@ -511,9 +526,14 @@ class FullBranchPrediction(implicit p: Parameters) extends XSBundle with HasBPUC
 
   def taken = br_taken_mask.reduce(_||_) || slot_valids.last // || (is_jal || is_jalr)
 
-  def fromFtbEntry(entry: FTBEntry, pc: UInt, last_stage: Option[Tuple2[UInt, Bool]] = None) = {
+  def fromFtbEntry(
+                    entry: FTBEntry,
+                    pc: UInt,
+                    last_stage_pc: Option[Tuple2[UInt, Bool]] = None,
+                    last_stage_entry: Option[Tuple2[FTBEntry, Bool]] = None
+                  ) = {
     slot_valids := entry.brSlots.map(_.valid) :+ entry.tailSlot.valid
-    targets := entry.getTargetVec(pc)
+    targets := entry.getTargetVec(pc, last_stage_pc) // Use previous stage pc for better timing
     jalr_target := targets.last
     offsets := entry.getOffsetVec
     is_jal := entry.tailSlot.valid && entry.isJal
@@ -522,11 +542,12 @@ class FullBranchPrediction(implicit p: Parameters) extends XSBundle with HasBPUC
     is_ret := entry.tailSlot.valid && entry.isRet
     last_may_be_rvi_call := entry.last_may_be_rvi_call
     is_br_sharing := entry.tailSlot.valid && entry.tailSlot.sharing
-    
+    predCycle.map(_ := GTimer())
+
     val startLower        = Cat(0.U(1.W),    pc(instOffsetBits+log2Ceil(PredictWidth)-1, instOffsetBits))
     val endLowerwithCarry = Cat(entry.carry, entry.pftAddr)
     fallThroughErr := startLower >= endLowerwithCarry
-    fallThroughAddr := Mux(fallThroughErr, pc + (FetchWidth * 4).U, entry.getFallThrough(pc))
+    fallThroughAddr := Mux(fallThroughErr, pc + (FetchWidth * 4).U, entry.getFallThrough(pc, last_stage_entry))
   }
 
   def display(cond: Bool): Unit = {
@@ -540,11 +561,14 @@ class SpeculativeInfo(implicit p: Parameters) extends XSBundle
   val afhob = new AllAheadFoldedHistoryOldestBits(foldedGHistInfos)
   val lastBrNumOH = UInt((numBr+1).W)
   val histPtr = new CGHPtr
-  val rasSp = UInt(log2Ceil(RasSize).W)
-  val rasTop = new RASEntry
+  val ssp = UInt(log2Up(RasSize).W)
+  val sctr = UInt(log2Up(RasCtrSize).W)
+  val TOSW = new RASPtr
+  val TOSR = new RASPtr
+  val NOS = new RASPtr
+  val topAddr = UInt(VAddrBits.W)
 }
 
-@chiselName
 class BranchPredictionBundle(implicit p: Parameters) extends XSBundle
   with HasBPUConst with BPUUtils {
   val pc    = Vec(numDup, UInt(VAddrBits.W))
@@ -555,7 +579,8 @@ class BranchPredictionBundle(implicit p: Parameters) extends XSBundle
 
 
   def target(pc: UInt) = VecInit(full_pred.map(_.target(pc)))
-  def targets(pc: Vec[UInt]) = VecInit(pc.zipWithIndex.map{case (a, i) => full_pred(i).target(a)})
+  def targets(pc: Vec[UInt]) = VecInit(pc.zipWithIndex.map{case (pc, idx) => full_pred(idx).target(pc)})
+  def allTargets(pc: Vec[UInt]) = VecInit(pc.zipWithIndex.map{case (pc, idx) => full_pred(idx).allTarget(pc)})
   def cfiIndex         = VecInit(full_pred.map(_.cfiIndex))
   def lastBrPosOH      = VecInit(full_pred.map(_.lastBrPosOH))
   def brTaken          = VecInit(full_pred.map(_.brTaken))
@@ -565,6 +590,7 @@ class BranchPredictionBundle(implicit p: Parameters) extends XSBundle
   def taken = VecInit(cfiIndex.map(_.valid))
 
   def getTarget = targets(pc)
+  def getAllTargets = allTargets(pc)
 
   def display(cond: Bool): Unit = {
     XSDebug(cond, p"[pc] ${Hexadecimal(pc(0))}\n")
@@ -572,7 +598,6 @@ class BranchPredictionBundle(implicit p: Parameters) extends XSBundle
   }
 }
 
-@chiselName
 class BranchPredictionResp(implicit p: Parameters) extends XSBundle with HasBPUConst {
   // val valids = Vec(3, Bool())
   val s1 = new BranchPredictionBundle
@@ -580,7 +605,7 @@ class BranchPredictionResp(implicit p: Parameters) extends XSBundle with HasBPUC
   val s3 = new BranchPredictionBundle
 
   val last_stage_meta = UInt(MaxMetaLength.W)
-  val last_stage_spec_info = new SpeculativeInfo
+  val last_stage_spec_info = new Ftq_Redirect_SRAMEntry
   val last_stage_ftb_entry = new FTBEntry
 
   val topdown_info = new FrontendTopDownBundle
@@ -628,6 +653,9 @@ class BranchPredictionUpdate(implicit p: Parameters) extends XSBundle with HasBP
   def is_jalr = ftb_entry.tailSlot.valid && ftb_entry.isJalr
   def is_call = ftb_entry.tailSlot.valid && ftb_entry.isCall
   def is_ret = ftb_entry.tailSlot.valid && ftb_entry.isRet
+
+  def is_call_taken = is_call && jmp_taken && cfi_idx.valid && cfi_idx.bits === ftb_entry.tailSlot.offset
+  def is_ret_taken = is_ret && jmp_taken && cfi_idx.valid && cfi_idx.bits === ftb_entry.tailSlot.offset
 
   def display(cond: Bool) = {
     XSDebug(cond, p"-----------BranchPredictionUpdate-----------\n")

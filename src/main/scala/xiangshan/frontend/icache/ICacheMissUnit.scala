@@ -16,7 +16,7 @@
 
 package xiangshan.frontend.icache
 
-import chipsalliance.rocketchip.config.Parameters
+import org.chipsalliance.cde.config.Parameters
 import chisel3._
 import chisel3.util._
 import freechips.rocketchip.diplomacy.IdRange
@@ -76,7 +76,7 @@ class ICacheMissEntry(edge: TLEdgeOut, id: Int)(implicit p: Parameters) extends 
     val meta_write = DecoupledIO(new ICacheMetaWriteBundle)
     val data_write = DecoupledIO(new ICacheDataWriteBundle)
 
-    val ongoing_req    = ValidIO(UInt(PAddrBits.W))
+    val ongoing_req    = Output(new FilterInfo)
     val fencei = Input(Bool())
   })
 
@@ -87,7 +87,7 @@ class ICacheMissEntry(edge: TLEdgeOut, id: Int)(implicit p: Parameters) extends 
   io.meta_write.bits := DontCare
   io.data_write.bits := DontCare
 
-  val s_idle  :: s_send_mem_aquire :: s_wait_mem_grant :: s_write_back :: s_wait_resp :: Nil = Enum(5)
+  val s_idle  :: s_send_mem_aquire :: s_wait_mem_grant :: s_write_back_wait_resp :: s_write_back :: s_wait_resp :: Nil = Enum(6)
   val state = RegInit(s_idle)
   /** control logic transformation */
   //request register
@@ -119,12 +119,12 @@ class ICacheMissEntry(edge: TLEdgeOut, id: Int)(implicit p: Parameters) extends 
   io.mem_acquire.valid := (state === s_send_mem_aquire)
 
   io.ongoing_req.valid := (state =/= s_idle)
-  io.ongoing_req.bits  :=  addrAlign(req.paddr, blockBytes, PAddrBits)
+  io.ongoing_req.paddr :=  addrAlign(req.paddr, blockBytes, PAddrBits)
 
   //state change
   switch(state) {
     is(s_idle) {
-      when(io.req.fire()) {
+      when(io.req.fire) {
         readBeatCnt := 0.U
         state := s_send_mem_aquire
         req := io.req.bits
@@ -133,33 +133,43 @@ class ICacheMissEntry(edge: TLEdgeOut, id: Int)(implicit p: Parameters) extends 
 
     // memory request
     is(s_send_mem_aquire) {
-      when(io.mem_acquire.fire()) {
+      when(io.mem_acquire.fire) {
         state := s_wait_mem_grant
       }
     }
 
     is(s_wait_mem_grant) {
       when(edge.hasData(io.mem_grant.bits)) {
-        when(io.mem_grant.fire()) {
+        when(io.mem_grant.fire) {
           readBeatCnt := readBeatCnt + 1.U
           respDataReg(readBeatCnt) := io.mem_grant.bits.data
           req_corrupt := io.mem_grant.bits.corrupt // TODO: seems has bug
           when(readBeatCnt === (refillCycles - 1).U) {
             assert(refill_done, "refill not done!")
-            state := s_write_back
+            state := s_write_back_wait_resp
           }
         }
       }
     }
 
+    is(s_write_back_wait_resp) {
+      when((io.meta_write.fire && io.data_write.fire || needflush) && io.resp.fire) {
+        state := s_idle
+      }.elsewhen(io.meta_write.fire && io.data_write.fire || needflush) {
+        state := s_wait_resp
+      }.elsewhen(io.resp.fire) {
+        state := s_write_back
+      }
+    }
+
     is(s_write_back) {
-      state := Mux(io.meta_write.fire() && io.data_write.fire() || needflush, s_wait_resp, s_write_back)
+      when(io.meta_write.fire && io.data_write.fire || needflush) {
+        state := s_idle
+      }
     }
 
     is(s_wait_resp) {
-      io.resp.bits.data := respDataReg.asUInt
-      io.resp.bits.corrupt := req_corrupt
-      when(io.resp.fire()) {
+      when(io.resp.fire) {
         state := s_idle
       }
     }
@@ -179,12 +189,15 @@ class ICacheMissEntry(edge: TLEdgeOut, id: Int)(implicit p: Parameters) extends 
   require(nSets <= 256) // icache size should not be more than 128KB
 
   //resp to ifu
-  io.resp.valid := state === s_wait_resp
+  io.resp.valid := (state === s_wait_resp) || (state === s_write_back_wait_resp)
 
-  io.meta_write.valid := (state === s_write_back && !needflush)
+  io.resp.bits.data := respDataReg.asUInt
+  io.resp.bits.corrupt := req_corrupt
+
+  io.meta_write.valid := (((state === s_write_back) || (state === s_write_back_wait_resp)) && !needflush)
   io.meta_write.bits.generate(tag = req_tag, idx = req_idx, waymask = req_waymask, bankIdx = req_idx(0))
 
-  io.data_write.valid := (state === s_write_back && !needflush)
+  io.data_write.valid := (((state === s_write_back) || (state === s_write_back_wait_resp)) && !needflush)
   io.data_write.bits.generate(data = respDataReg.asUInt,
                               idx  = req_idx,
                               waymask = req_waymask,
@@ -194,11 +207,19 @@ class ICacheMissEntry(edge: TLEdgeOut, id: Int)(implicit p: Parameters) extends 
   XSPerfAccumulate(
     "entryPenalty" + Integer.toString(id, 10),
     BoolStopWatch(
-      start = io.req.fire(),
+      start = io.req.fire,
       stop = io.resp.valid,
       startHighPriority = true)
   )
-  XSPerfAccumulate("entryReq" + Integer.toString(id, 10), io.req.fire())
+  XSPerfAccumulate("entryReq" + Integer.toString(id, 10), io.req.fire)
+
+  // Statistics on the latency distribution of MSHR
+  val cntLatency = RegInit(0.U(32.W))
+  cntLatency := Mux(io.mem_acquire.fire, 1.U, cntLatency + 1.U)
+  // the condition is same as the transition from s_wait_mem_grant to s_write_back
+  val cntEnable = (state === s_wait_mem_grant) && edge.hasData(io.mem_grant.bits) &&
+                  io.mem_grant.fire && (readBeatCnt === (refillCycles - 1).U)
+  XSPerfHistogram("icache_mshr_latency_" + id.toString(), cntLatency, cntEnable, 0, 300, 10, right_strict = true)
 }
 
 
@@ -212,25 +233,20 @@ class ICacheMissUnit(edge: TLEdgeOut)(implicit p: Parameters) extends ICacheMiss
     val mem_acquire = DecoupledIO(new TLBundleA(edge.bundle))
     val mem_grant   = Flipped(DecoupledIO(new TLBundleD(edge.bundle)))
 
+    val fdip_acquire = Flipped(DecoupledIO(new TLBundleA(edge.bundle)))
+    val fdip_grant   = DecoupledIO(new TLBundleD(edge.bundle))
+
     val meta_write  = DecoupledIO(new ICacheMetaWriteBundle)
     val data_write  = DecoupledIO(new ICacheDataWriteBundle)
 
-    val prefetch_req          =  Flipped(DecoupledIO(new PIQReq))
-    val mshr_info             =  Vec(totalMSHRNum,ValidIO(UInt(PAddrBits.W)))
-    val freePIQEntry          =  Output(UInt(log2Ceil(nPrefetchEntries).W))
-
+    val ICacheMissUnitInfo = new ICacheMissUnitInfo
     val fencei = Input(Bool())
-
-    val piq_write_ipbuffer = ValidIO(new IPFBufferWrite)
-
-    val to_main_pipe = Vec(nPrefetchEntries, new PIQToMainPipe)
   })
   // assign default values to output signals
   io.mem_grant.ready := false.B
 
   val meta_write_arb = Module(new Arbiter(new ICacheMetaWriteBundle,  PortNumber))
   val refill_arb     = Module(new Arbiter(new ICacheDataWriteBundle,  PortNumber))
-  val ipf_write_arb  = Module(new Arbiter(new IPFBufferWrite,  nPrefetchEntries))
 
   io.mem_grant.ready := true.B
 
@@ -255,80 +271,53 @@ class ICacheMissUnit(edge: TLEdgeOut)(implicit p: Parameters) extends ICacheMiss
     }
 
     io.resp(i) <> entry.io.resp
-    io.mshr_info(i) <> entry.io.ongoing_req
+    io.ICacheMissUnitInfo.mshr(i) <> entry.io.ongoing_req
     entry.io.fencei := io.fencei
 //    XSPerfAccumulate(
 //      "entryPenalty" + Integer.toString(i, 10),
 //      BoolStopWatch(
-//        start = entry.io.req.fire(),
-//        stop = entry.io.resp.fire(),
+//        start = entry.io.req.fire,
+//        stop = entry.io.resp.fire,
 //        startHighPriority = true)
 //    )
-//    XSPerfAccumulate("entryReq" + Integer.toString(i, 10), entry.io.req.fire())
+//    XSPerfAccumulate("entryReq" + Integer.toString(i, 10), entry.io.req.fire)
 
     entry
   }
 
-  val alloc = Wire(UInt(log2Ceil(nPrefetchEntries).W))
-  val toMainPipe = io.to_main_pipe.map(_.info)
-
-  val prefEntries = (PortNumber until PortNumber + nPrefetchEntries) map { i =>
-    val prefetchEntry = Module(new PIQEntry(edge, i))
-
-    prefetchEntry.io.mem_grant.valid := false.B
-    prefetchEntry.io.mem_grant.bits := DontCare
-    prefetchEntry.io.fencei := io.fencei
-
-    ipf_write_arb.io.in(i - PortNumber) <> prefetchEntry.io.piq_write_ipbuffer
-
-    when(io.mem_grant.bits.source === i.U) {
-      prefetchEntry.io.mem_grant <> io.mem_grant
-    }
-
-    prefetchEntry.io.req.valid := io.prefetch_req.valid && ((i-PortNumber).U === alloc)
-    prefetchEntry.io.req.bits  := io.prefetch_req.bits
-
-    prefetchEntry.io.id := i.U
-
-    io.mshr_info(i) := prefetchEntry.io.ongoing_req
-
-    prefetchEntry
+  io.fdip_grant.valid := false.B
+  io.fdip_grant.bits  := DontCare
+  when (io.mem_grant.bits.source === PortNumber.U) {
+    io.fdip_grant <> io.mem_grant
   }
 
-  alloc := PriorityEncoder(prefEntries.map(_.io.req.ready))
-  io.prefetch_req.ready := ParallelOR(prefEntries.map(_.io.req.ready))
-  io.freePIQEntry := PriorityEncoder(prefEntries.map(_.io.req.ready))
-  (0 until nPrefetchEntries).foreach(i => toMainPipe(i) <> prefEntries(i).io.prefetch_entry_data)
-  val tl_a_chanel = entries.map(_.io.mem_acquire) ++ prefEntries.map(_.io.mem_acquire)
+  /**
+    ******************************************************************************
+    * Register 2 cycle meta write info for IPrefetchPipe filter
+    ******************************************************************************
+    */
+  val meta_write_buffer = InitQueue(new FilterInfo, size = 2)
+  meta_write_buffer(0).valid := io.meta_write.fire
+  meta_write_buffer(0).paddr := io.data_write.bits.paddr
+  meta_write_buffer(1)       := meta_write_buffer(0)
+  (0 until 2).foreach (i => {
+    io.ICacheMissUnitInfo.recentWrite(i) := meta_write_buffer(i)
+  })
+
+  val tl_a_chanel = entries.map(_.io.mem_acquire) :+ io.fdip_acquire
   TLArbiter.lowest(edge, io.mem_acquire, tl_a_chanel:_*)
 
   io.meta_write     <> meta_write_arb.io.out
   io.data_write     <> refill_arb.io.out
 
-  io.piq_write_ipbuffer.valid := ipf_write_arb.io.out.valid
-  io.piq_write_ipbuffer.bits  := ipf_write_arb.io.out.bits
-  ipf_write_arb.io.out.ready := true.B
-
-  XSPerfAccumulate("refill_ipf_num", io.piq_write_ipbuffer.fire)
-
   if (env.EnableDifftest) {
-    val diffipfrefill = Module(new DifftestRefillEvent)
-    diffipfrefill.io.clock := clock
-    diffipfrefill.io.coreid := io.hartId
-    diffipfrefill.io.cacheid := 3.U
-    diffipfrefill.io.valid := ipf_write_arb.io.out.valid
-    diffipfrefill.io.addr := ipf_write_arb.io.out.bits.meta.paddr
-    diffipfrefill.io.data := ipf_write_arb.io.out.bits.data.asTypeOf(diffipfrefill.io.data)
-  }
-
-  if (env.EnableDifftest) {
-    val difftest = Module(new DifftestRefillEvent)
-    difftest.io.clock := clock
-    difftest.io.coreid := io.hartId
-    difftest.io.cacheid := 0.U
-    difftest.io.valid := refill_arb.io.out.valid
-    difftest.io.addr := refill_arb.io.out.bits.paddr
-    difftest.io.data := refill_arb.io.out.bits.data.asTypeOf(difftest.io.data)
+    val difftest = DifftestModule(new DiffRefillEvent, dontCare = true)
+    difftest.coreid := io.hartId
+    difftest.index := 0.U
+    difftest.valid := refill_arb.io.out.valid
+    difftest.addr := refill_arb.io.out.bits.paddr
+    difftest.data := refill_arb.io.out.bits.data.asTypeOf(difftest.data)
+    difftest.idtfr := DontCare
   }
 
   (0 until nWays).map{ w =>
@@ -337,6 +326,3 @@ class ICacheMissUnit(edge: TLEdgeOut)(implicit p: Parameters) extends ICacheMiss
   }
 
 }
-
-
-

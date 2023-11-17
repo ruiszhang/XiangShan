@@ -48,12 +48,12 @@ trait HasXSDts {
       )
 
       val dtlb = Map(
-        "d-tlb-size" -> (ldtlbParams.normalNSets * ldtlbParams.normalNWays).asProperty,
+        "d-tlb-size" -> (ldtlbParams.NSets * ldtlbParams.NWays).asProperty,
         "d-tlb-sets" -> 1.asProperty
       )
 
       val itlb = Map(
-        "i-tlb-size" -> (itlbParams.normalNSets * itlbParams.normalNWays).asProperty,
+        "i-tlb-size" -> (itlbParams.NSets * itlbParams.NWays).asProperty,
         "i-tlb-sets" -> 1.asProperty
       )
 
@@ -98,9 +98,9 @@ trait HasXSDts {
   ResourceBinding {
     Resource(device, "reg").bind(ResourceAddress(coreParams.HartId))
     val int_resources = (
-      clint_int_sink.edges.in.flatMap(_.source.sources) ++
-      plic_int_sink.edges.in.flatMap(_.source.sources) ++
-      debug_int_sink.edges.in.flatMap(_.source.sources)
+      memBlock.clint_int_sink.edges.in.flatMap(_.source.sources) ++
+      memBlock.plic_int_sink.edges.in.flatMap(_.source.sources) ++
+      memBlock.debug_int_sink.edges.in.flatMap(_.source.sources)
       ).flatMap {
       s =>
         println(s.resources.map(_.key), s.range)

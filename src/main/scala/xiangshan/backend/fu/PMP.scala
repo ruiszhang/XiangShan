@@ -18,9 +18,8 @@
 
 package xiangshan.backend.fu
 
-import chipsalliance.rocketchip.config.Parameters
+import org.chipsalliance.cde.config.Parameters
 import chisel3._
-import chisel3.internal.naming.chiselName
 import chisel3.util._
 import utility.MaskedRegMap.WritableMask
 import xiangshan._
@@ -38,7 +37,6 @@ abstract class PMPBundle(implicit val p: Parameters) extends Bundle with PMPCons
 abstract class PMPModule(implicit val p: Parameters) extends Module with PMPConst
 abstract class PMPXSModule(implicit p: Parameters) extends XSModule with PMPConst
 
-@chiselName
 class PMPConfig(implicit p: Parameters) extends PMPBundle {
   val l = Bool()
   val c = Bool() // res(1), unuse in pmp
@@ -87,12 +85,14 @@ trait PMPReadWriteMethodBare extends PMPConst {
     Cat(match_mask_c_addr & ~(match_mask_c_addr + 1.U), ((1 << PMPOffBits) - 1).U(PMPOffBits.W))
   }
 
-  def write_cfg_vec(mask: Vec[UInt], addr: Vec[UInt], index: Int)(cfgs: UInt): UInt = {
+  def write_cfg_vec(mask: Vec[UInt], addr: Vec[UInt], index: Int, oldcfg: UInt)(cfgs: UInt): UInt = {
     val cfgVec = Wire(Vec(cfgs.getWidth/8, new PMPConfig))
     for (i <- cfgVec.indices) {
       val cfg_w_m_tmp = cfgs((i+1)*8-1, i*8).asUInt.asTypeOf(new PMPConfig)
-      cfgVec(i) := cfg_w_m_tmp
-      when (!cfg_w_m_tmp.l) {
+      val cfg_old_tmp = oldcfg((i+1)*8-1, i*8).asUInt.asTypeOf(new PMPConfig)
+      cfgVec(i) := cfg_old_tmp
+      when (!cfg_old_tmp.l) {
+        cfgVec(i) := cfg_w_m_tmp
         cfgVec(i).w := cfg_w_m_tmp.w && cfg_w_m_tmp.r
         if (CoarserGrain) { cfgVec(i).a := Cat(cfg_w_m_tmp.a(1), cfg_w_m_tmp.a.orR) }
         when (cfgVec(i).na4_napot) {
@@ -136,12 +136,14 @@ trait PMPReadWriteMethodBare extends PMPConst {
 }
 
 trait PMPReadWriteMethod extends PMPReadWriteMethodBare  { this: PMPBase =>
-  def write_cfg_vec(cfgs: UInt): UInt = {
+  def write_cfg_vec(oldcfg: UInt)(cfgs: UInt): UInt = {
     val cfgVec = Wire(Vec(cfgs.getWidth/8, new PMPConfig))
     for (i <- cfgVec.indices) {
       val cfg_w_tmp = cfgs((i+1)*8-1, i*8).asUInt.asTypeOf(new PMPConfig)
-      cfgVec(i) := cfg_w_tmp
-      when (!cfg_w_tmp.l) {
+      val cfg_old_tmp = oldcfg((i+1)*8-1, i*8).asUInt.asTypeOf(new PMPConfig)
+      cfgVec(i) := cfg_old_tmp
+      when (!cfg_old_tmp.l) {
+        cfgVec(i) := cfg_w_tmp
         cfgVec(i).w := cfg_w_tmp.w && cfg_w_tmp.r
         if (CoarserGrain) { cfgVec(i).a := Cat(cfg_w_tmp.a(1), cfg_w_tmp.a.orR) }
       }
@@ -173,7 +175,6 @@ trait PMPReadWriteMethod extends PMPReadWriteMethodBare  { this: PMPBase =>
 /** PMPBase for CSR unit
   * with only read and write logic
   */
-@chiselName
 class PMPBase(implicit p: Parameters) extends PMPBundle with PMPReadWriteMethod {
   val cfg = new PMPConfig
   val addr = UInt((PMPAddrBits - PMPOffBits).W)
@@ -263,7 +264,6 @@ trait PMPMatchMethod extends PMPConst { this: PMPEntry =>
   * with one more elements mask to help napot match
   * TODO: make mask an element, not an method, for timing opt
   */
-@chiselName
 class PMPEntry(implicit p: Parameters) extends PMPBase with PMPMatchMethod {
   val mask = UInt(PMPAddrBits.W) // help to match in napot
 
@@ -321,7 +321,7 @@ trait PMPMethod extends PMPConst {
         addr = cfgBase + pmpCfgIndex(i),
         reg = cfgMerged(i/pmpCfgPerCSR),
         wmask = WritableMask,
-        wfn = new PMPBase().write_cfg_vec(mask, addr, i)
+        wfn = new PMPBase().write_cfg_vec(mask, addr, i, cfgMerged(i/pmpCfgPerCSR))
       ))
     }).fold(Map())((a, b) => a ++ b) // ugly code, hit me if u have better codes
 
@@ -340,7 +340,6 @@ trait PMPMethod extends PMPConst {
   }
 }
 
-@chiselName
 class PMP(implicit p: Parameters) extends PMPXSModule with HasXSParameter with PMPMethod with PMAMethod with HasCSRConst {
   val io = IO(new Bundle {
     val distribute_csr = Flipped(new DistributedCSRIO())
@@ -394,7 +393,7 @@ class PMPRespBundle(implicit p: Parameters) extends PMPBundle {
     res.st := this.st || resp.st
     res.instr := this.instr || resp.instr
     res.mmio := this.mmio || resp.mmio
-    res.atomic := this.atomic || resp.atomic    
+    res.atomic := this.atomic || resp.atomic
     res
   }
 }
@@ -514,7 +513,6 @@ class PMPCheckv2IO(lgMaxSize: Int)(implicit p: Parameters) extends PMPBundle {
   }
 }
 
-@chiselName
 class PMPChecker
 (
   lgMaxSize: Int = 3,
@@ -545,7 +543,6 @@ class PMPChecker
 }
 
 /* get config with check */
-@chiselName
 class PMPCheckerv2
 (
   lgMaxSize: Int = 3,

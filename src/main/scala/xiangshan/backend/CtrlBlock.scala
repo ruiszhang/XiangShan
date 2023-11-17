@@ -16,7 +16,7 @@
 
 package xiangshan.backend
 
-import chipsalliance.rocketchip.config.Parameters
+import org.chipsalliance.cde.config.Parameters
 import chisel3._
 import chisel3.util._
 import freechips.rocketchip.diplomacy.{LazyModule, LazyModuleImp}
@@ -24,10 +24,10 @@ import utils._
 import utility._
 import xiangshan._
 import xiangshan.backend.decode.{DecodeStage, FusionDecoder, ImmUnion}
-import xiangshan.backend.dispatch.{Dispatch, Dispatch2Rs, DispatchQueue}
+import xiangshan.backend.dispatch._
 import xiangshan.backend.fu.PFEvent
 import xiangshan.backend.rename.{Rename, RenameTableWrapper}
-import xiangshan.backend.rob.{DebugLSIO, LsTopdownInfo, Rob, RobCSRIO, RobLsqIO, RobPtr}
+import xiangshan.backend.rob._
 import xiangshan.frontend.{FtqPtr, FtqRead, Ftq_RF_Components}
 import xiangshan.mem.mdp.{LFST, SSIT, WaitTable}
 import xiangshan.ExceptionNO._
@@ -35,9 +35,10 @@ import xiangshan.backend.exu.ExuConfig
 import xiangshan.mem.{LsqEnqCtrl, LsqEnqIO}
 
 class CtrlToFtqIO(implicit p: Parameters) extends XSBundle {
-  def numRedirect = exuParameters.JmpCnt + exuParameters.AluCnt
   val rob_commits = Vec(CommitWidth, Valid(new RobCommitInfo))
   val redirect = Valid(new Redirect)
+  val ftqIdxAhead = Vec(BackendRedirectNum, Valid(new FtqPtr))
+  val ftqIdxSelOH = Valid(UInt((BackendRedirectNum).W))
 }
 
 class SnapshotPtr(implicit p: Parameters) extends CircularQueuePtr[SnapshotPtr](
@@ -102,9 +103,8 @@ class RedirectGenerator(implicit p: Parameters) extends XSModule
   with HasCircularQueuePtrHelper {
 
   class RedirectGeneratorIO(implicit p: Parameters) extends XSBundle {
-    def numRedirect = exuParameters.JmpCnt + exuParameters.AluCnt
     val hartId = Input(UInt(8.W))
-    val exuMispredict = Vec(numRedirect, Flipped(ValidIO(new ExuOutput)))
+    val exuMispredict = Vec(NumRedirect, Flipped(ValidIO(new ExuOutput)))
     val loadReplay = Flipped(ValidIO(new Redirect))
     val flush = Input(Bool())
     val redirectPcRead = new FtqRead(UInt(VAddrBits.W))
@@ -113,6 +113,7 @@ class RedirectGenerator(implicit p: Parameters) extends XSModule
     val memPredUpdate = Output(new MemPredUpdateReq)
     val memPredPcRead = new FtqRead(UInt(VAddrBits.W)) // read req send form stage 2
     val isMisspreRedirect = Output(Bool())
+    val stage2oldestOH = Output(UInt((NumRedirect + 1).W))
   }
   val io = IO(new RedirectGeneratorIO)
   /*
@@ -171,6 +172,7 @@ class RedirectGenerator(implicit p: Parameters) extends XSModule
   // stage1 -> stage2
   io.stage2Redirect.valid := s1_redirect_valid_reg && !io.flush
   io.stage2Redirect.bits := s1_redirect_bits_reg
+  io.stage2oldestOH := s1_redirect_onehot.asUInt
 
   val s1_isReplay = s1_redirect_onehot.last
   val s1_isJump = s1_redirect_onehot.head
@@ -178,7 +180,7 @@ class RedirectGenerator(implicit p: Parameters) extends XSModule
   val brTarget = real_pc + SignExt(ImmUnion.B.toImm32(s1_imm12_reg), XLEN)
   val snpc = real_pc + Mux(s1_pd.isRVC, 2.U, 4.U)
   val target = Mux(s1_isReplay,
-    real_pc, // replay from itself
+    Mux(s1_redirect_bits_reg.flushItself(), real_pc, real_pc + Mux(s1_redirect_bits_reg.isRVC, 2.U, 4.U)),
     Mux(s1_redirect_bits_reg.cfiUpdate.taken,
       Mux(s1_isJump, s1_jumpTarget, brTarget),
       snpc
@@ -207,7 +209,7 @@ class RedirectGenerator(implicit p: Parameters) extends XSModule
   val store_pc = io.memPredPcRead(s1_redirect_bits_reg.stFtqIdx, s1_redirect_bits_reg.stFtqOffset)
 
   // update load violation predictor if load violation redirect triggered
-  io.memPredUpdate.valid := RegNext(s1_isReplay && s1_redirect_valid_reg, init = false.B)
+  io.memPredUpdate.valid := RegNext(s1_isReplay && s1_redirect_valid_reg && s2_redirect_bits_reg.flushItself(), init = false.B)
   // update wait table
   io.memPredUpdate.waddr := RegNext(XORFold(real_pc(VAddrBits-1, 1), MemPredPCWidth))
   io.memPredUpdate.wdata := true.B
@@ -215,21 +217,11 @@ class RedirectGenerator(implicit p: Parameters) extends XSModule
   io.memPredUpdate.ldpc := RegNext(XORFold(real_pc(VAddrBits-1, 1), MemPredPCWidth))
   // store pc is ready 1 cycle after s1_isReplay is judged
   io.memPredUpdate.stpc := XORFold(store_pc(VAddrBits-1, 1), MemPredPCWidth)
-
-  // // recover runahead checkpoint if redirect
-  // if (!env.FPGAPlatform) {
-  //   val runahead_redirect = Module(new DifftestRunaheadRedirectEvent)
-  //   runahead_redirect.io.clock := clock
-  //   runahead_redirect.io.coreid := io.hartId
-  //   runahead_redirect.io.valid := io.stage3Redirect.valid
-  //   runahead_redirect.io.pc :=  s2_pc // for debug only
-  //   runahead_redirect.io.target_pc := s2_target // for debug only
-  //   runahead_redirect.io.checkpoint_id := io.stage3Redirect.bits.debug_runahead_checkpoint_id // make sure it is right
-  // }
 }
 
 class CtrlBlock(dpExuConfigs: Seq[Seq[Seq[ExuConfig]]])(implicit p: Parameters) extends LazyModule
   with HasWritebackSink with HasWritebackSource {
+  override def shouldBeInlined: Boolean = false
   val rob = LazyModule(new Rob)
 
   override def addWritebackSink(source: Seq[HasWritebackSource], index: Option[Seq[Int]]): HasWritebackSink = {
@@ -278,6 +270,7 @@ class CtrlBlockImp(outer: CtrlBlock)(implicit p: Parameters) extends LazyModuleI
     val sqCanAccept = Input(Bool())
     val lqCanAccept = Input(Bool())
     val ld_pc_read = Vec(exuParameters.LduCnt, Flipped(new FtqRead(UInt(VAddrBits.W))))
+    val st_pc_read = Vec(exuParameters.StuCnt, Flipped(new FtqRead(UInt(VAddrBits.W))))
     // from int block
     val exuRedirect = Vec(exuParameters.AluCnt + exuParameters.JmpCnt, Flipped(ValidIO(new ExuOutput)))
     val stIn = Vec(exuParameters.StuCnt, Flipped(ValidIO(new ExuInput)))
@@ -311,6 +304,11 @@ class CtrlBlockImp(outer: CtrlBlock)(implicit p: Parameters) extends LazyModuleI
     val debug_fp_rat = Vec(32, Output(UInt(PhyRegIdxWidth.W)))
     val robDeqPtr = Output(new RobPtr)
     val robHeadLsIssue = Input(Bool())
+    val debugTopDown = new Bundle {
+      val fromRob = new RobCoreTopDownIO
+      val fromCore = new CoreDispatchTopDownIO
+    }
+    val debugRolling = new RobDebugRollingIO
   })
 
   override def writebackSource: Option[Seq[Seq[Valid[ExuOutput]]]] = {
@@ -323,7 +321,7 @@ class CtrlBlockImp(outer: CtrlBlock)(implicit p: Parameters) extends LazyModuleI
         wb_next.bits.uop.debugInfo.writebackTime := timer
       }
       exuOutput
-    }))
+    }).toSeq)
   }
 
   val decode = Module(new DecodeStage)
@@ -341,9 +339,11 @@ class CtrlBlockImp(outer: CtrlBlock)(implicit p: Parameters) extends LazyModuleI
 
   // jumpPc (2) + redirects (1) + loadPredUpdate (1) + jalr_target (1) + [ld pc (LduCnt)] + robWriteback (sum(writebackLengths)) + robFlush (1)
   val PCMEMIDX_LD = 5
+  val PCMEMIDX_ST = PCMEMIDX_LD + exuParameters.LduCnt
+  val PCMEM_READ_PORT_COUNT = if(EnableStorePrefetchSMS) 6 + exuParameters.LduCnt + exuParameters.StuCnt else 6 + exuParameters.LduCnt
   val pcMem = Module(new SyncDataModuleTemplate(
     new Ftq_RF_Components, FtqSize,
-    6 + exuParameters.LduCnt, 1, "CtrlPcMem")
+    PCMEM_READ_PORT_COUNT, 1, "CtrlPcMem")
   )
   pcMem.io.wen.head   := RegNext(io.frontend.fromFtq.pc_mem_wen)
   pcMem.io.waddr.head := RegNext(io.frontend.fromFtq.pc_mem_waddr)
@@ -392,7 +392,8 @@ class CtrlBlockImp(outer: CtrlBlock)(implicit p: Parameters) extends LazyModuleI
   redirectGen.io.loadReplay <> loadReplay
   redirectGen.io.flush := flushRedirect.valid
 
-  val frontendFlushValid = DelayN(flushRedirect.valid, 5)
+  val frontendFlushValidAhead = DelayN(flushRedirect.valid, 4)
+  val frontendFlushValid = RegNext(frontendFlushValidAhead)
   val frontendFlushBits = RegEnable(flushRedirect.bits, flushRedirect.valid)
   // When ROB commits an instruction with a flush, we notify the frontend of the flush without the commit.
   // Flushes to frontend may be delayed by some cycles and commit before flush causes errors.
@@ -406,6 +407,21 @@ class CtrlBlockImp(outer: CtrlBlock)(implicit p: Parameters) extends LazyModuleI
   }
   io.frontend.toFtq.redirect.valid := frontendFlushValid || redirectGen.io.stage2Redirect.valid
   io.frontend.toFtq.redirect.bits := Mux(frontendFlushValid, frontendFlushBits, redirectGen.io.stage2Redirect.bits)
+  io.frontend.toFtq.ftqIdxSelOH.valid := frontendFlushValid || redirectGen.io.stage2Redirect.valid
+  io.frontend.toFtq.ftqIdxSelOH.bits := Cat(frontendFlushValid, redirectGen.io.stage2oldestOH & Fill(NumRedirect + 1, !frontendFlushValid))
+
+  //jmp/brh
+  for (i <- 0 until NumRedirect) {
+    io.frontend.toFtq.ftqIdxAhead(i).valid := exuRedirect(i).valid && exuRedirect(i).bits.redirect.cfiUpdate.isMisPred && !flushRedirect.valid && !frontendFlushValidAhead
+    io.frontend.toFtq.ftqIdxAhead(i).bits := exuRedirect(i).bits.redirect.ftqIdx
+  }
+  //loadreplay
+  io.frontend.toFtq.ftqIdxAhead(NumRedirect).valid := loadReplay.valid && !flushRedirect.valid && !frontendFlushValidAhead
+  io.frontend.toFtq.ftqIdxAhead(NumRedirect).bits := loadReplay.bits.ftqIdx
+  //exception
+  io.frontend.toFtq.ftqIdxAhead.last.valid := frontendFlushValidAhead
+  io.frontend.toFtq.ftqIdxAhead.last.bits := frontendFlushBits.ftqIdx
+
   // Be careful here:
   // T0: flushRedirect.valid, exception.valid
   // T1: csr.redirect.valid
@@ -637,7 +653,18 @@ class CtrlBlockImp(outer: CtrlBlock)(implicit p: Parameters) extends LazyModuleI
   for(i <- 0 until exuParameters.LduCnt){
     // load s0 -> get rdata (s1) -> reg next (s2) -> output (s2)
     pcMem.io.raddr(i + PCMEMIDX_LD) := io.ld_pc_read(i).ptr.value
-    io.ld_pc_read(i).data := pcMem.io.rdata(i + 5).getPc(RegNext(io.ld_pc_read(i).offset))
+    io.ld_pc_read(i).data := pcMem.io.rdata(i + PCMEMIDX_LD).getPc(RegNext(io.ld_pc_read(i).offset))
+  }
+  if(EnableStorePrefetchSMS) {
+    for(i <- 0 until exuParameters.StuCnt){
+      // store s0 -> get rdata (s1) -> reg next (s2) -> output (s2)
+      pcMem.io.raddr(i + PCMEMIDX_ST) := io.st_pc_read(i).ptr.value
+      io.st_pc_read(i).data := pcMem.io.rdata(i + PCMEMIDX_ST).getPc(RegNext(io.st_pc_read(i).offset))
+    }
+  }else {
+    for(i <- 0 until exuParameters.StuCnt){
+      io.st_pc_read(i).data := 0.U
+    }
   }
 
   rob.io.hartId := io.hartId
@@ -664,6 +691,11 @@ class CtrlBlockImp(outer: CtrlBlock)(implicit p: Parameters) extends LazyModuleI
   rob.io.lsTopdownInfo := io.robio.lsTopdownInfo
   io.robDeqPtr := rob.io.robDeqPtr
 
+  io.debugTopDown.fromRob := rob.io.debugTopDown.toCore
+  dispatch.io.debugTopDown.fromRob := rob.io.debugTopDown.toDispatch
+  dispatch.io.debugTopDown.fromCore := io.debugTopDown.fromCore
+  io.debugRolling := rob.io.debugRolling
+
   io.perfInfo.ctrlInfo.robFull := RegNext(rob.io.robFull)
   io.perfInfo.ctrlInfo.intdqFull := RegNext(intDq.io.dqFull)
   io.perfInfo.ctrlInfo.fpdqFull := RegNext(fpDq.io.dqFull)
@@ -679,8 +711,21 @@ class CtrlBlockImp(outer: CtrlBlock)(implicit p: Parameters) extends LazyModuleI
     val perfEventsEu1     = Input(Vec(6, new PerfEvent))
   })
 
-  val allPerfEvents = Seq(decode, rename, dispatch, intDq, fpDq, lsDq, rob).flatMap(_.getPerf)
-  val hpmEvents = allPerfEvents ++ perfinfo.perfEventsEu0 ++ perfinfo.perfEventsEu1 ++ perfinfo.perfEventsRs
-  val perfEvents = HPerfMonitor(csrevents, hpmEvents).getPerfEvents
+  val perfFromUnits = Seq(decode, rename, dispatch, intDq, fpDq, lsDq, rob).flatMap(_.getPerfEvents)
+  val perfFromIO    = perfinfo.perfEventsEu0.map(x => ("perfEventsEu0", x.value)) ++
+                        perfinfo.perfEventsEu1.map(x => ("perfEventsEu1", x.value)) ++
+                        perfinfo.perfEventsRs.map(x => ("perfEventsRs", x.value))
+  val perfBlock     = Seq()
+  // let index = 0 be no event
+  val allPerfEvents = Seq(("noEvent", 0.U)) ++ perfFromUnits ++ perfFromIO ++ perfBlock
+
+  if (printEventCoding) {
+    for (((name, inc), i) <- allPerfEvents.zipWithIndex) {
+      println("CtrlBlock perfEvents Set", name, inc, i)
+    }
+  }
+
+  val allPerfInc = allPerfEvents.map(_._2.asTypeOf(new PerfEvent))
+  val perfEvents = HPerfMonitor(csrevents, allPerfInc).getPerfEvents
   generatePerfEvent()
 }

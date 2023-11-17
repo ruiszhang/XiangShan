@@ -16,7 +16,7 @@
 
 package xiangshan.frontend.icache
 
-import chipsalliance.rocketchip.config.Parameters
+import org.chipsalliance.cde.config.Parameters
 import chisel3._
 import chisel3.util._
 import freechips.rocketchip.tilelink.{ClientMetadata, TLPermissions}
@@ -94,42 +94,83 @@ class ICacheMetaReadBundle(implicit p: Parameters) extends ICacheBundle
     val resp = Output(new ICacheMetaRespBundle)
 }
 
-class IPFBufferFilterRead(implicit p: Parameters) extends  IPrefetchBundle{
+class IPFBufferFilterRead(implicit p: Parameters) extends IPrefetchBundle{
   /** input */
-  val req = Flipped(new Bundle {
-    val vSetIdx = Output(UInt(log2Ceil(nSets).W))
-    val paddr = Output(UInt(PAddrBits.W))
-  })
+  val req = new Bundle {
+    val paddr  = Input(UInt(PAddrBits.W))
+  }
   /** output */
   val resp = new Bundle {
     val ipf_hit = Output(Bool())
   }
 }
 
-class IPFBufferRead(implicit p: Parameters) extends IPrefetchBundle {
+class IPFBufferRead(implicit p: Parameters) extends IPrefetchBundle{
+  /** input */
   val req = Vec(PortNumber, Flipped(DecoupledIO(new Bundle {
-    val vaddr = UInt(VAddrBits.W)
-    val paddr = UInt(PAddrBits.W)
+    val paddr   = UInt(PAddrBits.W)
   })))
-  val resp = Vec(PortNumber, ValidIO(new Bundle {
-    val ipf_hit = Bool()
+  /** output */
+  val resp = Vec(PortNumber, Output(new Bundle {
+    val ipf_hit   = Bool()
     val cacheline = UInt(blockBits.W)
   }))
 }
 
-class PIQMetaWrite(implicit p: Parameters) extends  IPrefetchBundle{
-  val tag = UInt(tagBits.W)
-  val index = UInt(idxBits.W)
-  val paddr = UInt(PAddrBits.W)
+class PIQFilterRead(implicit p: Parameters) extends IPrefetchBundle{
+  /** input */
+  val req = new Bundle {
+    val paddr  = Input(UInt(PAddrBits.W))
+  }
+  /** output */
+  val resp = new Bundle {
+    val piq_hit = Output(Bool())
+  }
+}
+
+class PIQRead(implicit p: Parameters) extends IPrefetchBundle{
+  /** input */
+  val req = Vec(PortNumber, Flipped(DecoupledIO(new Bundle {
+    val paddr   = UInt(PAddrBits.W)
+  })))
+  /** output */
+  val resp = Vec(PortNumber, Output(((new Bundle {
+    val piq_hit     = Bool()
+    val cacheline   = UInt(blockBits.W)
+    val data_valid  = Bool()
+  }))))
 }
 
 class IPFBufferWrite(implicit p: Parameters) extends  IPrefetchBundle{
-  val buffIdx = UInt(log2Ceil(nPrefetchEntries).W)
-  val meta = new PIQMetaWrite
-  val data =  UInt(blockBits.W)
+  val paddr     = UInt(PAddrBits.W)
+  val cacheline = UInt(blockBits.W)
+  val vSetIdx   = UInt(idxBits.W)
+  val has_hit   = Bool()
 }
 
-class IPFBufferMove(implicit p: Parameters) extends  IPrefetchBundle{
+class IPFReplacer(implicit p: Parameters) extends  IPrefetchBundle{
   val vsetIdx = Output(UInt(idxBits.W))
   val waymask = Input(UInt(nWays.W))
+}
+
+class FilterInfo(implicit p: Parameters) extends ICacheBundle{
+  val paddr = UInt(PAddrBits.W)
+  val valid = Bool()
+}
+
+class MissSlotInfo(implicit p: Parameters) extends ICacheBundle{
+  val ptag    = UInt(tagBits.W)
+  val vSetIdx = UInt(idxBits.W)
+  val valid   = Bool()
+}
+
+class ICacheMissUnitInfo(implicit p: Parameters) extends IPrefetchBundle{
+  val mshr        = Output(Vec(PortNumber, new FilterInfo))
+  val recentWrite = Output(Vec(2, new FilterInfo))
+}
+
+class ICacheMainPipeInfo(implicit p: Parameters) extends IPrefetchBundle{
+  val s1Info = Output(Vec(PortNumber, new FilterInfo))
+  val s2Info = Output(Vec(PortNumber, new FilterInfo))
+  val missSlot = Output(Vec(PortNumber, new MissSlotInfo))
 }

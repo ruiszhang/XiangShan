@@ -16,7 +16,7 @@
 
 package xiangshan
 
-import chipsalliance.rocketchip.config.{Field, Parameters}
+import org.chipsalliance.cde.config.{Field, Parameters}
 import chisel3._
 import chisel3.util._
 import xiangshan.backend.exu._
@@ -72,7 +72,9 @@ case class XSCoreParameters
   EnableCommitGHistDiff: Boolean = true,
   UbtbSize: Int = 256,
   FtbSize: Int = 2048,
-  RasSize: Int = 32,
+  RasSize: Int = 16,
+  RasSpecSize: Int = 32,
+  RasCtrSize: Int = 3,
   CacheLineSize: Int = 512,
   FtbWays: Int = 4,
   TageTableInfos: Seq[Tuple3[Int,Int,Int]] =
@@ -125,7 +127,9 @@ case class XSCoreParameters
 
       (preds, ras.io.out)
     }),
+  ICacheECCForceError: Boolean = false,
   IBufSize: Int = 48,
+  IBufNBank: Int = 6, // IBuffer bank amount, should divide IBufSize
   DecodeWidth: Int = 6,
   RenameWidth: Int = 6,
   CommitWidth: Int = 6,
@@ -183,6 +187,11 @@ case class XSCoreParameters
   EnableCacheErrorAfterReset: Boolean = true,
   EnableAccurateLoadError: Boolean = true,
   EnableUncacheWriteOutstanding: Boolean = false,
+  EnableStorePrefetchAtIssue: Boolean = false,
+  EnableStorePrefetchAtCommit: Boolean = false,
+  EnableAtCommitMissTrigger: Boolean = true,
+  EnableStorePrefetchSMS: Boolean = false,
+  EnableStorePrefetchSPB: Boolean = false,
   MMUAsidLen: Int = 16, // max is 16, 0 is not supported now
   ReSelectLen: Int = 7, // load replay queue replay select counter len
   iwpuParameters: WPUParameters = WPUParameters(
@@ -200,21 +209,13 @@ case class XSCoreParameters
     name = "itlb",
     fetchi = true,
     useDmode = false,
-    normalNWays = 32,
-    normalReplacer = Some("plru"),
-    superNWays = 4,
-    superReplacer = Some("plru")
+    NWays = 48,
   ),
   itlbPortNum: Int = 2 + ICacheParameters().prefetchPipeNum + 1,
   ipmpPortNum: Int = 2 + ICacheParameters().prefetchPipeNum + 1,
   ldtlbParameters: TLBParameters = TLBParameters(
     name = "ldtlb",
-    normalNSets = 64,
-    normalNWays = 1,
-    normalAssociative = "sa",
-    normalReplacer = Some("setplru"),
-    superNWays = 16,
-    normalAsVictim = true,
+    NWays = 48,
     outReplace = false,
     partialStaticPMP = true,
     outsideRecvFlush = true,
@@ -222,12 +223,7 @@ case class XSCoreParameters
   ),
   sttlbParameters: TLBParameters = TLBParameters(
     name = "sttlb",
-    normalNSets = 64,
-    normalNWays = 1,
-    normalAssociative = "sa",
-    normalReplacer = Some("setplru"),
-    superNWays = 16,
-    normalAsVictim = true,
+    NWays = 48,
     outReplace = false,
     partialStaticPMP = true,
     outsideRecvFlush = true,
@@ -235,12 +231,7 @@ case class XSCoreParameters
   ),
   pftlbParameters: TLBParameters = TLBParameters(
     name = "pftlb",
-    normalNSets = 64,
-    normalNWays = 1,
-    normalAssociative = "sa",
-    normalReplacer = Some("setplru"),
-    superNWays = 16,
-    normalAsVictim = true,
+    NWays = 48,
     outReplace = false,
     partialStaticPMP = true,
     outsideRecvFlush = true,
@@ -249,9 +240,7 @@ case class XSCoreParameters
   refillBothTlb: Boolean = false,
   btlbParameters: TLBParameters = TLBParameters(
     name = "btlb",
-    normalNSets = 1,
-    normalNWays = 64,
-    superNWays = 4,
+    NWays = 48,
   ),
   l2tlbParameters: L2TLBParameters = L2TLBParameters(),
   NumPerfCounters: Int = 16,
@@ -263,7 +252,6 @@ case class XSCoreParameters
     nProbeEntries = 2,
     nPrefetchEntries = 12,
     nPrefBufferEntries = 32,
-    hasPrefetch = true,
   ),
   dcacheParametersOpt: Option[DCacheParameters] = Some(DCacheParameters(
     tagECC = Some("secded"),
@@ -271,7 +259,8 @@ case class XSCoreParameters
     replacer = Some("setplru"),
     nMissEntries = 16,
     nProbeEntries = 8,
-    nReleaseEntries = 18
+    nReleaseEntries = 18,
+    nMaxPrefetchEntry = 6,
   )),
   L2CacheParamsOpt: Option[L2Param] = Some(L2Param(
     name = "l2",
@@ -365,6 +354,8 @@ trait HasXSParameter {
   val FtbSize = coreParams.FtbSize
   val FtbWays = coreParams.FtbWays
   val RasSize = coreParams.RasSize
+  val RasSpecSize = coreParams.RasSpecSize
+  val RasCtrSize = coreParams.RasCtrSize
 
   def getBPDComponents(resp_in: BranchPredictionResp, p: Parameters) = {
     coreParams.branchPredictor(resp_in, p)
@@ -409,7 +400,9 @@ trait HasXSParameter {
   val CacheLineSize = coreParams.CacheLineSize
   val CacheLineHalfWord = CacheLineSize / 16
   val ExtHistoryLength = HistoryLength + 64
+  val ICacheECCForceError = coreParams.ICacheECCForceError
   val IBufSize = coreParams.IBufSize
+  val IBufNBank = coreParams.IBufNBank
   val DecodeWidth = coreParams.DecodeWidth
   val RenameWidth = coreParams.RenameWidth
   val CommitWidth = coreParams.CommitWidth
@@ -440,6 +433,9 @@ trait HasXSParameter {
   val NRIntWritePorts = exuParameters.AluCnt + exuParameters.MduCnt + exuParameters.LduCnt
   val NRFpReadPorts = 3 * exuParameters.FmacCnt + exuParameters.StuCnt
   val NRFpWritePorts = exuParameters.FpExuCnt + exuParameters.LduCnt
+  val NumRedirect = exuParameters.JmpCnt + exuParameters.AluCnt
+  val BackendRedirectNum = NumRedirect + 2 //2: ldReplay + Exception
+  val FtqRedirectAheadNum = exuParameters.AluCnt
   val LoadPipelineWidth = coreParams.LoadPipelineWidth
   val StorePipelineWidth = coreParams.StorePipelineWidth
   val VecMemSrcInWidth = coreParams.VecMemSrcInWidth
@@ -456,6 +452,11 @@ trait HasXSParameter {
   val EnableCacheErrorAfterReset = coreParams.EnableCacheErrorAfterReset
   val EnableAccurateLoadError = coreParams.EnableAccurateLoadError
   val EnableUncacheWriteOutstanding = coreParams.EnableUncacheWriteOutstanding
+  val EnableStorePrefetchAtIssue = coreParams.EnableStorePrefetchAtIssue
+  val EnableStorePrefetchAtCommit = coreParams.EnableStorePrefetchAtCommit
+  val EnableAtCommitMissTrigger = coreParams.EnableAtCommitMissTrigger
+  val EnableStorePrefetchSMS = coreParams.EnableStorePrefetchSMS
+  val EnableStorePrefetchSPB = coreParams.EnableStorePrefetchSPB
   val asidLen = coreParams.MMUAsidLen
   val BTLBWidth = coreParams.LoadPipelineWidth + coreParams.StorePipelineWidth
   val refillBothTlb = coreParams.refillBothTlb
@@ -520,4 +521,5 @@ trait HasXSParameter {
   val numCSRPCntCtrl     = 8
   val numCSRPCntLsu      = 8
   val numCSRPCntHc       = 5
+  val printEventCoding   = true
 }

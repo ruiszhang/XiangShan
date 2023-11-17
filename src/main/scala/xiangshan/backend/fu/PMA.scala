@@ -70,7 +70,7 @@ trait MMPMAMethod extends PMAConst with PMAMethod with PMPReadWriteMethodBare {
         if (notempty) { (r_ready, o_valid, pmaCfgMerged(pmaCfgIndex(i))) }
         else { (r_ready, o_valid, 0.U) }
       }, w = RegWriteFn((valid, data) => {
-        if (notempty) { when (valid) { pmaCfgMerged(pmaCfgIndex(i)) := write_cfg_vec(mask, addr, i)(data) } }
+        if (notempty) { when (valid) { pmaCfgMerged(pmaCfgIndex(i)) := write_cfg_vec(mask, addr, i, pmaCfgMerged(pmaCfgIndex(i)))(data) } }
         true.B
       }), desc = RegFieldDesc(s"MMPMA_config_${i}", s"pma config register #${i}"))
     }}
@@ -179,7 +179,7 @@ trait PMAMethod extends PMAConst {
     })
     val addr = addr_list.reverse
     val mask = mask_list.reverse
-    (VecInit(cfgInitMerge), VecInit(addr), VecInit(mask))
+    (VecInit(cfgInitMerge), VecInit(addr.toSeq), VecInit(mask.toSeq))
   }
 
   def get_napot(base: BigInt, range: BigInt): BigInt = {
@@ -197,7 +197,7 @@ trait PMAMethod extends PMAConst {
   }
 
   def match_mask(paddr: UInt, cfg: PMPConfig) = {
-    val match_mask_addr: UInt = Cat(paddr, cfg.a(0)).asUInt() | (((1 << PlatformGrain) - 1) >> PMPOffBits).U((paddr.getWidth + 1).W)
+    val match_mask_addr: UInt = Cat(paddr, cfg.a(0)).asUInt | (((1 << PlatformGrain) - 1) >> PMPOffBits).U((paddr.getWidth + 1).W)
     Cat(match_mask_addr & ~(match_mask_addr + 1.U), ((1 << PMPOffBits) - 1).U(PMPOffBits.W))
   }
 
@@ -209,8 +209,8 @@ trait PMAMethod extends PMAConst {
 trait PMACheckMethod extends PMPConst {
   def pma_check(cmd: UInt, cfg: PMPConfig) = {
     val resp = Wire(new PMPRespBundle)
-    resp.ld := TlbCmd.isRead(cmd) && !TlbCmd.isAtom(cmd) && !cfg.r
-    resp.st := (TlbCmd.isWrite(cmd) || TlbCmd.isAtom(cmd) && cfg.atomic) && !cfg.w
+    resp.ld := TlbCmd.isRead(cmd) && !TlbCmd.isAmo(cmd) && !cfg.r
+    resp.st := (TlbCmd.isWrite(cmd) || TlbCmd.isAmo(cmd) && cfg.atomic) && !cfg.w
     resp.instr := TlbCmd.isExec(cmd) && !cfg.x
     resp.mmio := !cfg.c
     resp.atomic := cfg.atomic
