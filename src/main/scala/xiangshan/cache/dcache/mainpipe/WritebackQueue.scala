@@ -22,6 +22,7 @@ import freechips.rocketchip.tilelink.TLPermissions._
 import freechips.rocketchip.tilelink.{TLArbiter, TLBundleC, TLBundleD, TLEdgeOut}
 import org.chipsalliance.cde.config.Parameters
 import utils.{HasPerfEvents, HasTLDump, XSDebug, XSPerfAccumulate}
+import coupledL2.UCKey
 
 class WritebackReqCtrl(implicit p: Parameters) extends DCacheBundle {
   val param  = UInt(cWidth.W)
@@ -31,6 +32,8 @@ class WritebackReqCtrl(implicit p: Parameters) extends DCacheBundle {
 
   val delay_release = Bool()
   val miss_id = UInt(log2Up(cfg.nMissEntries).W)
+
+  val UC = UInt(2.W)
 }
 
 class WritebackReqWodata(implicit p: Parameters) extends WritebackReqCtrl {
@@ -63,6 +66,7 @@ class WritebackReq(implicit p: Parameters) extends WritebackReqWodata {
     out.dirty := dirty
     out.delay_release := delay_release
     out.miss_id := miss_id
+    out.UC := UC
     out
   }
 
@@ -74,6 +78,7 @@ class WritebackReq(implicit p: Parameters) extends WritebackReqWodata {
     out.dirty := dirty
     out.delay_release := delay_release
     out.miss_id := miss_id
+    out.UC := UC
     out
   }
 
@@ -322,6 +327,7 @@ class WritebackEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
   io.mem_release.bits  := Mux(req.voluntary,
     Mux(req.hasData, voluntaryReleaseData, voluntaryRelease),
     Mux(req.hasData, probeResponseData, probeResponse))
+  io.mem_release.bits.user.lift(UCKey).foreach(_ := req.UC)
 
   when (io.mem_release.fire) { remain_clr := PriorityEncoderOH(remain_dup_1) }
 
@@ -344,6 +350,7 @@ class WritebackEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
     val dirty = Bool()
     val delay_release = Bool()
     val miss_id = UInt(log2Up(cfg.nMissEntries).W)
+    val UC = UInt(2.W)
 
     def toWritebackReqCtrl = {
       val r = Wire(new WritebackReqCtrl())
@@ -353,6 +360,7 @@ class WritebackEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
       r.dirty := dirty
       r.delay_release := delay_release
       r.miss_id := miss_id
+      r.UC := UC
       r
     }
   }
@@ -382,6 +390,7 @@ class WritebackEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
           req_later.dirty := io.req.bits.dirty
           req_later.delay_release := io.req.bits.delay_release
           req_later.miss_id := io.req.bits.miss_id
+          req_later.UC := io.req.bits.UC
         }.otherwise {
           // Release hasn't been sent out yet, change Release to ProbeAck
           req.voluntary := false.B
@@ -402,6 +411,7 @@ class WritebackEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
         req_later.dirty := io.req.bits.dirty
         req_later.delay_release := io.req.bits.delay_release
         req_later.miss_id := io.req.bits.miss_id
+        req_later.UC := io.req.bits.UC
       }
 
       when (release_done) {
@@ -476,6 +486,7 @@ class WritebackEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
       req_later.dirty := io.req.bits.dirty
       req_later.delay_release := io.req.bits.delay_release
       req_later.miss_id := io.req.bits.miss_id
+      req_later.UC := io.req.bits.UC
     }
     when (io.mem_grant.fire) {
       when (merge) {
@@ -571,6 +582,7 @@ class WritebackQueue(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
   // assign default values to output signals
   io.mem_release.valid := false.B
   io.mem_release.bits  := DontCare
+  io.mem_release.bits.user.lift(UCKey).foreach(_ := io.req.bits.UC)
   io.mem_grant.ready   := false.B
 
   // dalay data write in miss queue release update for 1 cycle

@@ -139,6 +139,7 @@ class MainPipe(implicit p: Parameters) extends DCacheModule with HasPerfEvents w
     val error_flag_write = DecoupledIO(new FlagMetaWriteReq)
     val prefetch_flag_write = DecoupledIO(new SourceMetaWriteReq)
     val access_flag_write = DecoupledIO(new FlagMetaWriteReq)
+    val hit_write = DecoupledIO(new HitMetaWriteReq)
 
     // tag sram
     val tag_read = DecoupledIO(new TagReadReq)
@@ -305,6 +306,7 @@ class MainPipe(implicit p: Parameters) extends DCacheModule with HasPerfEvents w
   val s1_encTag = ParallelMux(s1_tag_match_way.asBools, (0 until nWays).map(w => enc_tag_resp(w)))
   val s1_flag_error = ParallelMux(s1_tag_match_way.asBools, (0 until nWays).map(w => io.extra_meta_resp(w).error))
   val s1_extra_meta = ParallelMux(s1_tag_match_way.asBools, (0 until nWays).map(w => io.extra_meta_resp(w)))
+  val s1_extra_uc = ParallelMux(s1_tag_match_way.asBools, (0 until nWays).map(w => io.extra_meta_resp(w).UC))
   val s1_l2_error = s1_req.error
 
   XSPerfAccumulate("probe_unused_prefetch", s1_req.probe && isFromL1Prefetch(s1_extra_meta.prefetch) && !s1_extra_meta.access) // may not be accurate
@@ -322,6 +324,7 @@ class MainPipe(implicit p: Parameters) extends DCacheModule with HasPerfEvents w
   )
   val s1_repl_tag = ParallelMux(s1_repl_way_en.asBools, (0 until nWays).map(w => tag_resp(w)))
   val s1_repl_coh = ParallelMux(s1_repl_way_en.asBools, (0 until nWays).map(w => meta_resp(w))).asTypeOf(new ClientMetadata)
+  val s1_repl_uc = ParallelMux(s1_repl_way_en.asBools, (0 until nWays).map(w => io.extra_meta_resp(w).UC))
   val s1_miss_tag = ParallelMux(s1_req.miss_way_en.asBools, (0 until nWays).map(w => tag_resp(w)))
   val s1_miss_coh = ParallelMux(s1_req.miss_way_en.asBools, (0 until nWays).map(w => meta_resp(w))).asTypeOf(new ClientMetadata)
 
@@ -388,6 +391,8 @@ class MainPipe(implicit p: Parameters) extends DCacheModule with HasPerfEvents w
   val s2_need_tag = RegEnable(s1_need_tag, s1_fire)
   val s2_encTag = RegEnable(s1_encTag, s1_fire)
   val s2_idx = get_idx(s2_req.vaddr)
+  val s2_extra_uc = RegEnable(s1_extra_uc, s1_fire)
+  val s2_repl_uc = RegEnable(s1_repl_uc, s1_fire)
 
   // duplicate regs to reduce fanout
   val s2_valid_dup = RegInit(VecInit(Seq.fill(8)(false.B)))
@@ -505,6 +510,8 @@ class MainPipe(implicit p: Parameters) extends DCacheModule with HasPerfEvents w
   val s3_need_replacement = RegEnable(s2_need_replacement, s2_fire_to_s3)
   val s3_probe_ttob_check_resp_r = RegEnable(io.probe_ttob_check_resp, RegNext(s2_fire_to_s3))
   val s3_probe_ttob_check_resp = Mux(RegNext(s2_fire_to_s3), io.probe_ttob_check_resp, s3_probe_ttob_check_resp_r)
+  val s3_extra_uc = RegEnable(s2_extra_uc, s2_fire_to_s3)
+  val s3_repl_uc = RegEnable(s2_repl_uc, s2_fire_to_s3)
 
   // duplicate regs to reduce fanout
   val s3_valid_dup = RegInit(VecInit(Seq.fill(14)(false.B)))
@@ -1534,6 +1541,11 @@ class MainPipe(implicit p: Parameters) extends DCacheModule with HasPerfEvents w
   io.access_flag_write.bits.way_en := s3_way_en_dup(1)
   io.access_flag_write.bits.flag := true.B
 
+  io.hit_write.valid := s3_fire_dup_for_meta_w_valid && s3_store_hit_dup_for_meta_w_valid
+  io.hit_write.bits.idx := s3_idx_dup(3)
+  io.hit_write.bits.way_en := s3_way_en_dup(1)
+  io.hit_write.bits.UC := Mux(s3_extra_uc < 3.U, s3_extra_uc + 1.U, 3.U)
+
   io.tag_write.valid := s3_fire_dup_for_tag_w_valid && s3_req_miss_dup_for_tag_w_valid
   io.tag_write.bits.idx := s3_idx_dup(4)
   io.tag_write.bits.way_en := s3_way_en_dup(2)
@@ -1584,6 +1596,8 @@ class MainPipe(implicit p: Parameters) extends DCacheModule with HasPerfEvents w
   io.wb.bits.data := s3_data.asUInt
   io.wb.bits.delay_release := s3_req_replace_dup_for_wb_valid
   io.wb.bits.miss_id := s3_req.miss_id
+  io.wb.bits.UC := Mux(s3_req_replace_dup_for_wb_valid && !s3_replace_nothing_dup_for_wb_valid, s3_repl_uc, 0.U)
+  dontTouch(io.wb.bits.UC)
 
   // update plru in main pipe s3
   if (!cfg.updateReplaceOn2ndmiss) {

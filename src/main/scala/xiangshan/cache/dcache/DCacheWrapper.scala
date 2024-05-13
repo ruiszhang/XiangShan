@@ -19,7 +19,7 @@ package xiangshan.cache
 import chisel3._
 import chisel3.experimental.ExtModule
 import chisel3.util._
-import coupledL2.VaddrField
+import coupledL2.{UCField, UCKey, VaddrField}
 import freechips.rocketchip.diplomacy.{IdRange, LazyModule, LazyModuleImp, TransferSizes}
 import freechips.rocketchip.tilelink._
 import freechips.rocketchip.util.BundleFieldBase
@@ -346,6 +346,7 @@ class DCacheExtraMeta(implicit p: Parameters) extends DCacheBundle
   val error = Bool() // cache line has been marked as corrupted by l2 / ecc error detected when store
   val prefetch = UInt(L1PfSourceBits.W) // cache line is first required by prefetch
   val access = Bool() // cache line has been accessed by load / store
+  val UC = UInt(2.W) // cache line's hit times
 
   // val debug_access_timestamp = UInt(64.W) // last time a load / store / refill access that cacheline
 }
@@ -772,6 +773,7 @@ class DCache()(implicit p: Parameters) extends LazyModule with HasDCacheParamete
   val reqFields: Seq[BundleFieldBase] = Seq(
     PrefetchField(),
     ReqSourceField(),
+    UCField(),
     VaddrField(VAddrBits - blockOffBits),
   ) ++ cacheParams.aliasBitsOpt.map(AliasField)
   val echoFields: Seq[BundleFieldBase] = Nil
@@ -824,6 +826,7 @@ class DCacheImp(outer: DCache) extends LazyModuleImp(outer) with HasDCacheParame
   val LoadPrefetchL1Enabled = true
   val AccessArrayReadPort = if(LoadPrefetchL1Enabled) LoadPipelineWidth + 1 + 1 else LoadPipelineWidth + 1
   val PrefetchArrayReadPort = if(LoadPrefetchL1Enabled) LoadPipelineWidth + 1 + 1 else LoadPipelineWidth + 1
+  val HitArrayReadPort = if(LoadPrefetchL1Enabled) LoadPipelineWidth + 1 else LoadPipelineWidth + 1
 
   //----------------------------------------
   // core data structures
@@ -831,6 +834,7 @@ class DCacheImp(outer: DCache) extends LazyModuleImp(outer) with HasDCacheParame
   val metaArray = Module(new L1CohMetaArray(readPorts = LoadPipelineWidth + 1, writePorts = 2))
   val errorArray = Module(new L1FlagMetaArray(readPorts = LoadPipelineWidth + 1, writePorts = 2))
   val prefetchArray = Module(new L1PrefetchSourceArray(readPorts = PrefetchArrayReadPort, writePorts = 2 + LoadPipelineWidth)) // prefetch flag array
+  val hitArray = Module(new L1HitMetaArray(readPorts = HitArrayReadPort, writePorts = LoadPipelineWidth + 2))
   val accessArray = Module(new L1FlagMetaArray(readPorts = AccessArrayReadPort, writePorts = LoadPipelineWidth + 2))
   val tagArray = Module(new DuplicatedTagArray(readPorts = TagReadPort))
   val prefetcherMonitor = Module(new PrefetcherMonitor)
@@ -892,6 +896,7 @@ class DCacheImp(outer: DCache) extends LazyModuleImp(outer) with HasDCacheParame
   meta_read_ports.take(LoadPipelineWidth + 1).zip(errorArray.io.read).foreach { case (p, r) => r <> p }
   meta_read_ports.take(LoadPipelineWidth + 1).zip(prefetchArray.io.read).foreach { case (p, r) => r <> p }
   meta_read_ports.take(LoadPipelineWidth + 1).zip(accessArray.io.read).foreach { case (p, r) => r <> p }
+  meta_read_ports.take(LoadPipelineWidth + 1).zip(hitArray.io.read).foreach { case (p, r) => r <> p }
   val extra_meta_resp_ports = ldu.map(_.io.extra_meta_resp) ++
     Seq(mainPipe.io.extra_meta_resp)
   extra_meta_resp_ports.zip(errorArray.io.resp).foreach { case (p, r) => {
@@ -902,6 +907,9 @@ class DCacheImp(outer: DCache) extends LazyModuleImp(outer) with HasDCacheParame
   }}
   extra_meta_resp_ports.zip(accessArray.io.resp).foreach { case (p, r) => {
     (0 until nWays).map(i => { p(i).access := r(i) })
+  }}
+  extra_meta_resp_ports.zip(hitArray.io.resp).foreach { case (p, r) => {
+    (0 until nWays).map(i => { p(i).UC := r(i) })
   }}
 
   if(LoadPrefetchL1Enabled) {
@@ -938,6 +946,12 @@ class DCacheImp(outer: DCache) extends LazyModuleImp(outer) with HasDCacheParame
 
   val same_cycle_update_pf_flag = ldu(0).io.prefetch_flag_write.valid && ldu(1).io.prefetch_flag_write.valid && (ldu(0).io.prefetch_flag_write.bits.idx === ldu(1).io.prefetch_flag_write.bits.idx) && (ldu(0).io.prefetch_flag_write.bits.way_en === ldu(1).io.prefetch_flag_write.bits.way_en)
   XSPerfAccumulate("same_cycle_update_pf_flag", same_cycle_update_pf_flag)
+
+  val hit_write_ports = ldu.map(_.io.hit_write) ++ Seq(
+    mainPipe.io.hit_write, // change uc when store acq hit
+    refillPipe.io.hit_write // give a origin value
+  )
+  hit_write_ports.zip(hitArray.io.write).foreach { case (p, w) => w <> p }
 
   val access_flag_write_ports = ldu.map(_.io.access_flag_write) ++ Seq(
     mainPipe.io.access_flag_write,

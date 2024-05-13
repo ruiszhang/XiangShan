@@ -365,6 +365,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule {
   val error = RegInit(false.B)
   val prefetch = RegInit(false.B)
   val access = RegInit(false.B)
+  val UC = RegInit(0.U(2.W))
 
   val should_refill_data_reg =  Reg(Bool())
   val should_refill_data = WireInit(should_refill_data_reg)
@@ -449,6 +450,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule {
     error := false.B
     prefetch := input_req_is_prefetch && !io.miss_req_pipe_reg.prefetch_late_en(io.req.bits, io.req.valid)
     access := false.B
+    UC := 0.U
     secondary_fired := false.B
   }
 
@@ -479,6 +481,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule {
     should_refill_data_reg := should_refill_data
     when (!input_req_is_prefetch) {
       access := true.B // when merge non-prefetch req, set access bit
+      UC := 1.U
     }
     secondary_fired := true.B
   }
@@ -723,6 +726,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule {
   refill.error := error
   refill.prefetch := req.pf_source
   refill.access := access
+  refill.UC := UC
   refill.alias := req.vaddr(13, 12) // TODO
   assert(!io.refill_pipe_req.valid || (refill.meta.coh =/= ClientMetadata(Nothing)), "refill modifies meta to Nothing, should not happen")
 
