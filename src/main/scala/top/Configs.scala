@@ -250,8 +250,8 @@ class WithNKBL2
           aliasBitsOpt = p.dcacheParametersOpt.get.aliasBitsOpt,
           vaddrBitsOpt = Some(p.VAddrBits - log2Up(p.dcacheParametersOpt.get.blockBytes))
         )),
-        reqField = Seq(utility.ReqSourceField()),
-        echoField = Seq(huancun.DirtyField()),
+        reqField = Seq(utility.ReqSourceField(), huancun.UCField()),
+        echoField = Seq(huancun.DirtyField(), huancun.TCField()),
         prefetch = Some(coupledL2.prefetch.PrefetchReceiverParams()),
         enablePerf = !site(DebugOptionsKey).FPGAPlatform,
         elaboratedTopDown = !site(DebugOptionsKey).FPGAPlatform
