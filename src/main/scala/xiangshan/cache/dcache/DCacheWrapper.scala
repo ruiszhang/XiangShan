@@ -19,11 +19,11 @@ package xiangshan.cache
 import chisel3._
 import chisel3.experimental.ExtModule
 import chisel3.util._
-import coupledL2.{VaddrField, PCField}
+import coupledL2.{VaddrField}
 import freechips.rocketchip.diplomacy.{IdRange, LazyModule, LazyModuleImp, TransferSizes}
 import freechips.rocketchip.tilelink._
 import freechips.rocketchip.util.BundleFieldBase
-import huancun.{AliasField, PrefetchField}
+import huancun.{AliasField, PrefetchField, PCField}
 import org.chipsalliance.cde.config.Parameters
 import utility._
 import utils._

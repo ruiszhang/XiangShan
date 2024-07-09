@@ -18,13 +18,13 @@ package xiangshan.cache
 
 import chisel3._
 import chisel3.util._
-import coupledL2.{PCKey, VaddrKey}
+import coupledL2.{VaddrKey}
 import difftest._
 import freechips.rocketchip.tilelink.ClientStates._
 import freechips.rocketchip.tilelink.MemoryOpCategories._
 import freechips.rocketchip.tilelink.TLPermissions._
 import freechips.rocketchip.tilelink._
-import huancun.{AliasKey, DirtyKey, PrefetchKey}
+import huancun.{AliasKey, DirtyKey, PrefetchKey, PCKey}
 import org.chipsalliance.cde.config.Parameters
 import utility._
 import utils._
