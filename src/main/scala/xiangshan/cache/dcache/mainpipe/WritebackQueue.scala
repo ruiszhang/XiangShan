@@ -22,6 +22,7 @@ import freechips.rocketchip.tilelink.TLPermissions._
 import freechips.rocketchip.tilelink.{TLArbiter, TLBundleC, TLBundleD, TLEdgeOut}
 import org.chipsalliance.cde.config.Parameters
 import utils.{HasPerfEvents, HasTLDump, XSDebug, XSPerfAccumulate}
+import coupledL2.UCKey
 
 class WritebackReqCtrl(implicit p: Parameters) extends DCacheBundle {
   val param  = UInt(cWidth.W)
@@ -31,6 +32,7 @@ class WritebackReqCtrl(implicit p: Parameters) extends DCacheBundle {
 
   val delay_release = Bool()
   val miss_id = UInt(log2Up(cfg.nMissEntries).W)
+  val UC = UInt(2.W)  // for l2-replacement(tubins)
 }
 
 class WritebackReqWodata(implicit p: Parameters) extends WritebackReqCtrl {
@@ -63,6 +65,7 @@ class WritebackReq(implicit p: Parameters) extends WritebackReqWodata {
     out.dirty := dirty
     out.delay_release := delay_release
     out.miss_id := miss_id
+    out.UC := UC
     out
   }
 
@@ -74,6 +77,7 @@ class WritebackReq(implicit p: Parameters) extends WritebackReqWodata {
     out.dirty := dirty
     out.delay_release := delay_release
     out.miss_id := miss_id
+    out.UC := UC
     out
   }
 
@@ -260,6 +264,7 @@ class WritebackEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
   io.mem_release.bits  := Mux(req.voluntary,
     Mux(req.hasData, voluntaryReleaseData, voluntaryRelease),
     Mux(req.hasData, probeResponseData, probeResponse))
+  io.mem_release.bits.user.lift(UCKey).foreach(_ := req.UC)
 
 
   when (io.mem_release.fire) {remain_clr := PriorityEncoderOH(remain_dup_1)}
@@ -330,6 +335,7 @@ class WritebackQueue(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
   // assign default values to output signals
   io.mem_release.valid := false.B
   io.mem_release.bits  := DontCare
+  io.mem_release.bits.user.lift(UCKey).foreach(_ := io.req.bits.UC)
   io.mem_grant.ready   := false.B
 
   // delay data write in writeback req for 1 cycle

@@ -1,0 +1,17 @@
+emu compiled at Jun 26 2024, 23:59:11
+Using seed = 2515
+Using simulated 32768B flash
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/gcc_200/1562/_1562_0.115416_.gz
+Gzip file detected and loading image from extracted gz file
+DRAMsim3 memory system initialized.
+The reference model is /nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(2167359)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+Warmup finished. The performance counters will be dumped and then reset.
+[FORK_INFO pid(2167359)] clear processes...
+Core 0: [33mEXCEEDING CYCLE/INSTR LIMIT at pc = 0x1c8b96
+[0m[35mCore-0 instrCnt = 40,000,006, cycleCnt = 21,228,761, IPC = 1.884236
+[0m[34mSeed=2515 Guest cycle spent: 21,228,765 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 17,240,289ms
+[0m

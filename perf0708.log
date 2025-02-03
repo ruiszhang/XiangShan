@@ -1,0 +1,7 @@
+All:   3
+First: omnetpp_20261_0.361193
+Last:  zeusmp_16125_0.0639645
+ssh zhangruisi@open23 NOOP_HOME=/nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan numactl -m 0 -C 0-15 /nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan/build/emu --diff /nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so --enable-fork -W 20000000 -I 40000000 -i /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/omnetpp/20261/_20261_0.361193_.gz -s 2967
+ssh zhangruisi@open23 NOOP_HOME=/nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan numactl -m 0 -C 16-31 /nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan/build/emu --diff /nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so --enable-fork -W 20000000 -I 40000000 -i /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/zeusmp/78888/_78888_0.086294_.gz -s 9154
+ssh zhangruisi@open23 NOOP_HOME=/nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan numactl -m 0 -C 32-47 /nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan/build/emu --diff /nfs/home/zhangruisi/myXiangShan9/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so --enable-fork -W 20000000 -I 40000000 -i /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/zeusmp/16125/_16125_0.063964_.gz -s 3763
+Waiting for pending tests to finish

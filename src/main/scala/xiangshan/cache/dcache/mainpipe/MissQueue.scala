@@ -89,6 +89,7 @@ class MissQueueRefillInfo(implicit p: Parameters) extends MissReqStoreData {
   val miss_param = UInt(TLPermissions.bdWidth.W)
   val miss_dirty = Bool()
   val error      = Bool()
+  val UC         = UInt(2.W)
 }
 
 class MissReq(implicit p: Parameters) extends MissReqWoStoreData {
@@ -388,6 +389,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule
   val error = RegInit(false.B)
   val prefetch = RegInit(false.B)
   val access = RegInit(false.B)
+  val UC = RegInit(0.U(2.W))
 
   val should_refill_data_reg =  Reg(Bool())
   val should_refill_data = WireInit(should_refill_data_reg)
@@ -467,6 +469,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule
     prefetch := input_req_is_prefetch && !io.miss_req_pipe_reg.prefetch_late_en(io.req.bits, io.req.valid)
     access := false.B
     secondary_fired := false.B
+    UC := Mux(prefetch, 0.U, 1.U)
   }
 
   when (io.miss_req_pipe_reg.merge) {
@@ -497,6 +500,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule
     should_refill_data_reg := should_refill_data
     when (!input_req_is_prefetch) {
       access := true.B // when merge non-prefetch req, set access bit
+      UC := 1.U
     }
     secondary_fired := true.B
   }
@@ -741,6 +745,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule
   io.refill_info.bits.miss_param := grant_param
   io.refill_info.bits.miss_dirty := isDirty
   io.refill_info.bits.error      := error
+  io.refill_info.bits.UC         := UC
 
   XSPerfAccumulate("miss_refill_mainpipe_req", io.main_pipe_req.fire)
   XSPerfAccumulate("miss_refill_without_hint", io.main_pipe_req.fire && !mainpipe_req_fired && !w_l2hint)
