@@ -1,0 +1,11 @@
+RESUME: True
+evaluate execute hours: 2.9091547
+opitimize execute hours: 2.9091547
+All:   4
+First: gobmk_13x13_198340000000_0.161601
+Last:  gcc_g23_1740000000_0.119858
+ssh zhangruisi@open13 NOOP_HOME=/nfs/home/zhangruisi/Downloads/xs-env/XiangShan numactl -m 0 -C 0-15 /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/build/emu --diff /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so --enable-fork -W 20000000 -I 40000000 -i /nfs-nvme/home/share/checkpoints_profiles/spec06_rv64gcb_o2_20m/take_cpt/gobmk_13x13_198340000000_0.161601/0/_198340000000_.gz -s 3284
+ssh zhangruisi@open13 NOOP_HOME=/nfs/home/zhangruisi/Downloads/xs-env/XiangShan numactl -m 0 -C 16-31 /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/build/emu --diff /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so --enable-fork -W 20000000 -I 40000000 -i /nfs-nvme/home/share/checkpoints_profiles/spec06_rv64gcb_o2_20m/take_cpt/gobmk_nngs_374620000000_0.243003/0/_374620000000_.gz -s 9434
+ssh zhangruisi@open13 NOOP_HOME=/nfs/home/zhangruisi/Downloads/xs-env/XiangShan numactl -m 0 -C 32-47 /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/build/emu --diff /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so --enable-fork -W 20000000 -I 40000000 -i /nfs-nvme/home/share/checkpoints_profiles/spec06_rv64gcb_o2_20m/take_cpt/gcc_expr_44040000000_0.154354/0/_44040000000_.gz -s 8988
+ssh zhangruisi@open13 NOOP_HOME=/nfs/home/zhangruisi/Downloads/xs-env/XiangShan numactl -m 0 -C 48-63 /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/build/emu --diff /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so --enable-fork -W 20000000 -I 40000000 -i /nfs-nvme/home/share/checkpoints_profiles/spec06_rv64gcb_o2_20m/take_cpt/gcc_g23_1740000000_0.119858/0/_1740000000_.gz -s 7024
+Waiting for pending tests to finish

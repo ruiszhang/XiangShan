@@ -1,0 +1,1260 @@
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,              1544115
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               443073
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                14875
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                  533
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,               163441
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                 8712
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=           112858121] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                   24
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                    5
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               775340
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,                32466
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                99048
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                 2151
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                 6005
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  176
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./soplex_pds-50_197380000000_0.131975
+[PERF ][time=            38991922] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                  371
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                  368
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               384615
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               331573
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                 5228
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                 2034
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                 3200
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                 2324
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./soplex_ref_121720000000_0.062358
+[PERF ][time=            57956512] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                   35
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                   35
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               468884
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               352382
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                    7
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                    7
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                  911
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  910
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./GemsFDTD_141980000000_0.245507
+[PERF ][time=            43528283] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                   34
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                   34
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               469655
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               353232
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                   12
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                   12
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                  925
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  925
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./GemsFDTD_1296600000000_0.243608
+[PERF ][time=            45546870] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               192339
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               192246
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,               576743
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,               192247
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                  754
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  754
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./lbm_140840000000_0.429260
+[PERF ][time=            55041762] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                    1
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                    1
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,              1417581
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               407094
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                12057
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                  612
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,               139484
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                 9723
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=           107737361] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               757290
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               755149
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                 2413
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                 2406
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./soplex_ref_122120000000_0.277611
+[PERF ][time=            80094618] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                   15
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                   11
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               738161
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,                11550
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,               121171
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                  714
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                 5711
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  226
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./soplex_pds-50_303960000000_0.123780
+[PERF ][time=            34923028] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                   31
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                   10
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               739153
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,                33654
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,               122110
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                 2157
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                 5338
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  196
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./soplex_pds-50_267600000000_0.106364
+[PERF ][time=            38496392] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                   34
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                   34
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               391209
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,                69509
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                   10
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                  255
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  232
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./xalancbmk_266100000000_0.150057
+[PERF ][time=            23708866] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                   11
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                   11
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               988957
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               988920
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                   51
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                    4
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                 1943
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                 1943
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./libquantum_1006500000000_0.149838
+[PERF ][time=            84322905] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                  618
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                  322
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               377525
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               160744
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                34720
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                13991
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                44601
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                 1715
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./omnetpp_492740000000_0.497511
+[PERF ][time=            51925327] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                 8647
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                   53
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               464460
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,                48642
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                 1186
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                  401
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                39962
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  794
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./xalancbmk_133280000000_0.099969
+[PERF ][time=            36463646] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                    5
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                    5
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               991853
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               991813
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                 1949
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                 1946
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./libquantum_500420000000_0.140808
+[PERF ][time=            87641297] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                    1
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                    1
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               435772
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               417072
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                11469
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                11469
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                  841
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  839
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./bwaves_1299540000000_0.750952
+[PERF ][time=            44282678] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                   90
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                   90
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               148420
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               141739
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                  950
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                  701
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                 6063
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  332
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./leslie3d_545640000000_0.178617
+[PERF ][time=            27006293] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                 3789
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                  102
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,                48853
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,                 9813
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                26489
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                 9533
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    2
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                24211
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  942
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./xalancbmk_882220000000_0.083836
+[PERF ][time=            22026224] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                    1
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                    1
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               958731
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               958701
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                 1884
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                 1884
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./libquantum_67100000000_0.124588
+[PERF ][time=           113740614] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,              1439222
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,              1122106
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                   26
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                92524
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                53136
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            79350873] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_NoWhere_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Total,                  123
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUInst_Miss,                  123
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Total,               260394
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPULoadData_Miss,               141853
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Total,                33017
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUStoreData_Miss,                 1143
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_CPUAtomicData_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1InstPrefetch_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_L1DataPrefetch_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Total,                  348
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_PTW_Miss,                  325
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2BOP_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2SMS_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stream_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Stride_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2TP_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L2Unknown_Miss,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Total,                    0
+Folder: ./leslie3d_1756120000000_0.168857
+[PERF ][time=            27222316] TOP.SimTop.l_soc.l3cacheOpt.topDown: E2_L3AReqSource_Prefetch2L3Unknown_Miss,                    0

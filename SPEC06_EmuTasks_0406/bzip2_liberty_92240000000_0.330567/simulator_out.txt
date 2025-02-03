@@ -1,0 +1,43 @@
+emu compiled at Apr  6 2024, 13:19:12
+Using seed = 3946
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+enableDynamicPrefetcher0 = 1
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+ColdDownThreshold_0 = 12
+nMaxPrefetchEntry0 = 14
+StoreWaitThreshold_0 = 0
+depth0 = 32
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+Using simulated 8192MB RAM
+The image is /nfs-nvme/home/share/checkpoints_profiles/spec06_rv64gcb_o2_20m/take_cpt/bzip2_liberty_92240000000_0.330567/0/_92240000000_.gz
+Gzip file detected and loading image from extracted gz file
+DRAMsim3 memory system initialized.
+The reference model is /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(477138)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+Warmup finished. The performance counters will be dumped and then reset.
+[FORK_INFO pid(477138)] clear processes...
+Core 0: [33mEXCEEDING CYCLE/INSTR LIMIT at pc = 0x17cb6
+[0m[35minstrCnt = 40,000,005, cycleCnt = 8,583,741, IPC = 4.659973
+[0m[34mSeed=3946 Guest cycle spent: 8,583,745 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 2,676,099ms
+[0m

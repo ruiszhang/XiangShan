@@ -1,0 +1,192 @@
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_req,               810538
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_hit,               556696
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_req,               820839
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_hit,               564592
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_req,               817740
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_hit,               563135
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_req,               820550
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_hit,               567760
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_req,               854214
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_hit,               580837
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_req,               865525
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_hit,               588443
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_req,               860226
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_hit,               585490
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_req,               865730
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_hit,               593631
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_req,               857986
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_hit,               633196
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_req,               852906
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_hit,               626297
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_req,               854560
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_hit,               628714
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_req,               853024
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_hit,               626125
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_req,               788206
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_hit,               558500
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_req,               784998
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_hit,               551762
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_req,               779896
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_hit,               545481
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_req,               785140
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_hit,               552220
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_req,               557052
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_hit,               210542
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_req,               495998
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_hit,               210799
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_req,               590506
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_hit,               210538
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_req,               463016
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_hit,               212278
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_req,               811884
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_hit,               215636
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_req,               553382
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_hit,               173433
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_req,               873239
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_hit,               219780
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_req,               705660
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_hit,               211136
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_req,               407317
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_hit,               278447
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_req,               412468
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_hit,               280783
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_req,               410918
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_hit,               282601
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_req,               412323
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            37204577] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_hit,               283110
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_req,               427107
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_hit,               280003
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_req,               432762
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_hit,               282882
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_req,               430113
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_hit,               282467
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_req,               432865
+Folder: ./mcf_191500000000_0.105600
+[PERF ][time=            74957635] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_hit,               285698
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_req,               431041
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_hit,               316187
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_req,               428501
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_hit,               313157
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_req,               429328
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_hit,               313908
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_req,               428560
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            39904068] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_hit,               312673
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_req,               394107
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_hit,               269697
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_req,               392499
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_hit,               266839
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_req,               389948
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_hit,               262796
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_req,               392570
+Folder: ./mcf_231360000000_0.096362
+[PERF ][time=            76468801] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_hit,               266682
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_req,               280574
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_hit,               100000
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_req,               250047
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_hit,               102116
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_req,               297301
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_hit,               102132
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_req,               233556
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            17728179] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_hit,               108132
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_req,               405942
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_0.directory: selfdir_A_hit,               100134
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_req,               276691
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_1.directory: selfdir_A_hit,                80196
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_req,               436620
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_2.directory: selfdir_A_hit,               104881
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_req,               352830
+Folder: ./mcf_17520000000_0.126350
+[PERF ][time=            36280152] TOP.SimTop.l_soc.l3cacheOpt.slices_3.directory: selfdir_A_hit,                99282

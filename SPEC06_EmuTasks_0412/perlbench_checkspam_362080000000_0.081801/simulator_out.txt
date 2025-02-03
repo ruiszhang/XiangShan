@@ -1,0 +1,60 @@
+emu compiled at Apr 11 2024, 18:22:48
+Using seed = 5991
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+tp_trainOnL1PF0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+enableDynamicPrefetcher0 = 1
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs-nvme/home/share/checkpoints_profiles/spec06_rv64gcb_o2_20m/take_cpt/perlbench_checkspam_362080000000_0.081801/0/_362080000000_.gz
+Gzip file detected and loading image from extracted gz file
+DRAMsim3 memory system initialized.
+The reference model is /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(1385812)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+Warmup finished. The performance counters will be dumped and then reset.
+abb174dd65566d4a4201359ee7439c5f:
+  SPAM[ 14889]: DATE_IN_FUTURE_06_12,DEAR_SOMETHING,MILLION_USD,NIGERIAN_BODY1,NIGERIAN_BODY2,NIGERIAN_BODY3,NIGERIAN_BODY4,NIGERIAN_BODY_GOVT_3,RATWARE_OE_MALFORMED,RISK_FREE,US_DOLLARS_3
+  ...replaced by 14818cc7ce2f38527e427ad7ccba92cd
+[FORK_INFO pid(1385812)] clear processes...
+Core 0: [33mEXCEEDING CYCLE/INSTR LIMIT at pc = 0x44e9e
+[0m[35minstrCnt = 40,000,004, cycleCnt = 21,393,173, IPC = 1.869756
+[0m[34mSeed=5991 Guest cycle spent: 21,393,177 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 7,699,776ms
+[0m

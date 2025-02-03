@@ -1,0 +1,207 @@
+emu compiled at Apr 11 2024, 18:22:48
+Using seed = 9908
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+tp_trainOnL1PF0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+enableDynamicPrefetcher0 = 1
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs-nvme/home/share/checkpoints_profiles/spec06_rv64gcb_o2_20m/take_cpt/xalancbmk_133280000000_0.099969/0/_133280000000_.gz
+Gzip file detected and loading image from extracted gz file
+DRAMsim3 memory system initialized.
+The reference model is /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(168629)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+[1;34m[src/isa/riscv64/system/mmu.c:575,isa_misalign_data_addr_check] addr misaligned happened: vaddr:ffffffff847511c4 len:8 type:1 pc:ffffffff846a2826[0m
+ERROR: ram wIdx = 0x608db258 out of bound!
+ERROR: ram wIdx = 0x608db259 out of bound!
+ERROR: ram wIdx = 0x608db25a out of bound!
+ERROR: ram wIdx = 0x608db25b out of bound!
+ERROR: ram wIdx = 0x608db25c out of bound!
+ERROR: ram wIdx = 0x608db25d out of bound!
+ERROR: ram wIdx = 0x608db25e out of bound!
+ERROR: ram wIdx = 0x608db25f out of bound!
+ERROR: ram wIdx = 0x608ea058 out of bound!
+ERROR: ram wIdx = 0x608ea059 out of bound!
+ERROR: ram wIdx = 0x608ea05a out of bound!
+ERROR: ram wIdx = 0x608ea05b out of bound!
+ERROR: ram wIdx = 0x608ea05c out of bound!
+ERROR: ram wIdx = 0x608ea05d out of bound!
+ERROR: ram wIdx = 0x608ea05e out of bound!
+ERROR: ram wIdx = 0x608ea05f out of bound!
+ERROR: ram wIdx = 0x608dcd60 out of bound!
+ERROR: ram wIdx = 0x608dcd61 out of bound!
+ERROR: ram wIdx = 0x608dcd62 out of bound!
+ERROR: ram wIdx = 0x608dcd63 out of bound!
+ERROR: ram wIdx = 0x608dcd64 out of bound!
+ERROR: ram wIdx = 0x608dcd65 out of bound!
+ERROR: ram wIdx = 0x608dcd66 out of bound!
+ERROR: ram wIdx = 0x608dcd67 out of bound!
+ERROR: ram wIdx = 0x608d4650 out of bound!
+ERROR: ram wIdx = 0x608d4651 out of bound!
+ERROR: ram wIdx = 0x608d4652 out of bound!
+ERROR: ram wIdx = 0x608d4653 out of bound!
+ERROR: ram wIdx = 0x608d4654 out of bound!
+ERROR: ram wIdx = 0x608d4655 out of bound!
+ERROR: ram wIdx = 0x608d4656 out of bound!
+ERROR: ram wIdx = 0x608d4657 out of bound!
+ERROR: ram wIdx = 0x608db6e8 out of bound!
+ERROR: ram wIdx = 0x608db6e9 out of bound!
+ERROR: ram wIdx = 0x608db6ea out of bound!
+ERROR: ram wIdx = 0x608db6eb out of bound!
+ERROR: ram wIdx = 0x608db6ec out of bound!
+ERROR: ram wIdx = 0x608db6ed out of bound!
+ERROR: ram wIdx = 0x608db6ee out of bound!
+ERROR: ram wIdx = 0x608db6ef out of bound!
+ERROR: ram wIdx = 0x608dc850 out of bound!
+ERROR: ram wIdx = 0x608dc851 out of bound!
+ERROR: ram wIdx = 0x608dc852 out of bound!
+ERROR: ram wIdx = 0x608dc853 out of bound!
+ERROR: ram wIdx = 0x608dc854 out of bound!
+ERROR: ram wIdx = 0x608dc855 out of bound!
+ERROR: ram wIdx = 0x608dc856 out of bound!
+ERROR: ram wIdx = 0x608dc857 out of bound!
+ERROR: ram wIdx = 0x608dc848 out of bound!
+ERROR: ram wIdx = 0x608dc849 out of bound!
+ERROR: ram wIdx = 0x608dc84a out of bound!
+ERROR: ram wIdx = 0x608dc84b out of bound!
+ERROR: ram wIdx = 0x608dc84c out of bound!
+ERROR: ram wIdx = 0x608dc84d out of bound!
+ERROR: ram wIdx = 0x608dc84e out of bound!
+ERROR: ram wIdx = 0x608dc84f out of bound!
+ERROR: ram wIdx = 0x608db260 out of bound!
+ERROR: ram wIdx = 0x608db261 out of bound!
+ERROR: ram wIdx = 0x608db262 out of bound!
+ERROR: ram wIdx = 0x608db263 out of bound!
+ERROR: ram wIdx = 0x608db264 out of bound!
+ERROR: ram wIdx = 0x608db265 out of bound!
+ERROR: ram wIdx = 0x608db266 out of bound!
+ERROR: ram wIdx = 0x608db267 out of bound!
+ERROR: ram wIdx = 0x608dc898 out of bound!
+ERROR: ram wIdx = 0x608dc899 out of bound!
+ERROR: ram wIdx = 0x608dc89a out of bound!
+ERROR: ram wIdx = 0x608dc89b out of bound!
+ERROR: ram wIdx = 0x608dc89c out of bound!
+ERROR: ram wIdx = 0x608dc89d out of bound!
+ERROR: ram wIdx = 0x608dc89e out of bound!
+ERROR: ram wIdx = 0x608dc89f out of bound!
+ERROR: ram wIdx = 0x608d4518 out of bound!
+ERROR: ram wIdx = 0x608d4519 out of bound!
+ERROR: ram wIdx = 0x608d451a out of bound!
+ERROR: ram wIdx = 0x608d451b out of bound!
+ERROR: ram wIdx = 0x608d451c out of bound!
+ERROR: ram wIdx = 0x608d451d out of bound!
+ERROR: ram wIdx = 0x608d451e out of bound!
+ERROR: ram wIdx = 0x608d451f out of bound!
+ERROR: ram wIdx = 0x608d4648 out of bound!
+ERROR: ram wIdx = 0x608d4649 out of bound!
+ERROR: ram wIdx = 0x608d464a out of bound!
+ERROR: ram wIdx = 0x608d464b out of bound!
+ERROR: ram wIdx = 0x608d464c out of bound!
+ERROR: ram wIdx = 0x608d464d out of bound!
+ERROR: ram wIdx = 0x608d464e out of bound!
+ERROR: ram wIdx = 0x608d464f out of bound!
+ERROR: ram wIdx = 0x608d4658 out of bound!
+ERROR: ram wIdx = 0x608d4659 out of bound!
+ERROR: ram wIdx = 0x608d465a out of bound!
+ERROR: ram wIdx = 0x608d465b out of bound!
+ERROR: ram wIdx = 0x608d465c out of bound!
+ERROR: ram wIdx = 0x608d465d out of bound!
+ERROR: ram wIdx = 0x608d465e out of bound!
+ERROR: ram wIdx = 0x608d465f out of bound!
+ERROR: ram wIdx = 0x608dc068 out of bound!
+ERROR: ram wIdx = 0x608dc069 out of bound!
+ERROR: ram wIdx = 0x608dc06a out of bound!
+ERROR: ram wIdx = 0x608dc06b out of bound!
+ERROR: ram wIdx = 0x608dc06c out of bound!
+ERROR: ram wIdx = 0x608dc06d out of bound!
+ERROR: ram wIdx = 0x608dc06e out of bound!
+ERROR: ram wIdx = 0x608dc06f out of bound!
+ERROR: ram wIdx = 0x608da8b8 out of bound!
+ERROR: ram wIdx = 0x608da8b9 out of bound!
+ERROR: ram wIdx = 0x608da8ba out of bound!
+ERROR: ram wIdx = 0x608da8bb out of bound!
+ERROR: ram wIdx = 0x608da8bc out of bound!
+ERROR: ram wIdx = 0x608da8bd out of bound!
+ERROR: ram wIdx = 0x608da8be out of bound!
+ERROR: ram wIdx = 0x608da8bf out of bound!
+Warmup finished. The performance counters will be dumped and then reset.
+[FORK_INFO pid(168629)] clear processes...
+Core 0: [33mEXCEEDING CYCLE/INSTR LIMIT at pc = 0x3fac0
+[0m[35minstrCnt = 40,000,001, cycleCnt = 28,206,026, IPC = 1.418137
+[0m[34mSeed=9908 Guest cycle spent: 28,206,030 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 9,998,451ms
+[0m

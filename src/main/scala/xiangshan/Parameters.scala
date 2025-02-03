@@ -171,6 +171,7 @@ case class XSCoreParameters
     StuCnt = 2
   ),
   prefetcher: Option[PrefetcherParams] = Some(SMSParams()),
+  //  prefetcher: Option[PrefetcherParams] = None,
   LoadPipelineWidth: Int = 2,
   StorePipelineWidth: Int = 2,
   VecMemSrcInWidth: Int = 2,
@@ -252,6 +253,8 @@ case class XSCoreParameters
     nProbeEntries = 2,
     nPrefetchEntries = 12,
     nPrefBufferEntries = 32,
+    // enableICachePrefetch = false,
+    // prefetchToL1 = false,
   ),
   dcacheParametersOpt: Option[DCacheParameters] = Some(DCacheParameters(
     tagECC = Some("secded"),

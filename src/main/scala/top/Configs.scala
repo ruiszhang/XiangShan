@@ -253,6 +253,7 @@ class WithNKBL2
         echoField = Seq(huancun.DirtyField(), huancun.TripCountField(), huancun.UseCountField()),
         respKey = Seq(huancun.HitLevelL3toL2Key),
         prefetch = Some(coupledL2.prefetch.PrefetchReceiverParams()),
+        // prefetch = None,
         enablePerf = !site(DebugOptionsKey).FPGAPlatform,
         elaboratedTopDown = !site(DebugOptionsKey).FPGAPlatform
       )),
@@ -293,6 +294,8 @@ class WithNKBL3(n: Int, ways: Int = 8, inclusive: Boolean = true, banks: Int = 1
         simulation = !site(DebugOptionsKey).FPGAPlatform,
         prefetch = Some(huancun.prefetch.L3PrefetchReceiverParams()),
         tpmeta = Some(huancun.prefetch.DefaultTPmetaParameters())
+        // prefetch = None,
+        // tpmeta = None
       ))
     )
 })

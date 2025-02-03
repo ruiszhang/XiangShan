@@ -1,0 +1,119 @@
+emu compiled at Dec  7 2023, 17:44:31
+Using seed = 4207
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+enableDynamicPrefetcher0 = 1
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+ColdDownThreshold_0 = 12
+nMaxPrefetchEntry0 = 14
+StoreWaitThreshold_0 = 0
+depth0 = 32
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+Using simulated 8192MB RAM
+The image is /nfs-nvme/home/share/checkpoints_profiles/spec06_rv64gcb_o2_20m/take_cpt/mcf_17520000000_0.126350/0/_17520000000_.gz
+Gzip file detected and loading image from extracted gz file
+DRAMsim3 memory system initialized.
+Open database successfully
+td_IntFlStall_rolling_0 table created successfully!
+td_IntNotReadyStall_rolling_0 table created successfully!
+td_OverrideBubble_rolling_0 table created successfully!
+td_LoadMemStall_rolling_0 table created successfully!
+td_ControlRecoveryStall_rolling_0 table created successfully!
+td_LoadTLBStall_rolling_0 table created successfully!
+td_OtherRedirectBubble_rolling_0 table created successfully!
+td_LoadL3Stall_rolling_0 table created successfully!
+td_ITLBMissBubble_rolling_0 table created successfully!
+ipc_futype_mul_rolling_0 table created successfully!
+ipc_futype_store_rolling_0 table created successfully!
+td_NoStall_rolling_0 table created successfully!
+ipc_futype_fmisc_rolling_0 table created successfully!
+td_LoadMSHRReplayStall_rolling_0 table created successfully!
+td_RASMissBubble_rolling_0 table created successfully!
+L1PrefetchAccuracyIns_rolling_0 table created successfully!
+td_MemVioRedirectBubble_rolling_0 table created successfully!
+td_AtomicStall_rolling_0 table created successfully!
+td_LoadVioReplayStall_rolling_0 table created successfully!
+L1PrefetchPollutionIns_rolling_0 table created successfully!
+L2PrefetchCoverageStride_rolling_0 table created successfully!
+L1PrefetchLatenessIns_rolling_0 table created successfully!
+td_FlushedInsts_rolling_0 table created successfully!
+td_SCMissBubble_rolling_0 table created successfully!
+ipc_futype_csr_rolling_0 table created successfully!
+ipc_futype_load_rolling_0 table created successfully!
+L2PrefetchAccuracyStream_rolling_0 table created successfully!
+L2PrefetchCoverage_rolling_0 table created successfully!
+td_FetchFragBubble_rolling_0 table created successfully!
+td_LoadL2Stall_rolling_0 table created successfully!
+ipc_futype_alu_rolling_0 table created successfully!
+td_IntDqStall_rolling_0 table created successfully!
+l3_repl table created successfully!
+td_FpFlStall_rolling_0 table created successfully!
+td_FtqFullStall_rolling_0 table created successfully!
+ipc_futype_mou_rolling_0 table created successfully!
+L2PrefetchAccuracyBOP_rolling_0 table created successfully!
+td_FtqUpdateBubble_rolling_0 table created successfully!
+ipc_futype_int_to_float_rolling_0 table created successfully!
+L2PrefetchCoverageBOP_rolling_0 table created successfully!
+td_NumStallReasons_rolling_0 table created successfully!
+td_MemVioRecoveryStall_rolling_0 table created successfully!
+td_FPNotReadyStall_rolling_0 table created successfully!
+L2PrefetchLate_rolling_0 table created successfully!
+L2PrefetchCoverageSMS_rolling_0 table created successfully!
+td_LoadL1Stall_rolling_0 table created successfully!
+TLLog table created successfully!
+td_StoreStall_rolling_0 table created successfully!
+td_TAGEMissBubble_rolling_0 table created successfully!
+ipc_futype_fdiv_fsqrt_rolling_0 table created successfully!
+ipc_rolling_0 table created successfully!
+L2MP table created successfully!
+td_OtherRecoveryStall_rolling_0 table created successfully!
+ipc_futype_fmac_rolling_0 table created successfully!
+td_OtherCoreStall_rolling_0 table created successfully!
+ipc_futype_bku_rolling_0 table created successfully!
+td_DivStall_rolling_0 table created successfully!
+IPCIns_rolling_0 table created successfully!
+L2PrefetchAccuracyStride_rolling_0 table created successfully!
+ipc_futype_fence_rolling_0 table created successfully!
+td_ITTAGEMissBubble_rolling_0 table created successfully!
+L2PrefetchAccuracyTP_rolling_0 table created successfully!
+L2PrefetchCoverageStream_rolling_0 table created successfully!
+L2PrefetchAccuracySMS_rolling_0 table created successfully!
+cpi_rolling_0 table created successfully!
+td_BTBMissBubble_rolling_0 table created successfully!
+ipc_futype_jmp_rolling_0 table created successfully!
+td_FpDqStall_rolling_0 table created successfully!
+L2PrefetchAccuracy_rolling_0 table created successfully!
+L2PrefetchCoverageTP_rolling_0 table created successfully!
+td_ICacheMissBubble_rolling_0 table created successfully!
+ipc_futype_div_rolling_0 table created successfully!
+td_MemNotReadyStall_rolling_0 table created successfully!
+td_LsDqStall_rolling_0 table created successfully!
+The reference model is /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(1359597)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+Warmup finished. The performance counters will be dumped and then reset.
+[FORK_INFO pid(1359597)] clear processes...
+Core 0: [33mEXCEEDING CYCLE/INSTR LIMIT at pc = 0x10cf6
+[0m[35minstrCnt = 40,000,002, cycleCnt = 83,650,118, IPC = 0.478182
+[0msaving memdb to /nfs/home/zhangruisi/Downloads/xs-env/XiangShan/build/2023-12-20@03:36:21.db ...
+[34mSeed=4207 Guest cycle spent: 83,650,122 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 38,437,371ms
+[0m
