@@ -1,0 +1,55 @@
+['lbm', 'libquantum', 'libquantum', 'mcf', 'omnetpp', 'soplex_pds-50', 'soplex_pds-50']
+=================== Coverage ==================
+                      lbm coverage: 0.40
+               libquantum coverage: 0.36
+                      mcf coverage: 0.14
+                  omnetpp coverage: 0.36
+            soplex_pds-50 coverage: 0.16
+
+==================== Score ===================
+            lbm: 29.787,  9.929
+     libquantum: 41.902, 13.967
+            mcf: 73.070, 24.357
+        omnetpp: 38.620, 12.873
+         soplex: 74.866, 24.955
+SPEC2006@3GHz: 48.330
+SPEC2006/GHz:  16.110
+
+********* SPECINT 2006 *********
+  400.perlbench: N/A
+      401.bzip2: N/A
+        403.gcc: N/A
+        429.mcf: 73.070, 24.357
+      445.gobmk: N/A
+      456.hmmer: N/A
+      458.sjeng: N/A
+ 462.libquantum: 41.902, 13.967
+    464.h264ref: N/A
+    471.omnetpp: 38.620, 12.873
+      473.astar: N/A
+  483.xalancbmk: N/A
+SPECint2006@3GHz:  2.647
+SPECint2006/GHz:   0.882
+
+********* SPECFP  2006 *********
+     410.bwaves: N/A
+     416.gamess: N/A
+       433.milc: N/A
+     434.zeusmp: N/A
+    435.gromacs: N/A
+  436.cactusADM: N/A
+   437.leslie3d: N/A
+       444.namd: N/A
+     447.dealII: N/A
+     450.soplex: 74.866, 24.955
+     453.povray: N/A
+   454.Calculix: N/A
+   459.GemsFDTD: N/A
+      465.tonto: N/A
+        470.lbm: 29.787,  9.929
+        481.wrf: N/A
+    482.sphinx3: N/A
+SPECfp2006@3GHz:  1.574
+SPECfp2006/GHz:  0.525
+
+Number of Checkpoints: 7
