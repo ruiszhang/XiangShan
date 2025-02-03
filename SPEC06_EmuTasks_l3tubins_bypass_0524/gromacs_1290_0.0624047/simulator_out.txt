@@ -1,0 +1,81 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 8569
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/gromacs/1290/_1290_0.062405_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(900034)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+Warmup finished. The performance counters will be dumped and then reset.
+[FORK_INFO pid(1009518)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(1009518)] dump wave to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-05-25@00:28:06_21200397.fst...
+The first instruction of core 0 has commited. Difftest enabled. 
+Warmup finished. The performance counters will be dumped and then reset.
+cacheid=1,idtfr=0,realpaddr=0x80a7a8e0: Refill test failed!
+addr: 80a7a8c0
+Gold: ffffffff3e8a3d71ffffffff0000000040ad57b340e042eebeb4c270bdb9f2c0be995d70be38d9c043901002beee5358c2782f2fc22f89da3f4cb088c317892f
+Core: ffffffff3e8a3d71ffffffff0000000040ad8ff340e042eebe9934b4be3bc780bea667b0be8a93c0431bdef13ebd6daa42ab6cb042de98c5c38c9cb442b2a278
+cacheid=1,idtfr=0,realpaddr=0x80a7a8e0: Refill test failed!
+addr: 80a7a8c0
+Gold: ffffffff3e8a3d71ffffffff0000000040ad57b340e042eebeb4c270bdb9f2c0be995d70be38d9c043901002beee5358c2782f2fc22f89da3f4cb088c317892f
+Core: ffffffff3e8a3d71ffffffff0000000040ad8ff340e042eebe9934b4be3bc780bea667b0be8a93c0431bdef13ebd6daa42ab6cb042de98c5c38c9cb442b2a278
+Core 0: [31mABORT at pc = 0x80a0c
+[0m[35minstrCnt = 38,080,822, cycleCnt = 21,205,760, IPC = 1.795777
+[0m[34mSeed=8569 Guest cycle spent: 21,205,763 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 6,933,615ms
+[0mThe first instruction of core 0 has commited. Difftest enabled. 
+Warmup finished. The performance counters will be dumped and then reset.
+cacheid=1,idtfr=0,realpaddr=0x80a7a8e0: Refill test failed!
+addr: 80a7a8c0
+Gold: ffffffff3e8a3d71ffffffff0000000040ad57b340e042eebeb4c270bdb9f2c0be995d70be38d9c043901002beee5358c2782f2fc22f89da3f4cb088c317892f
+Core: ffffffff3e8a3d71ffffffff0000000040ad8ff340e042eebe9934b4be3bc780bea667b0be8a93c0431bdef13ebd6daa42ab6cb042de98c5c38c9cb442b2a278
+cacheid=1,idtfr=0,realpaddr=0x80a7a8e0: Refill test failed!
+addr: 80a7a8c0
+Gold: ffffffff3e8a3d71ffffffff0000000040ad57b340e042eebeb4c270bdb9f2c0be995d70be38d9c043901002beee5358c2782f2fc22f89da3f4cb088c317892f
+Core: ffffffff3e8a3d71ffffffff0000000040ad8ff340e042eebe9934b4be3bc780bea667b0be8a93c0431bdef13ebd6daa42ab6cb042de98c5c38c9cb442b2a278
+Core 0: [31mABORT at pc = 0x80a0c
+[0m[35minstrCnt = 38,080,822, cycleCnt = 21,205,760, IPC = 1.795777
+[0m[34mSeed=8569 Guest cycle spent: 21,205,763 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 6,933,703ms
+[0m

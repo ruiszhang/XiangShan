@@ -1,0 +1,391 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 5507
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/bzip2_html/12894/_12894_0.292959_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(3045263)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffcf018 out of bound!
+ERROR: ram wIdx = 0x6ffcf019 out of bound!
+ERROR: ram wIdx = 0x6ffcf01a out of bound!
+ERROR: ram wIdx = 0x6ffcf01b out of bound!
+ERROR: ram wIdx = 0x6ffcf01c out of bound!
+ERROR: ram wIdx = 0x6ffcf01d out of bound!
+ERROR: ram wIdx = 0x6ffcf01e out of bound!
+ERROR: ram wIdx = 0x6ffcf01f out of bound!
+ERROR: ram wIdx = 0x6ffcf0e8 out of bound!
+ERROR: ram wIdx = 0x6ffcf0e9 out of bound!
+ERROR: ram wIdx = 0x6ffcf0ea out of bound!
+ERROR: ram wIdx = 0x6ffcf0eb out of bound!
+ERROR: ram wIdx = 0x6ffcf0ec out of bound!
+ERROR: ram wIdx = 0x6ffcf0ed out of bound!
+ERROR: ram wIdx = 0x6ffcf0ee out of bound!
+ERROR: ram wIdx = 0x6ffcf0ef out of bound!
+Warmup finished. The performance counters will be dumped and then reset.
+ERROR: ram wIdx = 0x6ffcf020 out of bound!
+ERROR: ram wIdx = 0x6ffcf021 out of bound!
+ERROR: ram wIdx = 0x6ffcf022 out of bound!
+ERROR: ram wIdx = 0x6ffcf023 out of bound!
+ERROR: ram wIdx = 0x6ffcf024 out of bound!
+ERROR: ram wIdx = 0x6ffcf025 out of bound!
+ERROR: ram wIdx = 0x6ffcf026 out of bound!
+ERROR: ram wIdx = 0x6ffcf027 out of bound!
+ERROR: ram wIdx = 0x6ffcf010 out of bound!
+ERROR: ram wIdx = 0x6ffcf011 out of bound!
+ERROR: ram wIdx = 0x6ffcf012 out of bound!
+ERROR: ram wIdx = 0x6ffcf013 out of bound!
+ERROR: ram wIdx = 0x6ffcf014 out of bound!
+ERROR: ram wIdx = 0x6ffcf015 out of bound!
+ERROR: ram wIdx = 0x6ffcf016 out of bound!
+ERROR: ram wIdx = 0x6ffcf017 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a0 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a1 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a2 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a3 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a4 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a5 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a6 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a7 out of bound!
+ERROR: ram wIdx = 0x6ffcf118 out of bound!
+ERROR: ram wIdx = 0x6ffcf119 out of bound!
+ERROR: ram wIdx = 0x6ffcf11a out of bound!
+ERROR: ram wIdx = 0x6ffcf11b out of bound!
+ERROR: ram wIdx = 0x6ffcf11c out of bound!
+ERROR: ram wIdx = 0x6ffcf11d out of bound!
+ERROR: ram wIdx = 0x6ffcf11e out of bound!
+ERROR: ram wIdx = 0x6ffcf11f out of bound!
+cacheid=1,idtfr=0,realpaddr=0xc39a8a60: Refill test failed!
+addr: c39a8a40
+Gold: 00000000000000000000000000000000000000950000000000000017000000000000000000000000000000000000000000000000000000000000000000000000
+Core: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+============== Commit Group Trace (Core 0) ==============
+commit group [00]: pc 0000010b38 cmtcnt 6
+commit group [01]: pc 0000010b50 cmtcnt 6
+commit group [02]: pc 0000010b68 cmtcnt 6
+commit group [03]: pc 0000010b80 cmtcnt 6
+commit group [04]: pc 0000010b98 cmtcnt 6
+commit group [05]: pc 0000010bb0 cmtcnt 6 <--
+commit group [06]: pc 0000010c24 cmtcnt 6
+commit group [07]: pc 0000010a60 cmtcnt 6
+commit group [08]: pc 0000010a78 cmtcnt 6
+commit group [09]: pc 0000010a90 cmtcnt 6
+commit group [10]: pc 0000010aa8 cmtcnt 6
+commit group [11]: pc 0000010ac0 cmtcnt 6
+commit group [12]: pc 0000010ad8 cmtcnt 6
+commit group [13]: pc 0000010af0 cmtcnt 6
+commit group [14]: pc 0000010b08 cmtcnt 6
+commit group [15]: pc 0000010b20 cmtcnt 6
+
+============== Commit Instr Trace ==============
+[00] commit pc 0000000000010ba8 inst 000ece83 wen 1 dst 29 data 000000000000005b idx 080 (1e) lbu     t4, 0(t4)
+[01] commit pc 0000000000010bac inst 080e0e3b wen 1 dst 28 data 0000000000050dbc idx 081 zext.w  t3, t3
+[02] commit pc 0000000000010bb0 inst 080888bb wen 1 dst 17 data 00000000000a9dea idx 082 zext.w  a7, a7
+[03] commit pc 0000000000010bb4 inst 07d81c63 wen 0 dst 24 data 0000000000010980 idx 083 bne     a6, t4, pc + 120
+[04] commit pc 0000000000010bb8 inst 20de2833 wen 1 dst 16 data 0000002034f449f8 idx 084 sh1add  a6, t3, a3
+[05] commit pc 0000000000010bbc inst 20d8a8b3 wen 1 dst 17 data 0000002034ff6a54 idx 085 sh1add  a7, a7, a3
+[06] commit pc 0000000000010bc0 inst 00085803 wen 1 dst 16 data 0000000000000092 idx 086 (1f) lhu     a6, 0(a6)
+[07] commit pc 0000000000010bc4 inst 0008d883 wen 1 dst 17 data 0000000000000000 idx 087 (20) lhu     a7, 0(a7) <--
+[08] commit pc 0000000000010b48 inst 20de2833 wen 1 dst 16 data 0000002034f449f4 idx 068 sh1add  a6, t3, a3
+[09] commit pc 0000000000010b4c inst 20d8a8b3 wen 1 dst 17 data 0000002034ff6a50 idx 069 sh1add  a7, a7, a3
+[10] commit pc 0000000000010b50 inst 00085803 wen 1 dst 16 data 0000000000000000 idx 06a (17) lhu     a6, 0(a6)
+[11] commit pc 0000000000010b54 inst 0008d883 wen 1 dst 17 data 0000000000000000 idx 06b (18) lhu     a7, 0(a7)
+[12] commit pc 0000000000010b58 inst e31811e3 wen 0 dst 03 data 00000000000120a2 idx 06c bne     a6, a7, pc - 478
+[13] commit pc 0000000000010b5c inst 00550e1b wen 1 dst 28 data 0000000000050dbb idx 06d addiw   t3, a0, 5
+[14] commit pc 0000000000010b60 inst 0055889b wen 1 dst 17 data 00000000000a9de9 idx 06e addiw   a7, a1, 5
+[15] commit pc 0000000000010b64 inst 08ce083b wen 1 dst 16 data 0000002034e48dcb idx 06f add.uw  a6, t3, a2
+[16] commit pc 0000000000010b68 inst 08c88ebb wen 1 dst 29 data 0000002034ea1df9 idx 070 add.uw  t4, a7, a2
+[17] commit pc 0000000000010b6c inst 00084803 wen 1 dst 16 data 0000000000000024 idx 071 (19) lbu     a6, 0(a6)
+[18] commit pc 0000000000010b70 inst 000ece83 wen 1 dst 29 data 0000000000000024 idx 072 (1a) lbu     t4, 0(t4)
+[19] commit pc 0000000000010b74 inst 080e0e3b wen 1 dst 28 data 0000000000050dbb idx 073 zext.w  t3, t3
+[20] commit pc 0000000000010b78 inst 080888bb wen 1 dst 17 data 00000000000a9de9 idx 074 zext.w  a7, a7
+[21] commit pc 0000000000010b7c inst 0bd81863 wen 0 dst 16 data 00000000000120a2 idx 075 bne     a6, t4, pc + 176
+[22] commit pc 0000000000010b80 inst 20de2833 wen 1 dst 16 data 0000002034f449f6 idx 076 sh1add  a6, t3, a3
+[23] commit pc 0000000000010b84 inst 20d8a8b3 wen 1 dst 17 data 0000002034ff6a52 idx 077 sh1add  a7, a7, a3
+[24] commit pc 0000000000010b88 inst 00085803 wen 1 dst 16 data 0000000000000000 idx 078 (1b) lhu     a6, 0(a6)
+[25] commit pc 0000000000010b8c inst 0008d883 wen 1 dst 17 data 0000000000000000 idx 079 (1c) lhu     a7, 0(a7)
+[26] commit pc 0000000000010b90 inst df1815e3 wen 0 dst 11 data 00000000000120a2 idx 07a bne     a6, a7, pc - 534
+[27] commit pc 0000000000010b94 inst 00650e1b wen 1 dst 28 data 0000000000050dbc idx 07b addiw   t3, a0, 6
+[28] commit pc 0000000000010b98 inst 0065889b wen 1 dst 17 data 00000000000a9dea idx 07c addiw   a7, a1, 6
+[29] commit pc 0000000000010b9c inst 08ce083b wen 1 dst 16 data 0000002034e48dcc idx 07d add.uw  a6, t3, a2
+[30] commit pc 0000000000010ba0 inst 08c88ebb wen 1 dst 29 data 0000002034ea1dfa idx 07e add.uw  t4, a7, a2
+[31] commit pc 0000000000010ba4 inst 00084803 wen 1 dst 16 data 000000000000005b idx 07f (1d) lbu     a6, 0(a6)
+
+==============  REF Regs  ==============
+  $0: 0x0000000000000000   ra: 0x00000000000120e0   sp: 0x0000003fffe78010   gp: 0x0000000000081a70 
+  tp: 0x0000000000088760   t0: 0x0000002034ea1b82   t1: 0x00000000000aabed   t2: 0x0000002034c3b668 
+  s0: 0x0000000000000004   s1: 0x0000002034c3b66c   a0: 0x0000000000050db6   a1: 0x00000000000a9de4 
+  a2: 0x0000002034df8010   a3: 0x0000002034ea2e80   a4: 0x00000000000aae4d   a5: 0x0000003fffe79520 
+  a6: 0x0000000000000092   a7: 0x0000000000000095   s2: 0x000000000003bd98   s3: 0x0000000000000004 
+  s4: 0x000000000003bd97   s5: 0x0000000000000001   s6: 0xfffffffffffffffc   s7: 0x0000002034df8010 
+  s8: 0x000000000003bd97   s9: 0x0000002034b4c010  s10: 0x00000000000a9b6c  s11: 0x000000000003bd97 
+  t3: 0x0000000000050dbc   t4: 0x000000000000005b   t5: 0x0000002034ea1b80   t6: 0x0000002034ea1b81 
+ ft0: 0x0000000000000000  ft1: 0x0000000000000000  ft2: 0x0000000000000000  ft3: 0x0000000000000000 
+ ft4: 0x0000000000000000  ft5: 0x0000000000000000  ft6: 0x0000000000000000  ft7: 0x0000000000000000 
+ fs0: 0x0000000000000000  fs1: 0x0000000000000000  fa0: 0x0000000000000000  fa1: 0x0000000000000000 
+ fa2: 0x0000000000000000  fa3: 0x0000000000000000  fa4: 0x0000000000000000  fa5: 0x0000000000000000 
+ fa6: 0x0000000000000000  fa7: 0x0000000000000000  fs2: 0x0000000000000000  fs3: 0x0000000000000000 
+ fs4: 0x0000000000000000  fs5: 0x0000000000000000  fs6: 0x0000000000000000  fs7: 0x0000000000000000 
+ fs8: 0x0000000000000000  fs9: 0x0000000000000000 fs10: 0x0000000000000000 fs11: 0x0000000000000000 
+ ft8: 0x0000000000000000  ft9: 0x0000000000000000 ft10: 0x0000000000000000 ft11: 0x0000000000000000 
+pc: 0x0000000000010bc8 mstatus: 0x8000000a000060aa mcause: 0x0000000000000009 mepc: 0x0000000000010a4c
+                       sstatus: 0x8000000200006022 scause: 0x000000000000000f sepc: 0x0000000000011c54
+satp: 0x8000000000080292
+mip: 0x0000000000000000 mie: 0x000000000000022a mscratch: 0x00000000800abdc0 sscratch: 0xffffffe079b73640
+mideleg: 0x0000000000000222 medeleg: 0x000000000000b109
+mtval: 0x0000000000000000 stval: 0x0000002034b6effc mtvec: 0x00000000800a0004 stvec: 0xffffffe000755cc8
+privilege mode:0  pmp: below
+ 0: cfg:0x00 addr:0x0000000020028000| 1: cfg:0x08 addr:0x000000002002d000
+ 2: cfg:0x1f addr:0x00000003ffffffff| 3: cfg:0x00 addr:0x0000000000000000
+ 4: cfg:0x00 addr:0x0000000000000000| 5: cfg:0x00 addr:0x0000000000000000
+ 6: cfg:0x00 addr:0x0000000000000000| 7: cfg:0x00 addr:0x0000000000000000
+ 8: cfg:0x00 addr:0x0000000000000000| 9: cfg:0x00 addr:0x0000000000000000
+10: cfg:0x00 addr:0x0000000000000000|11: cfg:0x00 addr:0x0000000000000000
+12: cfg:0x00 addr:0x0000000000000000|13: cfg:0x00 addr:0x0000000000000000
+14: cfg:0x00 addr:0x0000000000000000|15: cfg:0x00 addr:0x0000000000000000
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffcf018 out of bound!
+ERROR: ram wIdx = 0x6ffcf019 out of bound!
+ERROR: ram wIdx = 0x6ffcf01a out of bound!
+ERROR: ram wIdx = 0x6ffcf01b out of bound!
+ERROR: ram wIdx = 0x6ffcf01c out of bound!
+ERROR: ram wIdx = 0x6ffcf01d out of bound!
+ERROR: ram wIdx = 0x6ffcf01e out of bound!
+ERROR: ram wIdx = 0x6ffcf01f out of bound!
+ERROR: ram wIdx = 0x6ffcf0e8 out of bound!
+ERROR: ram wIdx = 0x6ffcf0e9 out of bound!
+ERROR: ram wIdx = 0x6ffcf0ea out of bound!
+ERROR: ram wIdx = 0x6ffcf0eb out of bound!
+ERROR: ram wIdx = 0x6ffcf0ec out of bound!
+ERROR: ram wIdx = 0x6ffcf0ed out of bound!
+ERROR: ram wIdx = 0x6ffcf0ee out of bound!
+ERROR: ram wIdx = 0x6ffcf0ef out of bound!
+Warmup finished. The performance counters will be dumped and then reset.
+ERROR: ram wIdx = 0x6ffcf020 out of bound!
+ERROR: ram wIdx = 0x6ffcf021 out of bound!
+ERROR: ram wIdx = 0x6ffcf022 out of bound!
+ERROR: ram wIdx = 0x6ffcf023 out of bound!
+ERROR: ram wIdx = 0x6ffcf024 out of bound!
+ERROR: ram wIdx = 0x6ffcf025 out of bound!
+ERROR: ram wIdx = 0x6ffcf026 out of bound!
+ERROR: ram wIdx = 0x6ffcf027 out of bound!
+ERROR: ram wIdx = 0x6ffcf010 out of bound!
+ERROR: ram wIdx = 0x6ffcf011 out of bound!
+ERROR: ram wIdx = 0x6ffcf012 out of bound!
+ERROR: ram wIdx = 0x6ffcf013 out of bound!
+ERROR: ram wIdx = 0x6ffcf014 out of bound!
+ERROR: ram wIdx = 0x6ffcf015 out of bound!
+ERROR: ram wIdx = 0x6ffcf016 out of bound!
+ERROR: ram wIdx = 0x6ffcf017 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a0 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a1 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a2 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a3 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a4 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a5 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a6 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a7 out of bound!
+ERROR: ram wIdx = 0x6ffcf118 out of bound!
+ERROR: ram wIdx = 0x6ffcf119 out of bound!
+ERROR: ram wIdx = 0x6ffcf11a out of bound!
+ERROR: ram wIdx = 0x6ffcf11b out of bound!
+ERROR: ram wIdx = 0x6ffcf11c out of bound!
+ERROR: ram wIdx = 0x6ffcf11d out of bound!
+ERROR: ram wIdx = 0x6ffcf11e out of bound!
+ERROR: ram wIdx = 0x6ffcf11f out of bound!
+[FORK_INFO pid(3085950)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(3085950)] dump wave to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-05-24@19:13:40_5673006.fst...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffcf018 out of bound!
+ERROR: ram wIdx = 0x6ffcf019 out of bound!
+ERROR: ram wIdx = 0x6ffcf01a out of bound!
+ERROR: ram wIdx = 0x6ffcf01b out of bound!
+ERROR: ram wIdx = 0x6ffcf01c out of bound!
+ERROR: ram wIdx = 0x6ffcf01d out of bound!
+ERROR: ram wIdx = 0x6ffcf01e out of bound!
+ERROR: ram wIdx = 0x6ffcf01f out of bound!
+ERROR: ram wIdx = 0x6ffcf0e8 out of bound!
+ERROR: ram wIdx = 0x6ffcf0e9 out of bound!
+ERROR: ram wIdx = 0x6ffcf0ea out of bound!
+ERROR: ram wIdx = 0x6ffcf0eb out of bound!
+ERROR: ram wIdx = 0x6ffcf0ec out of bound!
+ERROR: ram wIdx = 0x6ffcf0ed out of bound!
+ERROR: ram wIdx = 0x6ffcf0ee out of bound!
+ERROR: ram wIdx = 0x6ffcf0ef out of bound!
+Warmup finished. The performance counters will be dumped and then reset.
+ERROR: ram wIdx = 0x6ffcf020 out of bound!
+ERROR: ram wIdx = 0x6ffcf021 out of bound!
+ERROR: ram wIdx = 0x6ffcf022 out of bound!
+ERROR: ram wIdx = 0x6ffcf023 out of bound!
+ERROR: ram wIdx = 0x6ffcf024 out of bound!
+ERROR: ram wIdx = 0x6ffcf025 out of bound!
+ERROR: ram wIdx = 0x6ffcf026 out of bound!
+ERROR: ram wIdx = 0x6ffcf027 out of bound!
+ERROR: ram wIdx = 0x6ffcf010 out of bound!
+ERROR: ram wIdx = 0x6ffcf011 out of bound!
+ERROR: ram wIdx = 0x6ffcf012 out of bound!
+ERROR: ram wIdx = 0x6ffcf013 out of bound!
+ERROR: ram wIdx = 0x6ffcf014 out of bound!
+ERROR: ram wIdx = 0x6ffcf015 out of bound!
+ERROR: ram wIdx = 0x6ffcf016 out of bound!
+ERROR: ram wIdx = 0x6ffcf017 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a0 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a1 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a2 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a3 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a4 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a5 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a6 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a7 out of bound!
+ERROR: ram wIdx = 0x6ffcf118 out of bound!
+ERROR: ram wIdx = 0x6ffcf119 out of bound!
+ERROR: ram wIdx = 0x6ffcf11a out of bound!
+ERROR: ram wIdx = 0x6ffcf11b out of bound!
+ERROR: ram wIdx = 0x6ffcf11c out of bound!
+ERROR: ram wIdx = 0x6ffcf11d out of bound!
+ERROR: ram wIdx = 0x6ffcf11e out of bound!
+ERROR: ram wIdx = 0x6ffcf11f out of bound!
+cacheid=1,idtfr=0,realpaddr=0xc39a8a60: Refill test failed!
+addr: c39a8a40
+Gold: 00000000000000000000000000000000000000950000000000000017000000000000000000000000000000000000000000000000000000000000000000000000
+Core: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+============== Commit Group Trace (Core 0) ==============
+commit group [00]: pc 0000010b58 cmtcnt 6
+commit group [01]: pc 0000010b70 cmtcnt 6
+commit group [02]: pc 0000010b88 cmtcnt 6
+commit group [03]: pc 0000010ba0 cmtcnt 6
+commit group [04]: pc 0000010bb8 cmtcnt 5 <--
+commit group [05]: pc 0000010a50 cmtcnt 6
+commit group [06]: pc 0000010a68 cmtcnt 6
+commit group [07]: pc 0000010a80 cmtcnt 6
+commit group [08]: pc 0000010a98 cmtcnt 6
+commit group [09]: pc 0000010ab0 cmtcnt 6
+commit group [10]: pc 0000010ac8 cmtcnt 6
+commit group [11]: pc 0000010ae0 cmtcnt 6
+commit group [12]: pc 0000010af8 cmtcnt 6
+commit group [13]: pc 0000010b10 cmtcnt 6
+commit group [14]: pc 0000010b28 cmtcnt 6
+commit group [15]: pc 0000010b40 cmtcnt 6
+
+============== Commit Instr Trace ==============
+[00] commit pc 0000000000010ba8 inst 000ece83 wen 1 dst 29 data 000000000000005b idx 080 (1b) lbu     t4, 0(t4)
+[01] commit pc 0000000000010bac inst 080e0e3b wen 1 dst 28 data 0000000000050dbc idx 081 zext.w  t3, t3
+[02] commit pc 0000000000010bb0 inst 080888bb wen 1 dst 17 data 00000000000a9dea idx 082 zext.w  a7, a7
+[03] commit pc 0000000000010bb4 inst 07d81c63 wen 0 dst 24 data 0000000000010980 idx 083 bne     a6, t4, pc + 120
+[04] commit pc 0000000000010bb8 inst 20de2833 wen 1 dst 16 data 0000002034f449f8 idx 084 sh1add  a6, t3, a3
+[05] commit pc 0000000000010bbc inst 20d8a8b3 wen 1 dst 17 data 0000002034ff6a54 idx 085 sh1add  a7, a7, a3
+[06] commit pc 0000000000010bc0 inst 00085803 wen 1 dst 16 data 0000000000000092 idx 086 (1c) lhu     a6, 0(a6)
+[07] commit pc 0000000000010bc4 inst 0008d883 wen 1 dst 17 data 0000000000000000 idx 087 (1d) lhu     a7, 0(a7)
+[08] commit pc 0000000000010bc8 inst db1819e3 wen 0 dst 19 data 0000000000010980 idx 088 bne     a6, a7, pc - 590 <--
+[09] commit pc 0000000000010b4c inst 20d8a8b3 wen 1 dst 17 data 0000002034ff6a50 idx 069 sh1add  a7, a7, a3
+[10] commit pc 0000000000010b50 inst 00085803 wen 1 dst 16 data 0000000000000000 idx 06a (14) lhu     a6, 0(a6)
+[11] commit pc 0000000000010b54 inst 0008d883 wen 1 dst 17 data 0000000000000000 idx 06b (15) lhu     a7, 0(a7)
+[12] commit pc 0000000000010b58 inst e31811e3 wen 0 dst 03 data 00000000000120a2 idx 06c bne     a6, a7, pc - 478
+[13] commit pc 0000000000010b5c inst 00550e1b wen 1 dst 28 data 0000000000050dbb idx 06d addiw   t3, a0, 5
+[14] commit pc 0000000000010b60 inst 0055889b wen 1 dst 17 data 00000000000a9de9 idx 06e addiw   a7, a1, 5
+[15] commit pc 0000000000010b64 inst 08ce083b wen 1 dst 16 data 0000002034e48dcb idx 06f add.uw  a6, t3, a2
+[16] commit pc 0000000000010b68 inst 08c88ebb wen 1 dst 29 data 0000002034ea1df9 idx 070 add.uw  t4, a7, a2
+[17] commit pc 0000000000010b6c inst 00084803 wen 1 dst 16 data 0000000000000024 idx 071 (16) lbu     a6, 0(a6)
+[18] commit pc 0000000000010b70 inst 000ece83 wen 1 dst 29 data 0000000000000024 idx 072 (17) lbu     t4, 0(t4)
+[19] commit pc 0000000000010b74 inst 080e0e3b wen 1 dst 28 data 0000000000050dbb idx 073 zext.w  t3, t3
+[20] commit pc 0000000000010b78 inst 080888bb wen 1 dst 17 data 00000000000a9de9 idx 074 zext.w  a7, a7
+[21] commit pc 0000000000010b7c inst 0bd81863 wen 0 dst 16 data 00000000000120a2 idx 075 bne     a6, t4, pc + 176
+[22] commit pc 0000000000010b80 inst 20de2833 wen 1 dst 16 data 0000002034f449f6 idx 076 sh1add  a6, t3, a3
+[23] commit pc 0000000000010b84 inst 20d8a8b3 wen 1 dst 17 data 0000002034ff6a52 idx 077 sh1add  a7, a7, a3
+[24] commit pc 0000000000010b88 inst 00085803 wen 1 dst 16 data 0000000000000000 idx 078 (18) lhu     a6, 0(a6)
+[25] commit pc 0000000000010b8c inst 0008d883 wen 1 dst 17 data 0000000000000000 idx 079 (19) lhu     a7, 0(a7)
+[26] commit pc 0000000000010b90 inst df1815e3 wen 0 dst 11 data 0000000000010980 idx 07a bne     a6, a7, pc - 534
+[27] commit pc 0000000000010b94 inst 00650e1b wen 1 dst 28 data 0000000000050dbc idx 07b addiw   t3, a0, 6
+[28] commit pc 0000000000010b98 inst 0065889b wen 1 dst 17 data 00000000000a9dea idx 07c addiw   a7, a1, 6
+[29] commit pc 0000000000010b9c inst 08ce083b wen 1 dst 16 data 0000002034e48dcc idx 07d add.uw  a6, t3, a2
+[30] commit pc 0000000000010ba0 inst 08c88ebb wen 1 dst 29 data 0000002034ea1dfa idx 07e add.uw  t4, a7, a2
+[31] commit pc 0000000000010ba4 inst 00084803 wen 1 dst 16 data 000000000000005b idx 07f (1a) lbu     a6, 0(a6)
+
+==============  REF Regs  ==============
+  $0: 0x0000000000000000   ra: 0x00000000000120e0   sp: 0x0000003fffe78010   gp: 0x0000000000081a70 
+  tp: 0x0000000000088760   t0: 0x0000002034ea1b82   t1: 0x00000000000aabed   t2: 0x0000002034c3b668 
+  s0: 0x0000000000000004   s1: 0x0000002034c3b66c   a0: 0x0000000000050db6   a1: 0x00000000000a9de4 
+  a2: 0x0000002034df8010   a3: 0x0000002034ea2e80   a4: 0x00000000000aae4d   a5: 0x0000003fffe79520 
+  a6: 0x0000000000000092   a7: 0x0000000000000095   s2: 0x000000000003bd98   s3: 0x0000000000000004 
+  s4: 0x000000000003bd97   s5: 0x0000000000000001   s6: 0xfffffffffffffffc   s7: 0x0000002034df8010 
+  s8: 0x000000000003bd97   s9: 0x0000002034b4c010  s10: 0x00000000000a9b6c  s11: 0x000000000003bd97 
+  t3: 0x0000000000050dbc   t4: 0x000000000000005b   t5: 0x0000002034ea1b80   t6: 0x0000002034ea1b81 
+ ft0: 0x0000000000000000  ft1: 0x0000000000000000  ft2: 0x0000000000000000  ft3: 0x0000000000000000 
+ ft4: 0x0000000000000000  ft5: 0x0000000000000000  ft6: 0x0000000000000000  ft7: 0x0000000000000000 
+ fs0: 0x0000000000000000  fs1: 0x0000000000000000  fa0: 0x0000000000000000  fa1: 0x0000000000000000 
+ fa2: 0x0000000000000000  fa3: 0x0000000000000000  fa4: 0x0000000000000000  fa5: 0x0000000000000000 
+ fa6: 0x0000000000000000  fa7: 0x0000000000000000  fs2: 0x0000000000000000  fs3: 0x0000000000000000 
+ fs4: 0x0000000000000000  fs5: 0x0000000000000000  fs6: 0x0000000000000000  fs7: 0x0000000000000000 
+ fs8: 0x0000000000000000  fs9: 0x0000000000000000 fs10: 0x0000000000000000 fs11: 0x0000000000000000 
+ ft8: 0x0000000000000000  ft9: 0x0000000000000000 ft10: 0x0000000000000000 ft11: 0x0000000000000000 
+pc: 0x000000000001097a mstatus: 0x8000000a000060aa mcause: 0x0000000000000009 mepc: 0x0000000000010a4c
+                       sstatus: 0x8000000200006022 scause: 0x000000000000000f sepc: 0x0000000000011c54
+satp: 0x8000000000080292
+mip: 0x0000000000000000 mie: 0x000000000000022a mscratch: 0x00000000800abdc0 sscratch: 0xffffffe079b73640
+mideleg: 0x0000000000000222 medeleg: 0x000000000000b109
+mtval: 0x0000000000000000 stval: 0x0000002034b6effc mtvec: 0x00000000800a0004 stvec: 0xffffffe000755cc8
+privilege mode:0  pmp: below
+ 0: cfg:0x00 addr:0x0000000020028000| 1: cfg:0x08 addr:0x000000002002d000
+ 2: cfg:0x1f addr:0x00000003ffffffff| 3: cfg:0x00 addr:0x0000000000000000
+ 4: cfg:0x00 addr:0x0000000000000000| 5: cfg:0x00 addr:0x0000000000000000
+ 6: cfg:0x00 addr:0x0000000000000000| 7: cfg:0x00 addr:0x0000000000000000
+ 8: cfg:0x00 addr:0x0000000000000000| 9: cfg:0x00 addr:0x0000000000000000
+10: cfg:0x00 addr:0x0000000000000000|11: cfg:0x00 addr:0x0000000000000000
+12: cfg:0x00 addr:0x0000000000000000|13: cfg:0x00 addr:0x0000000000000000
+14: cfg:0x00 addr:0x0000000000000000|15: cfg:0x00 addr:0x0000000000000000
+priviledgeMode: 0
+     a7 different at pc = 0x0000010bb8, right= 0x0000000000000095, wrong = 0x0000000000000000
+Core 0: [31mABORT at pc = 0x120e8
+[0m[35minstrCnt = 28,323,498, cycleCnt = 5,678,343, IPC = 4.987986
+[0m[34mSeed=5507 Guest cycle spent: 5,678,346 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 2,089,517ms
+[0mpriviledgeMode: 0
+     a7 different at pc = 0x0000010bb0, right= 0x0000000000000095, wrong = 0x0000000000000000
+Core 0: [31mABORT at pc = 0x120e8
+[0m[35minstrCnt = 28,323,498, cycleCnt = 5,678,378, IPC = 4.987956
+[0m[34mSeed=5507 Guest cycle spent: 5,678,381 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 2,089,688ms
+[0m

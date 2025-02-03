@@ -1,0 +1,191 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 9648
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/GemsFDTD/59041/_59041_0.203022_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(3222489)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ff4a8b8 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b9 out of bound!
+ERROR: ram wIdx = 0x6ff4a8ba out of bound!
+ERROR: ram wIdx = 0x6ff4a8bb out of bound!
+ERROR: ram wIdx = 0x6ff4a8bc out of bound!
+ERROR: ram wIdx = 0x6ff4a8bd out of bound!
+ERROR: ram wIdx = 0x6ff4a8be out of bound!
+ERROR: ram wIdx = 0x6ff4a8bf out of bound!
+ERROR: ram wIdx = 0x6ff4a8b0 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b1 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b2 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b3 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b4 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b5 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b6 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b7 out of bound!
+ERROR: ram wIdx = 0x6ff4a8d0 out of bound!
+ERROR: ram wIdx = 0x6ff4a8d1 out of bound!
+ERROR: ram wIdx = 0x6ff4a8d2 out of bound!
+ERROR: ram wIdx = 0x6ff4a8d3 out of bound!
+ERROR: ram wIdx = 0x6ff4a8d4 out of bound!
+ERROR: ram wIdx = 0x6ff4a8d5 out of bound!
+ERROR: ram wIdx = 0x6ff4a8d6 out of bound!
+ERROR: ram wIdx = 0x6ff4a8d7 out of bound!
+ERROR: ram wIdx = 0x6ff4a960 out of bound!
+ERROR: ram wIdx = 0x6ff4a961 out of bound!
+ERROR: ram wIdx = 0x6ff4a962 out of bound!
+ERROR: ram wIdx = 0x6ff4a963 out of bound!
+ERROR: ram wIdx = 0x6ff4a964 out of bound!
+ERROR: ram wIdx = 0x6ff4a965 out of bound!
+ERROR: ram wIdx = 0x6ff4a966 out of bound!
+ERROR: ram wIdx = 0x6ff4a967 out of bound!
+ERROR: ram wIdx = 0x6ff4a900 out of bound!
+ERROR: ram wIdx = 0x6ff4a901 out of bound!
+ERROR: ram wIdx = 0x6ff4a902 out of bound!
+ERROR: ram wIdx = 0x6ff4a903 out of bound!
+ERROR: ram wIdx = 0x6ff4a904 out of bound!
+ERROR: ram wIdx = 0x6ff4a905 out of bound!
+ERROR: ram wIdx = 0x6ff4a906 out of bound!
+ERROR: ram wIdx = 0x6ff4a907 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b0 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b1 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b2 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b3 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b4 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b5 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b6 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b7 out of bound!
+ERROR: ram wIdx = 0x6ff4a978 out of bound!
+ERROR: ram wIdx = 0x6ff4a979 out of bound!
+ERROR: ram wIdx = 0x6ff4a97a out of bound!
+ERROR: ram wIdx = 0x6ff4a97b out of bound!
+ERROR: ram wIdx = 0x6ff4a97c out of bound!
+ERROR: ram wIdx = 0x6ff4a97d out of bound!
+ERROR: ram wIdx = 0x6ff4a97e out of bound!
+ERROR: ram wIdx = 0x6ff4a97f out of bound!
+ERROR: ram wIdx = 0x6ff4a8b0 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b1 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b2 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b3 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b4 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b5 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b6 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b7 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b0 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b1 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b2 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b3 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b4 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b5 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b6 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b7 out of bound!
+ERROR: ram wIdx = 0x6ff4a8c0 out of bound!
+ERROR: ram wIdx = 0x6ff4a8c1 out of bound!
+ERROR: ram wIdx = 0x6ff4a8c2 out of bound!
+ERROR: ram wIdx = 0x6ff4a8c3 out of bound!
+ERROR: ram wIdx = 0x6ff4a8c4 out of bound!
+ERROR: ram wIdx = 0x6ff4a8c5 out of bound!
+ERROR: ram wIdx = 0x6ff4a8c6 out of bound!
+ERROR: ram wIdx = 0x6ff4a8c7 out of bound!
+ERROR: ram wIdx = 0x6ff4a8a0 out of bound!
+ERROR: ram wIdx = 0x6ff4a8a1 out of bound!
+ERROR: ram wIdx = 0x6ff4a8a2 out of bound!
+ERROR: ram wIdx = 0x6ff4a8a3 out of bound!
+ERROR: ram wIdx = 0x6ff4a8a4 out of bound!
+ERROR: ram wIdx = 0x6ff4a8a5 out of bound!
+ERROR: ram wIdx = 0x6ff4a8a6 out of bound!
+ERROR: ram wIdx = 0x6ff4a8a7 out of bound!
+ERROR: ram wIdx = 0x6ff4a938 out of bound!
+ERROR: ram wIdx = 0x6ff4a939 out of bound!
+ERROR: ram wIdx = 0x6ff4a93a out of bound!
+ERROR: ram wIdx = 0x6ff4a93b out of bound!
+ERROR: ram wIdx = 0x6ff4a93c out of bound!
+ERROR: ram wIdx = 0x6ff4a93d out of bound!
+ERROR: ram wIdx = 0x6ff4a93e out of bound!
+ERROR: ram wIdx = 0x6ff4a93f out of bound!
+[FORK_INFO pid(3239134)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(3239134)] dump wave to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-05-24@21:17:54_2125174.fst...
+ of bound!
+ERROR: ram wIdx = 0x6ff4a93e out of bound!
+ERROR: ram wIdx = 0x6ff4a93f out of bound!
+ERROR: ram wIdx = 0x6ff4a8b8 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b9 out of bound!
+ERROR: ram wIdx = 0x6ff4a8ba out of bound!
+ERROR: ram wIdx = 0x6ff4a8bb out of bound!
+ERROR: ram wIdx = 0x6ff4a8bc out of bound!
+ERROR: ram wIdx = 0x6ff4a8bd out of bound!
+ERROR: ram wIdx = 0x6ff4a8be out of bound!
+ERROR: ram wIdx = 0x6ff4a8bf out of bound!
+ERROR: ram wIdx = 0x6ff4a8b8 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b9 out of bound!
+ERROR: ram wIdx = 0x6ff4a8ba out of bound!
+ERROR: ram wIdx = 0x6ff4a8bb out of bound!
+ERROR: ram wIdx = 0x6ff4a8bc out of bound!
+ERROR: ram wIdx = 0x6ff4a8bd out of bound!
+ERROR: ram wIdx = 0x6ff4a8be out of bound!
+ERROR: ram wIdx = 0x6ff4a8bf out of bound!
+[FORK_INFO pid(3239134)] checkpoint has reached the main process abort point: 2129854
+Core 0: [31mABORT at pc = 0x1cc64
+[0m[35minstrCnt = 8,485,657, cycleCnt = 2,129,951, IPC = 3.983968
+[0m[34mSeed=9648 Guest cycle spent: 2,129,954 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 916,312ms
+[0m of bound!
+ERROR: ram wIdx = 0x6ff4a93e out of bound!
+ERROR: ram wIdx = 0x6ff4a93f out of bound!
+ERROR: ram wIdx = 0x6ff4a8b8 out of bound!
+ERROR: ram wIdx = 0x6ff4a8b9 out of bound!
+ERROR: ram wIdx = 0x6ff4a8ba out of bound!
+ERROR: ram wIdx = 0x6ff4a8bb out of bound!
+ERROR: ram wIdx = 0x6ff4a8bc out of bound!
+ERROR: ram wIdx = 0x6ff4a8bd out of bound!
+ERROR: ram wIdx = 0x6ff4a8be out of bound!
+ERROR: ram wIdx = 0x6ff4a8bf out of bound!
+cacheid=1,idtfr=0,realpaddr=0x809835a0: Refill test failed!
+addr: 80983580
+Gold: 0000000000b460a00000000000b2d8850000000000b2d6b1000000000000d7b9000000000001abc800000000000000d3fffffffffff950e00000000000000ea8
+Core: 0000000000b388e70000000000b202a10000000000b200cd000000000000d7b9000000000001abc800000000000000d3fffffffffff950e00000000000000ea8
+Core 0: [31mABORT at pc = 0x1ccd4
+[0m[35minstrCnt = 8,485,172, cycleCnt = 2,129,851, IPC = 3.983928
+[0m[34mSeed=9648 Guest cycle spent: 2,129,854 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 916,638ms
+[0m

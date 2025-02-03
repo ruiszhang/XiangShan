@@ -1,0 +1,118 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 7052
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/hmmer_retro/12637/_12637_0.101057_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(957802)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffc6110 out of bound!
+ERROR: ram wIdx = 0x6ffc6111 out of bound!
+ERROR: ram wIdx = 0x6ffc6112 out of bound!
+ERROR: ram wIdx = 0x6ffc6113 out of bound!
+ERROR: ram wIdx = 0x6ffc6114 out of bound!
+ERROR: ram wIdx = 0x6ffc6115 out of bound!
+ERROR: ram wIdx = 0x6ffc6116 out of bound!
+ERROR: ram wIdx = 0x6ffc6117 out of bound!
+ERROR: ram wIdx = 0x6ffc6118 out of bound!
+ERROR: ram wIdx = 0x6ffc6119 out of bound!
+ERROR: ram wIdx = 0x6ffc611a out of bound!
+ERROR: ram wIdx = 0x6ffc611b out of bound!
+ERROR: ram wIdx = 0x6ffc611c out of bound!
+ERROR: ram wIdx = 0x6ffc611d out of bound!
+ERROR: ram wIdx = 0x6ffc611e out of bound!
+ERROR: ram wIdx = 0x6ffc611f out of bound!
+[FORK_INFO pid(971870)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(971870)] dump wave to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-05-24@23:50:24_2468290.fst...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffc6110 out of bound!
+ERROR: ram wIdx = 0x6ffc6111 out of bound!
+ERROR: ram wIdx = 0x6ffc6112 out of bound!
+ERROR: ram wIdx = 0x6ffc6113 out of bound!
+ERROR: ram wIdx = 0x6ffc6114 out of bound!
+ERROR: ram wIdx = 0x6ffc6115 out of bound!
+ERROR: ram wIdx = 0x6ffc6116 out of bound!
+ERROR: ram wIdx = 0x6ffc6117 out of bound!
+ERROR: ram wIdx = 0x6ffc6118 out of bound!
+ERROR: ram wIdx = 0x6ffc6119 out of bound!
+ERROR: ram wIdx = 0x6ffc611a out of bound!
+ERROR: ram wIdx = 0x6ffc611b out of bound!
+ERROR: ram wIdx = 0x6ffc611c out of bound!
+ERROR: ram wIdx = 0x6ffc611d out of bound!
+ERROR: ram wIdx = 0x6ffc611e out of bound!
+ERROR: ram wIdx = 0x6ffc611f out of bound!
+cacheid=1,idtfr=0,realpaddr=0x80946460: Refill test failed!
+addr: 80946440
+Gold: fffe72e6fffe7848fffe6822fffe6d84fffe615afffe62c0fffe59fcfffe5ff4fffe4f3cfffe5738fffe4478fffe49dafffe39b4fffe3f16fffe2ef0fffe3452
+Core: fffe76a4fffe7c06fffe6be0fffe7142fffe6518fffe667efffe5dbafffe63b2fffe52fafffe5af6fffe4836fffe4d98fffe3d72fffe42d4fffe32aefffe3810
+Core 0: [31mABORT at pc = 0x17d6e
+[0m[35minstrCnt = 11,447,571, cycleCnt = 2,471,818, IPC = 4.631235
+[0m[34mSeed=7052 Guest cycle spent: 2,471,821 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 903,096ms
+[0mThe first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffc6110 out of bound!
+ERROR: ram wIdx = 0x6ffc6111 out of bound!
+ERROR: ram wIdx = 0x6ffc6112 out of bound!
+ERROR: ram wIdx = 0x6ffc6113 out of bound!
+ERROR: ram wIdx = 0x6ffc6114 out of bound!
+ERROR: ram wIdx = 0x6ffc6115 out of bound!
+ERROR: ram wIdx = 0x6ffc6116 out of bound!
+ERROR: ram wIdx = 0x6ffc6117 out of bound!
+ERROR: ram wIdx = 0x6ffc6118 out of bound!
+ERROR: ram wIdx = 0x6ffc6119 out of bound!
+ERROR: ram wIdx = 0x6ffc611a out of bound!
+ERROR: ram wIdx = 0x6ffc611b out of bound!
+ERROR: ram wIdx = 0x6ffc611c out of bound!
+ERROR: ram wIdx = 0x6ffc611d out of bound!
+ERROR: ram wIdx = 0x6ffc611e out of bound!
+ERROR: ram wIdx = 0x6ffc611f out of bound!
+cacheid=1,idtfr=0,realpaddr=0x80946460: Refill test failed!
+addr: 80946440
+Gold: fffe72e6fffe7848fffe6822fffe6d84fffe615afffe62c0fffe59fcfffe5ff4fffe4f3cfffe5738fffe4478fffe49dafffe39b4fffe3f16fffe2ef0fffe3452
+Core: fffe76a4fffe7c06fffe6be0fffe7142fffe6518fffe667efffe5dbafffe63b2fffe52fafffe5af6fffe4836fffe4d98fffe3d72fffe42d4fffe32aefffe3810
+Core 0: [31mABORT at pc = 0x17d38
+[0m[35minstrCnt = 11,447,554, cycleCnt = 2,471,867, IPC = 4.631137
+[0m[34mSeed=7052 Guest cycle spent: 2,471,870 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 903,175ms
+[0m

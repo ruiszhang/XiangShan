@@ -1,0 +1,6 @@
+All:   19
+First: lbm_7139_0.400131
+Last:  sphinx3_41852_0.0724912
+ssh zhangruisi@open24 NOOP_HOME=/nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan numactl -m 0 -C 0-15 /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/emu --diff /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so --enable-fork -W 20000000 -I 40000000 -i /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/mcf/12253/_12253_0.137576_.gz -s 9513
+ssh zhangruisi@open24 NOOP_HOME=/nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan numactl -m 0 -C 16-31 /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/emu --diff /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so --enable-fork -W 20000000 -I 40000000 -i /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/mcf/9294/_9294_0.130425_.gz -s 4560
+Waiting for pending tests to finish

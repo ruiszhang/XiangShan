@@ -1,0 +1,202 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 408
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/sphinx3/142675/_142675_0.088378_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(3522948)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ff100d8 out of bound!
+ERROR: ram wIdx = 0x6ff100d9 out of bound!
+ERROR: ram wIdx = 0x6ff100da out of bound!
+ERROR: ram wIdx = 0x6ff100db out of bound!
+ERROR: ram wIdx = 0x6ff100dc out of bound!
+ERROR: ram wIdx = 0x6ff100dd out of bound!
+ERROR: ram wIdx = 0x6ff100de out of bound!
+ERROR: ram wIdx = 0x6ff100df out of bound!
+ERROR: ram wIdx = 0x6ff100f0 out of bound!
+ERROR: ram wIdx = 0x6ff100f1 out of bound!
+ERROR: ram wIdx = 0x6ff100f2 out of bound!
+ERROR: ram wIdx = 0x6ff100f3 out of bound!
+ERROR: ram wIdx = 0x6ff100f4 out of bound!
+ERROR: ram wIdx = 0x6ff100f5 out of bound!
+ERROR: ram wIdx = 0x6ff100f6 out of bound!
+ERROR: ram wIdx = 0x6ff100f7 out of bound!
+cacheid=1,idtfr=0,realpaddr=0x81092ee0: Refill test failed!
+addr: 81092ec0
+Gold: ffff0647ffff5566ffff512affff1bf2fffec771fffecd97fffec9c5ffff7f81ffff9847fffeb4eaffff4650ffff16eefffedd4dffff28adffffb208ffff04f3
+Core: ffff40e8ffff3e3affff3d1afffeca69ffff0991ffff096efffeff35ffff751affff9b1fffff1523ffff3838ffff1bf8ffff2e31ffff22c8ffffa3cbffff38ce
+
+============== Commit Group Trace (Core 0) ==============
+commit group [00]: pc 00000202fc cmtcnt 6
+commit group [01]: pc 000002030c cmtcnt 6
+commit group [02]: pc 0000020320 cmtcnt 5
+commit group [03]: pc 0000020580 cmtcnt 2 <--
+commit group [04]: pc 0000020308 cmtcnt 6
+commit group [05]: pc 000002031a cmtcnt 6
+commit group [06]: pc 00000202f2 cmtcnt 6
+commit group [07]: pc 0000020304 cmtcnt 6
+commit group [08]: pc 0000020318 cmtcnt 6
+commit group [09]: pc 00000202f0 cmtcnt 6
+commit group [10]: pc 0000020302 cmtcnt 6
+commit group [11]: pc 0000020314 cmtcnt 6
+commit group [12]: pc 00000202ec cmtcnt 6
+commit group [13]: pc 00000202fe cmtcnt 6
+commit group [14]: pc 0000020310 cmtcnt 6
+commit group [15]: pc 00000202e8 cmtcnt 6
+
+============== Commit Instr Trace ==============
+[00] commit pc 00000000000202f2 inst 46f60163 wen 0 dst 02 data 00000000000205a0 idx 0c0 beq     a2, a5, pc + 1122
+[01] commit pc 00000000000202f6 inst 06093783 wen 1 dst 15 data 0000000000b2bf00 idx 0c1 (13) ld      a5, 96(s2)
+[02] commit pc 00000000000202fa inst 009787b3 wen 1 dst 15 data 0000000000b30608 idx 0c2 add     a5, a5, s1
+[03] commit pc 00000000000202fc inst 00e7a023 wen 0 dst 00 data 00000000000205a0 idx 0c3 (1b) sw      a4, 0(a5)
+[04] commit pc 00000000000202fe inst 0009a703 wen 1 dst 14 data 0000000000001800 idx 0c4 (14) lw      a4, 0(s3)
+[05] commit pc 0000000000020302 inst 001b8b93 wen 1 dst 23 data 00000000000011c3 idx 0c5 addi    s7, s7, 1
+[06] commit pc 0000000000020304 inst 000b879b wen 1 dst 15 data 00000000000011c3 idx 0c6 sext.w  a5, s7
+[07] commit pc 0000000000020308 inst 002c8c93 wen 1 dst 25 data 0000000000506636 idx 0c7 addi    s9, s9, 2
+[08] commit pc 000000000002030a inst 004d8d93 wen 1 dst 27 data 0000000000b9b8dc idx 0c8 addi    s11, s11, 4
+[09] commit pc 000000000002030c inst 06e7de63 wen 0 dst 28 data 00000000000205a0 idx 0c9 bge     a5, a4, pc + 124
+[10] commit pc 0000000000020310 inst 000c9783 wen 1 dst 15 data 0000000000000068 idx 0ca (15) lh      a5, 0(s9)
+[11] commit pc 0000000000020314 inst 002b9493 wen 1 dst 09 data 000000000000470c idx 0cb slli    s1, s7, 2
+[12] commit pc 0000000000020318 inst 00040563 wen 0 dst 10 data 00000000000205a0 idx 0cc beqz    s0, pc + 10
+[13] commit pc 000000000002031a inst 009406b3 wen 1 dst 13 data 0000000000b2a5fc idx 0cd add     a3, s0, s1
+[14] commit pc 000000000002031e inst 0006a603 wen 1 dst 12 data 0000000000000001 idx 0ce (16) lw      a2, 0(a3)
+[15] commit pc 0000000000020320 inst fc0604e3 wen 0 dst 09 data 00000000000205a0 idx 0cf beqz    a2, pc - 56
+[16] commit pc 0000000000020322 inst 000b8c1b wen 1 dst 24 data 00000000000011c3 idx 0d0 sext.w  s8, s7
+[17] commit pc 0000000000020326 inst 240b0963 wen 0 dst 18 data 00000000000205a0 idx 0d1 beqz    s6, pc + 594
+[18] commit pc 0000000000020578 inst 1cfc0c63 wen 0 dst 24 data 00000000000205a0 idx 0d2 beq     s8, a5, pc + 472
+[19] commit pc 000000000002057c inst 2157c7b3 wen 1 dst 15 data 0000000000b51ec0 idx 0d3 sh2add  a5, a5, s5
+[20] commit pc 0000000000020580 inst 0007a783 wen 1 dst 15 data ffffffffffff3e3a idx 0d4 (17) lw      a5, 0(a5)
+[21] commit pc 0000000000020582 inst 0b892703 wen 1 dst 14 data 0000000038000000 idx 0d5 (18) lw      a4, 184(s2) <--
+[22] commit pc 000000000002030c inst 06e7de63 wen 0 dst 28 data 00000000000205a0 idx 0b6 bge     a5, a4, pc + 124
+[23] commit pc 0000000000020310 inst 000c9783 wen 1 dst 15 data 0000000000000068 idx 0b7 (11) lh      a5, 0(s9)
+[24] commit pc 0000000000020314 inst 002b9493 wen 1 dst 09 data 0000000000004708 idx 0b8 slli    s1, s7, 2
+[25] commit pc 0000000000020318 inst 00040563 wen 0 dst 10 data 00000000000205a0 idx 0b9 beqz    s0, pc + 10
+[26] commit pc 000000000002031a inst 009406b3 wen 1 dst 13 data 0000000000b2a5f8 idx 0ba add     a3, s0, s1
+[27] commit pc 000000000002031e inst 0006a603 wen 1 dst 12 data 0000000000000000 idx 0bb (12) lw      a2, 0(a3)
+[28] commit pc 0000000000020320 inst fc0604e3 wen 0 dst 09 data 00000000000205a0 idx 0bc beqz    a2, pc - 56
+[29] commit pc 00000000000202e8 inst 000b1d63 wen 0 dst 26 data 00000000000205a0 idx 0bd bnez    s6, pc + 26
+[30] commit pc 00000000000202ec inst 000b861b wen 1 dst 12 data 00000000000011c2 idx 0be sext.w  a2, s7
+[31] commit pc 00000000000202f0 inst 00000713 wen 1 dst 14 data 00000000000205a0 idx 0bf li      a4, 0
+
+==============  REF Regs  ==============
+  $0: 0x0000000000000000   ra: 0x00000000000210ae   sp: 0x0000003fff880790   gp: 0x00000000000a7590 
+  tp: 0x00000000000b5760   t0: 0x0000000000000633   t1: 0x0000002001670670   t2: 0xfffffffffffff89f 
+  s0: 0x0000000000b25ef0   s1: 0x000000000000470c   a0: 0x0000000000000001   a1: 0x0000000000751680 
+  a2: 0x0000000000000001   a3: 0x0000000000b2a5fc   a4: 0x0000000038000000   a5: 0xffffffffffff5566 
+  a6: 0x000000000002bf48   a7: 0x0000002000f1f670   s2: 0x00000000000a7018   s3: 0x0000000000518990 
+  s4: 0x00000000005190a0   s5: 0x0000000000b51d20   s6: 0x0000000000000000   s7: 0x00000000000011c3 
+  s8: 0x00000000000011c3   s9: 0x0000000000506636  s10: 0x0000000000005e7d  s11: 0x0000000000b9b8dc 
+  t3: 0x00000000000a7018   t4: 0x00000000000001fa   t5: 0x00000000005192b0   t6: 0x0000000000000001 
+ ft0: 0x40aa0a8f7f6b1d93  ft1: 0x3fd556ccefb6e8ed  ft2: 0x4016072c03cdfe9f  ft3: 0x4020000000000000 
+ ft4: 0x3c8ae6d684fdfce3  ft5: 0x3feffdc006bff7e6  ft6: 0x3f97ff7001033255  ft7: 0xbc2313198a2e0370 
+ fs0: 0x4059000000000000  fs1: 0x0000000000000000  fa0: 0xc01aa806f471d35f  fa1: 0xc0bbe89b651c5a90 
+ fa2: 0xffffffffbccb7b90  fa3: 0xc0fee43452d622af  fa4: 0x402af18180000000  fa5: 0x3fd99b287814303f 
+ fa6: 0x3c8ae6dae86977bd  fa7: 0xbfc5555555555555  fs2: 0x0000000000000000  fs3: 0x0000000000000000 
+ fs4: 0x0000000000000000  fs5: 0x0000000000000000  fs6: 0x0000000000000000  fs7: 0x0000000000000000 
+ fs8: 0x0000000000000000  fs9: 0x0000000000000000 fs10: 0x0000000000000000 fs11: 0x0000000000000000 
+ ft8: 0x3f81111111110ece  ft9: 0xbf2a01a019db08b8 ft10: 0x0000000000000000 ft11: 0x0000000000000000 
+pc: 0x0000000000020586 mstatus: 0x8000000a000060aa mcause: 0x0000000000000009 mepc: 0x000000000001fdbc
+                       sstatus: 0x8000000200006022 scause: 0x0000000000000008 sepc: 0x0000000000037e2c
+satp: 0x80000000000802e3
+mip: 0x0000000000000000 mie: 0x000000000000022a mscratch: 0x00000000800abdc0 sscratch: 0xffffffe079b72e80
+mideleg: 0x0000000000000222 medeleg: 0x000000000000b109
+mtval: 0x0000000000000000 stval: 0x0000000000000000 mtvec: 0x00000000800a0004 stvec: 0xffffffe002af1cc8
+privilege mode:0  pmp: below
+ 0: cfg:0x00 addr:0x0000000020028000| 1: cfg:0x08 addr:0x000000002002d000
+ 2: cfg:0x1f addr:0x00000003ffffffff| 3: cfg:0x00 addr:0x0000000000000000
+ 4: cfg:0x00 addr:0x0000000000000000| 5: cfg:0x00 addr:0x0000000000000000
+ 6: cfg:0x00 addr:0x0000000000000000| 7: cfg:0x00 addr:0x0000000000000000
+ 8: cfg:0x00 addr:0x0000000000000000| 9: cfg:0x00 addr:0x0000000000000000
+10: cfg:0x00 addr:0x0000000000000000|11: cfg:0x00 addr:0x0000000000000000
+12: cfg:0x00 addr:0x0000000000000000|13: cfg:0x00 addr:0x0000000000000000
+14: cfg:0x00 addr:0x0000000000000000|15: cfg:0x00 addr:0x0000000000000000
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ff100d8 out of bound!
+ERROR: ram wIdx = 0x6ff100d9 out of bound!
+ERROR: ram wIdx = 0x6ff100da out of bound!
+ERROR: ram wIdx = 0x6ff100db out of bound!
+ERROR: ram wIdx = 0x6ff100dc out of bound!
+ERROR: ram wIdx = 0x6ff100dd out of bound!
+ERROR: ram wIdx = 0x6ff100de out of bound!
+ERROR: ram wIdx = 0x6ff100df out of bound!
+ERROR: ram wIdx = 0x6ff100f0 out of bound!
+ERROR: ram wIdx = 0x6ff100f1 out of bound!
+ERROR: ram wIdx = 0x6ff100f2 out of bound!
+ERROR: ram wIdx = 0x6ff100f3 out of bound!
+ERROR: ram wIdx = 0x6ff100f4 out of bound!
+ERROR: ram wIdx = 0x6ff100f5 out of bound!
+ERROR: ram wIdx = 0x6ff100f6 out of bound!
+ERROR: ram wIdx = 0x6ff100f7 out of bound!
+[FORK_INFO pid(3529252)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(3529252)] dump wave to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-05-25@01:30:31_903417.fst...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ff100d8 out of bound!
+ERROR: ram wIdx = 0x6ff100d9 out of bound!
+ERROR: ram wIdx = 0x6ff100da out of bound!
+ERROR: ram wIdx = 0x6ff100db out of bound!
+ERROR: ram wIdx = 0x6ff100dc out of bound!
+ERROR: ram wIdx = 0x6ff100dd out of bound!
+ERROR: ram wIdx = 0x6ff100de out of bound!
+ERROR: ram wIdx = 0x6ff100df out of bound!
+ERROR: ram wIdx = 0x6ff100f0 out of bound!
+ERROR: ram wIdx = 0x6ff100f1 out of bound!
+ERROR: ram wIdx = 0x6ff100f2 out of bound!
+ERROR: ram wIdx = 0x6ff100f3 out of bound!
+ERROR: ram wIdx = 0x6ff100f4 out of bound!
+ERROR: ram wIdx = 0x6ff100f5 out of bound!
+ERROR: ram wIdx = 0x6ff100f6 out of bound!
+ERROR: ram wIdx = 0x6ff100f7 out of bound!
+[FORK_INFO pid(3529252)] checkpoint has reached the main process abort point: 909212
+Core 0: [31mABORT at pc = 0x202fa
+[0m[35minstrCnt = 3,299,691, cycleCnt = 909,309, IPC = 3.628790
+[0m[34mSeed=408 Guest cycle spent: 909,312 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 394,115ms
+[0mpriviledgeMode: 0
+     a5 different at pc = 0x0000020580, right= 0xffffffffffff5566, wrong = 0xffffffffffff3e3a
+Core 0: [31mABORT at pc = 0x21098
+[0m[35minstrCnt = 3,299,831, cycleCnt = 909,209, IPC = 3.629343
+[0m[34mSeed=408 Guest cycle spent: 909,212 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 394,230ms
+[0m

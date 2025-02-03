@@ -1,0 +1,153 @@
+emu compiled at May 27 2024, 22:24:07
+Using seed = 1254
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/omnetpp/20261/_20261_0.361193_.gz
+Gzip file detected and loading image from extracted gz file
+DRAMsim3 memory system initialized.
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(3607910)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ff08fb0 out of bound!
+ERROR: ram wIdx = 0x6ff08fb1 out of bound!
+ERROR: ram wIdx = 0x6ff08fb2 out of bound!
+ERROR: ram wIdx = 0x6ff08fb3 out of bound!
+ERROR: ram wIdx = 0x6ff08fb4 out of bound!
+ERROR: ram wIdx = 0x6ff08fb5 out of bound!
+ERROR: ram wIdx = 0x6ff08fb6 out of bound!
+ERROR: ram wIdx = 0x6ff08fb7 out of bound!
+ERROR: ram wIdx = 0x6ff08f20 out of bound!
+ERROR: ram wIdx = 0x6ff08f21 out of bound!
+ERROR: ram wIdx = 0x6ff08f22 out of bound!
+ERROR: ram wIdx = 0x6ff08f23 out of bound!
+ERROR: ram wIdx = 0x6ff08f24 out of bound!
+ERROR: ram wIdx = 0x6ff08f25 out of bound!
+ERROR: ram wIdx = 0x6ff08f26 out of bound!
+ERROR: ram wIdx = 0x6ff08f27 out of bound!
+ERROR: ram wIdx = 0x6ff08f08 out of bound!
+ERROR: ram wIdx = 0x6ff08f09 out of bound!
+ERROR: ram wIdx = 0x6ff08f0a out of bound!
+ERROR: ram wIdx = 0x6ff08f0b out of bound!
+ERROR: ram wIdx = 0x6ff08f0c out of bound!
+ERROR: ram wIdx = 0x6ff08f0d out of bound!
+ERROR: ram wIdx = 0x6ff08f0e out of bound!
+ERROR: ram wIdx = 0x6ff08f0f out of bound!
+Warmup finished. The performance counters will be dumped and then reset.
+ERROR: ram wIdx = 0x6ff08f50 out of bound!
+ERROR: ram wIdx = 0x6ff08f51 out of bound!
+ERROR: ram wIdx = 0x6ff08f52 out of bound!
+ERROR: ram wIdx = 0x6ff08f53 out of bound!
+ERROR: ram wIdx = 0x6ff08f54 out of bound!
+ERROR: ram wIdx = 0x6ff08f55 out of bound!
+ERROR: ram wIdx = 0x6ff08f56 out of bound!
+ERROR: ram wIdx = 0x6ff08f57 out of bound!
+ERROR: ram wIdx = 0x6ff08f18 out of bound!
+ERROR: ram wIdx = 0x6ff08f19 out of bound!
+ERROR: ram wIdx = 0x6ff08f1a out of bound!
+ERROR: ram wIdx = 0x6ff08f1b out of bound!
+ERROR: ram wIdx = 0x6ff08f1c out of bound!
+ERROR: ram wIdx = 0x6ff08f1d out of bound!
+ERROR: ram wIdx = 0x6ff08f1e out of bound!
+ERROR: ram wIdx = 0x6ff08f1f out of bound!
+ERROR: ram wIdx = 0x6ff08f70 out of bound!
+ERROR: ram wIdx = 0x6ff08f71 out of bound!
+ERROR: ram wIdx = 0x6ff08f72 out of bound!
+ERROR: ram wIdx = 0x6ff08f73 out of bound!
+ERROR: ram wIdx = 0x6ff08f74 out of bound!
+ERROR: ram wIdx = 0x6ff08f75 out of bound!
+ERROR: ram wIdx = 0x6ff08f76 out of bound!
+ERROR: ram wIdx = 0x6ff08f77 out of bound!
+ERROR: ram wIdx = 0x6ff08f20 out of bound!
+ERROR: ram wIdx = 0x6ff08f21 out of bound!
+ERROR: ram wIdx = 0x6ff08f22 out of bound!
+ERROR: ram wIdx = 0x6ff08f23 out of bound!
+ERROR: ram wIdx = 0x6ff08f24 out of bound!
+ERROR: ram wIdx = 0x6ff08f25 out of bound!
+ERROR: ram wIdx = 0x6ff08f26 out of bound!
+ERROR: ram wIdx = 0x6ff08f27 out of bound!
+ERROR: ram wIdx = 0x6ff08fa0 out of bound!
+ERROR: ram wIdx = 0x6ff08fa1 out of bound!
+ERROR: ram wIdx = 0x6ff08fa2 out of bound!
+ERROR: ram wIdx = 0x6ff08fa3 out of bound!
+ERROR: ram wIdx = 0x6ff08fa4 out of bound!
+ERROR: ram wIdx = 0x6ff08fa5 out of bound!
+ERROR: ram wIdx = 0x6ff08fa6 out of bound!
+ERROR: ram wIdx = 0x6ff08fa7 out of bound!
+ERROR: ram wIdx = 0x6ff08f00 out of bound!
+ERROR: ram wIdx = 0x6ff08f01 out of bound!
+ERROR: ram wIdx = 0x6ff08f02 out of bound!
+ERROR: ram wIdx = 0x6ff08f03 out of bound!
+ERROR: ram wIdx = 0x6ff08f04 out of bound!
+ERROR: ram wIdx = 0x6ff08f05 out of bound!
+ERROR: ram wIdx = 0x6ff08f06 out of bound!
+ERROR: ram wIdx = 0x6ff08f07 out of bound!
+ERROR: ram wIdx = 0x6ff08f08 out of bound!
+ERROR: ram wIdx = 0x6ff08f09 out of bound!
+ERROR: ram wIdx = 0x6ff08f0a out of bound!
+ERROR: ram wIdx = 0x6ff08f0b out of bound!
+ERROR: ram wIdx = 0x6ff08f0c out of bound!
+ERROR: ram wIdx = 0x6ff08f0d out of bound!
+ERROR: ram wIdx = 0x6ff08f0e out of bound!
+ERROR: ram wIdx = 0x6ff08f0f out of bound!
+ERROR: ram wIdx = 0x6ff08f50 out of bound!
+ERROR: ram wIdx = 0x6ff08f51 out of bound!
+ERROR: ram wIdx = 0x6ff08f52 out of bound!
+ERROR: ram wIdx = 0x6ff08f53 out of bound!
+ERROR: ram wIdx = 0x6ff08f54 out of bound!
+ERROR: ram wIdx = 0x6ff08f55 out of bound!
+ERROR: ram wIdx = 0x6ff08f56 out of bound!
+ERROR: ram wIdx = 0x6ff08f57 out of bound!
+ERROR: ram wIdx = 0x6ff08f48 out of bound!
+ERROR: ram wIdx = 0x6ff08f49 out of bound!
+ERROR: ram wIdx = 0x6ff08f4a out of bound!
+ERROR: ram wIdx = 0x6ff08f4b out of bound!
+ERROR: ram wIdx = 0x6ff08f4c out of bound!
+ERROR: ram wIdx = 0x6ff08f4d out of bound!
+ERROR: ram wIdx = 0x6ff08f4e out of bound!
+ERROR: ram wIdx = 0x6ff08f4f out of bound!
+[FORK_INFO pid(3607910)] clear processes...
+Core 0: [33mEXCEEDING CYCLE/INSTR LIMIT at pc = 0x6a47a
+[0m[35minstrCnt = 40,000,000, cycleCnt = 44,948,277, IPC = 0.889912
+[0m[34mSeed=1254 Guest cycle spent: 44,948,281 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 15,307,693ms
+[0m

@@ -1,0 +1,103 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 2827
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/leslie3d/68289/_68289_0.182714_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(968246)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ff2f5c8 out of bound!
+ERROR: ram wIdx = 0x6ff2f5c9 out of bound!
+ERROR: ram wIdx = 0x6ff2f5ca out of bound!
+ERROR: ram wIdx = 0x6ff2f5cb out of bound!
+ERROR: ram wIdx = 0x6ff2f5cc out of bound!
+ERROR: ram wIdx = 0x6ff2f5cd out of bound!
+ERROR: ram wIdx = 0x6ff2f5ce out of bound!
+ERROR: ram wIdx = 0x6ff2f5cf out of bound!
+[FORK_INFO pid(972092)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(972092)] dump wave to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-05-24@23:50:35_570444.fst...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ff2f5c8 out of bound!
+ERROR: ram wIdx = 0x6ff2f5c9 out of bound!
+ERROR: ram wIdx = 0x6ff2f5ca out of bound!
+ERROR: ram wIdx = 0x6ff2f5cb out of bound!
+ERROR: ram wIdx = 0x6ff2f5cc out of bound!
+ERROR: ram wIdx = 0x6ff2f5cd out of bound!
+ERROR: ram wIdx = 0x6ff2f5ce out of bound!
+ERROR: ram wIdx = 0x6ff2f5cf out of bound!
+[FORK_INFO pid(972092)] checkpoint has reached the main process abort point: 575664
+cacheid=1,idtfr=0,realpaddr=0xf1207960: Refill test failed!
+addr: f1207940
+Gold: 40262b1a15ee2fbd402627e07972ddeb402625288bb13d54402622f122c0ed45402620ce43a341b540261e4ff801540940261b7b51936d78402618b0c095838e
+Core: 4026292d5469f8d640262601e11bebdb4026234e74c70661402621088b14cbba40261eedbd65454940261c9294256e7c402619d6f7e850144026171997e7a1bc
+Core 0: [31mABORT at pc = 0x14a84
+[0m[35minstrCnt = 1,813,028, cycleCnt = 575,722, IPC = 3.149138
+[0m[34mSeed=2827 Guest cycle spent: 575,725 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 301,113ms
+[0mThe first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ff2f5c8 out of bound!
+ERROR: ram wIdx = 0x6ff2f5c9 out of bound!
+ERROR: ram wIdx = 0x6ff2f5ca out of bound!
+ERROR: ram wIdx = 0x6ff2f5cb out of bound!
+ERROR: ram wIdx = 0x6ff2f5cc out of bound!
+ERROR: ram wIdx = 0x6ff2f5cd out of bound!
+ERROR: ram wIdx = 0x6ff2f5ce out of bound!
+ERROR: ram wIdx = 0x6ff2f5cf out of bound!
+ERROR: ram wIdx = 0x6ff2f5b8 out of bound!
+ERROR: ram wIdx = 0x6ff2f5b9 out of bound!
+ERROR: ram wIdx = 0x6ff2f5ba out of bound!
+ERROR: ram wIdx = 0x6ff2f5bb out of bound!
+ERROR: ram wIdx = 0x6ff2f5bc out of bound!
+ERROR: ram wIdx = 0x6ff2f5bd out of bound!
+ERROR: ram wIdx = 0x6ff2f5be out of bound!
+ERROR: ram wIdx = 0x6ff2f5bf out of bound!
+cacheid=1,idtfr=0,realpaddr=0xf1207960: Refill test failed!
+addr: f1207940
+Gold: 40262b1a15ee2fbd402627e07972ddeb402625288bb13d54402622f122c0ed45402620ce43a341b540261e4ff801540940261b7b51936d78402618b0c095838e
+Core: 4026292d5469f8d640262601e11bebdb4026234e74c70661402621088b14cbba40261eedbd65454940261c9294256e7c402619d6f7e850144026171997e7a1bc
+Core 0: [31mABORT at pc = 0x14a90
+[0m[35minstrCnt = 1,813,008, cycleCnt = 575,661, IPC = 3.149437
+[0m[34mSeed=2827 Guest cycle spent: 575,664 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 301,216ms
+[0m

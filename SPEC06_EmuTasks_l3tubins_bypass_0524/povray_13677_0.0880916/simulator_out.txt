@@ -1,0 +1,104 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 5680
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/povray/13677/_13677_0.088092_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(3477288)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x58f41ad8 out of bound!
+ERROR: ram wIdx = 0x58f41ad9 out of bound!
+ERROR: ram wIdx = 0x58f41ada out of bound!
+ERROR: ram wIdx = 0x58f41adb out of bound!
+ERROR: ram wIdx = 0x58f41adc out of bound!
+ERROR: ram wIdx = 0x58f41add out of bound!
+ERROR: ram wIdx = 0x58f41ade out of bound!
+ERROR: ram wIdx = 0x58f41adf out of bound!
+ERROR: ram wIdx = 0x6ffadc68 out of bound!
+ERROR: ram wIdx = 0x6ffadc69 out of bound!
+ERROR: ram wIdx = 0x6ffadc6a out of bound!
+ERROR: ram wIdx = 0x6ffadc6b out of bound!
+ERROR: ram wIdx = 0x6ffadc6c out of bound!
+ERROR: ram wIdx = 0x6ffadc6d out of bound!
+ERROR: ram wIdx = 0x6ffadc6e out of bound!
+ERROR: ram wIdx = 0x6ffadc6f out of bound!
+Warmup finished. The performance counters will be dumped and then reset.
+ERROR: ram wIdx = 0x6ffadf08 out of bound!
+ERROR: ram wIdx = 0x6ffadf09 out of bound!
+ERROR: ram wIdx = 0x6ffadf0a out of bound!
+ERROR: ram wIdx = 0x6ffadf0b out of bound!
+ERROR: ram wIdx = 0x6ffadf0c out of bound!
+ERROR: ram wIdx = 0x6ffadf0d out of bound!
+ERROR: ram wIdx = 0x6ffadf0e out of bound!
+ERROR: ram wIdx = 0x6ffadf0f out of bound!
+ERROR: ram wIdx = 0x6ffadd48 out of bound!
+ERROR: ram wIdx = 0x6ffadd49 out of bound!
+ERROR: ram wIdx = 0x6ffadd4a out of bound!
+ERROR: ram wIdx = 0x6ffadd4b out of bound!
+ERROR: ram wIdx = 0x6ffadd4c out of bound!
+ERROR: ram wIdx = 0x6ffadd4d out of bound!
+ERROR: ram wIdx = 0x6ffadd4e out of bound!
+ERROR: ram wIdx = 0x6ffadd4f out of bound!
+ERROR: ram wIdx = 0x6ffadce0 out of bound!
+ERROR: ram wIdx = 0x6ffadce1 out of bound!
+ERROR: ram wIdx = 0x6ffadce2 out of bound!
+ERROR: ram wIdx = 0x6ffadce3 out of bound!
+ERROR: ram wIdx = 0x6ffadce4 out of bound!
+ERROR: ram wIdx = 0x6ffadce5 out of bound!
+ERROR: ram wIdx = 0x6ffadce6 out of bound!
+ERROR: ram wIdx = 0x6ffadce7 out of bound!
+ERROR: ram wIdx = 0x58f41ae8 out of bound!
+ERROR: ram wIdx = 0x58f41ae9 out of bound!
+ERROR: ram wIdx = 0x58f41aea out of bound!
+ERROR: ram wIdx = 0x58f41aeb out of bound!
+ERROR: ram wIdx = 0x58f41aec out of bound!
+ERROR: ram wIdx = 0x58f41aed out of bound!
+ERROR: ram wIdx = 0x58f41aee out of bound!
+ERROR: ram wIdx = 0x58f41aef out of bound!
+[FORK_INFO pid(3477288)] clear processes...
+Core 0: [33mEXCEEDING CYCLE/INSTR LIMIT at pc = 0x8899a
+[0m[35minstrCnt = 40,000,000, cycleCnt = 14,231,167, IPC = 2.810732
+[0m[34mSeed=5680 Guest cycle spent: 14,231,171 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 4,509,776ms
+[0m

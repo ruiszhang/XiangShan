@@ -1,0 +1,263 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 8898
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/bzip2_html/9573/_9573_0.165534_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(3017911)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffcf0a8 out of bound!
+ERROR: ram wIdx = 0x6ffcf0a9 out of bound!
+ERROR: ram wIdx = 0x6ffcf0aa out of bound!
+ERROR: ram wIdx = 0x6ffcf0ab out of bound!
+ERROR: ram wIdx = 0x6ffcf0ac out of bound!
+ERROR: ram wIdx = 0x6ffcf0ad out of bound!
+ERROR: ram wIdx = 0x6ffcf0ae out of bound!
+ERROR: ram wIdx = 0x6ffcf0af out of bound!
+ERROR: ram wIdx = 0x6ffcf080 out of bound!
+ERROR: ram wIdx = 0x6ffcf081 out of bound!
+ERROR: ram wIdx = 0x6ffcf082 out of bound!
+ERROR: ram wIdx = 0x6ffcf083 out of bound!
+ERROR: ram wIdx = 0x6ffcf084 out of bound!
+ERROR: ram wIdx = 0x6ffcf085 out of bound!
+ERROR: ram wIdx = 0x6ffcf086 out of bound!
+ERROR: ram wIdx = 0x6ffcf087 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b0 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b1 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b2 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b3 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b4 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b5 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b6 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b7 out of bound!
+ERROR: ram wIdx = 0x6ffcf0e8 out of bound!
+ERROR: ram wIdx = 0x6ffcf0e9 out of bound!
+ERROR: ram wIdx = 0x6ffcf0ea out of bound!
+ERROR: ram wIdx = 0x6ffcf0eb out of bound!
+ERROR: ram wIdx = 0x6ffcf0ec out of bound!
+ERROR: ram wIdx = 0x6ffcf0ed out of bound!
+ERROR: ram wIdx = 0x6ffcf0ee out of bound!
+ERROR: ram wIdx = 0x6ffcf0ef out of bound!
+ERROR: ram wIdx = 0x6ffcf2a0 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a1 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a2 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a3 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a4 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a5 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a6 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a7 out of bound!
+ERROR: ram wIdx = 0x6ffcf060 out of bound!
+ERROR: ram wIdx = 0x6ffcf061 out of bound!
+ERROR: ram wIdx = 0x6ffcf062 out of bound!
+ERROR: ram wIdx = 0x6ffcf063 out of bound!
+ERROR: ram wIdx = 0x6ffcf064 out of bound!
+ERROR: ram wIdx = 0x6ffcf065 out of bound!
+ERROR: ram wIdx = 0x6ffcf066 out of bound!
+ERROR: ram wIdx = 0x6ffcf067 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f0 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f1 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f2 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f3 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f4 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f5 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f6 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f7 out of bound!
+ERROR: ram wIdx = 0x6ffcf090 out of bound!
+ERROR: ram wIdx = 0x6ffcf091 out of bound!
+ERROR: ram wIdx = 0x6ffcf092 out of bound!
+ERROR: ram wIdx = 0x6ffcf093 out of bound!
+ERROR: ram wIdx = 0x6ffcf094 out of bound!
+ERROR: ram wIdx = 0x6ffcf095 out of bound!
+ERROR: ram wIdx = 0x6ffcf096 out of bound!
+ERROR: ram wIdx = 0x6ffcf097 out of bound!
+[FORK_INFO pid(3030524)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(3030524)] dump wave to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-05-24@18:12:36_1263427.fst...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffcf0a8 out of bound!
+ERROR: ram wIdx = 0x6ffcf0a9 out of bound!
+ERROR: ram wIdx = 0x6ffcf0aa out of bound!
+ERROR: ram wIdx = 0x6ffcf0ab out of bound!
+ERROR: ram wIdx = 0x6ffcf0ac out of bound!
+ERROR: ram wIdx = 0x6ffcf0ad out of bound!
+ERROR: ram wIdx = 0x6ffcf0ae out of bound!
+ERROR: ram wIdx = 0x6ffcf0af out of bound!
+ERROR: ram wIdx = 0x6ffcf080 out of bound!
+ERROR: ram wIdx = 0x6ffcf081 out of bound!
+ERROR: ram wIdx = 0x6ffcf082 out of bound!
+ERROR: ram wIdx = 0x6ffcf083 out of bound!
+ERROR: ram wIdx = 0x6ffcf084 out of bound!
+ERROR: ram wIdx = 0x6ffcf085 out of bound!
+ERROR: ram wIdx = 0x6ffcf086 out of bound!
+ERROR: ram wIdx = 0x6ffcf087 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b0 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b1 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b2 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b3 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b4 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b5 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b6 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b7 out of bound!
+ERROR: ram wIdx = 0x6ffcf0e8 out of bound!
+ERROR: ram wIdx = 0x6ffcf0e9 out of bound!
+ERROR: ram wIdx = 0x6ffcf0ea out of bound!
+ERROR: ram wIdx = 0x6ffcf0eb out of bound!
+ERROR: ram wIdx = 0x6ffcf0ec out of bound!
+ERROR: ram wIdx = 0x6ffcf0ed out of bound!
+ERROR: ram wIdx = 0x6ffcf0ee out of bound!
+ERROR: ram wIdx = 0x6ffcf0ef out of bound!
+ERROR: ram wIdx = 0x6ffcf2a0 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a1 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a2 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a3 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a4 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a5 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a6 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a7 out of bound!
+ERROR: ram wIdx = 0x6ffcf060 out of bound!
+ERROR: ram wIdx = 0x6ffcf061 out of bound!
+ERROR: ram wIdx = 0x6ffcf062 out of bound!
+ERROR: ram wIdx = 0x6ffcf063 out of bound!
+ERROR: ram wIdx = 0x6ffcf064 out of bound!
+ERROR: ram wIdx = 0x6ffcf065 out of bound!
+ERROR: ram wIdx = 0x6ffcf066 out of bound!
+ERROR: ram wIdx = 0x6ffcf067 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f0 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f1 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f2 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f3 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f4 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f5 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f6 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f7 out of bound!
+ERROR: ram wIdx = 0x6ffcf090 out of bound!
+ERROR: ram wIdx = 0x6ffcf091 out of bound!
+ERROR: ram wIdx = 0x6ffcf092 out of bound!
+ERROR: ram wIdx = 0x6ffcf093 out of bound!
+ERROR: ram wIdx = 0x6ffcf094 out of bound!
+ERROR: ram wIdx = 0x6ffcf095 out of bound!
+ERROR: ram wIdx = 0x6ffcf096 out of bound!
+ERROR: ram wIdx = 0x6ffcf097 out of bound!
+[FORK_INFO pid(3030524)] checkpoint has reached the main process abort point: 1268562
+cacheid=1,idtfr=0,realpaddr=0xc3e1e5e0: Refill test failed!
+addr: c3e1e5c0
+Gold: 0000163900000ed71b7d000000001c2d00000000000000000000000000003367000000002ecb00000000046300000f8d0000107200001a400bba000000001512
+Core: 0000163900000ed71b7d000000001c2d0000000000000000000000000000000000000000000000000000046300000f8d0000107200001a400bba000000001512
+Core 0: [31mABORT at pc = 0x12938
+[0m[35minstrCnt = 1,917,186, cycleCnt = 1,268,648, IPC = 1.511204
+[0m[34mSeed=8898 Guest cycle spent: 1,268,651 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 614,588ms
+[0mThe first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffcf0a8 out of bound!
+ERROR: ram wIdx = 0x6ffcf0a9 out of bound!
+ERROR: ram wIdx = 0x6ffcf0aa out of bound!
+ERROR: ram wIdx = 0x6ffcf0ab out of bound!
+ERROR: ram wIdx = 0x6ffcf0ac out of bound!
+ERROR: ram wIdx = 0x6ffcf0ad out of bound!
+ERROR: ram wIdx = 0x6ffcf0ae out of bound!
+ERROR: ram wIdx = 0x6ffcf0af out of bound!
+ERROR: ram wIdx = 0x6ffcf080 out of bound!
+ERROR: ram wIdx = 0x6ffcf081 out of bound!
+ERROR: ram wIdx = 0x6ffcf082 out of bound!
+ERROR: ram wIdx = 0x6ffcf083 out of bound!
+ERROR: ram wIdx = 0x6ffcf084 out of bound!
+ERROR: ram wIdx = 0x6ffcf085 out of bound!
+ERROR: ram wIdx = 0x6ffcf086 out of bound!
+ERROR: ram wIdx = 0x6ffcf087 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b0 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b1 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b2 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b3 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b4 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b5 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b6 out of bound!
+ERROR: ram wIdx = 0x6ffcf0b7 out of bound!
+ERROR: ram wIdx = 0x6ffcf0e8 out of bound!
+ERROR: ram wIdx = 0x6ffcf0e9 out of bound!
+ERROR: ram wIdx = 0x6ffcf0ea out of bound!
+ERROR: ram wIdx = 0x6ffcf0eb out of bound!
+ERROR: ram wIdx = 0x6ffcf0ec out of bound!
+ERROR: ram wIdx = 0x6ffcf0ed out of bound!
+ERROR: ram wIdx = 0x6ffcf0ee out of bound!
+ERROR: ram wIdx = 0x6ffcf0ef out of bound!
+ERROR: ram wIdx = 0x6ffcf2a0 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a1 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a2 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a3 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a4 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a5 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a6 out of bound!
+ERROR: ram wIdx = 0x6ffcf2a7 out of bound!
+ERROR: ram wIdx = 0x6ffcf060 out of bound!
+ERROR: ram wIdx = 0x6ffcf061 out of bound!
+ERROR: ram wIdx = 0x6ffcf062 out of bound!
+ERROR: ram wIdx = 0x6ffcf063 out of bound!
+ERROR: ram wIdx = 0x6ffcf064 out of bound!
+ERROR: ram wIdx = 0x6ffcf065 out of bound!
+ERROR: ram wIdx = 0x6ffcf066 out of bound!
+ERROR: ram wIdx = 0x6ffcf067 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f0 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f1 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f2 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f3 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f4 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f5 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f6 out of bound!
+ERROR: ram wIdx = 0x6ffcf0f7 out of bound!
+ERROR: ram wIdx = 0x6ffcf090 out of bound!
+ERROR: ram wIdx = 0x6ffcf091 out of bound!
+ERROR: ram wIdx = 0x6ffcf092 out of bound!
+ERROR: ram wIdx = 0x6ffcf093 out of bound!
+ERROR: ram wIdx = 0x6ffcf094 out of bound!
+ERROR: ram wIdx = 0x6ffcf095 out of bound!
+ERROR: ram wIdx = 0x6ffcf096 out of bound!
+ERROR: ram wIdx = 0x6ffcf097 out of bound!
+cacheid=1,idtfr=0,realpaddr=0xc3e1e5e0: Refill test failed!
+addr: c3e1e5c0
+Gold: 0000163900000ed71b7d000000001c2d00000000000000000000000000003367000000002ecb00000000046300000f8d0000107200001a400bba000000001512
+Core: 0000163900000ed71b7d000000001c2d0000000000000000000000000000000000000000000000000000046300000f8d0000107200001a400bba000000001512
+Core 0: [31mABORT at pc = 0x1294a
+[0m[35minstrCnt = 1,917,191, cycleCnt = 1,268,559, IPC = 1.511314
+[0m[34mSeed=8898 Guest cycle spent: 1,268,562 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 614,764ms
+[0m

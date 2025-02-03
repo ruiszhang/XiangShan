@@ -1,0 +1,75 @@
+emu compiled at Jun  4 2024, 17:52:48
+Using seed = 231
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+depth0 = 32
+enableDynamicPrefetcher0 = 1
+StoreWaitThreshold_0 = 0
+nMaxPrefetchEntry0 = 14
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+always_update0 = 1
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+enableL3StreamPrefetch0 = 0
+enableL1StreamPrefetcher0 = 1
+ColdDownThreshold_0 = 12
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+enableTP0 = 1
+tp_throttleCycles0 = 4
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_recordThres0 = 16
+tp_trainOnVaddr0 = 0
+tp_trainOnL1PF0 = 0
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/soplex_pds-50/16031/_16031_0.078308_.gz
+Gzip file detected and loading image from extracted gz file
+DRAMsim3 memory system initialized.
+Open database successfully
+L2PrefetchAccuracyBOP_rolling_0 table created successfully!
+L2PrefetchAccuracyStride_rolling_0 table created successfully!
+L2PrefetchAccuracySMS_rolling_0 table created successfully!
+L2PrefetchCoverageStride_rolling_0 table created successfully!
+L2PrefetchAccuracyStream_rolling_0 table created successfully!
+L2PrefetchCoverage_rolling_0 table created successfully!
+l3_repl_Dir table created successfully!
+L2PrefetchCoverageBOP_rolling_0 table created successfully!
+L2PrefetchLate_rolling_0 table created successfully!
+L2PrefetchCoverageSMS_rolling_0 table created successfully!
+TLLog table created successfully!
+L2MP table created successfully!
+L2PrefetchAccuracyTP_rolling_0 table created successfully!
+L2PrefetchCoverageStream_rolling_0 table created successfully!
+L2PrefetchCoverageTP_rolling_0 table created successfully!
+L2PrefetchAccuracy_rolling_0 table created successfully!
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(709776)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+Warmup finished. The performance counters will be dumped and then reset.
+[FORK_INFO pid(709776)] clear processes...
+Core 0: [33mEXCEEDING CYCLE/INSTR LIMIT at pc = 0x389bc
+[0m[35minstrCnt = 40,000,001, cycleCnt = 35,963,596, IPC = 1.112236
+[0msaving memdb to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-06-06@23:50:03.db ...
+[34mSeed=231 Guest cycle spent: 35,963,600 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 18,528,748ms
+[0m

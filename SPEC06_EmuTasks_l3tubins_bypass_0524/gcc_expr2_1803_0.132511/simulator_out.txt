@@ -1,0 +1,80 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 3165
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/gcc_expr2/1803/_1803_0.132511_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(3197073)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+ERROR: ram wIdx = 0x6ffe9798 out of bound!
+ERROR: ram wIdx = 0x6ffe9799 out of bound!
+ERROR: ram wIdx = 0x6ffe979a out of bound!
+ERROR: ram wIdx = 0x6ffe979b out of bound!
+ERROR: ram wIdx = 0x6ffe979c out of bound!
+ERROR: ram wIdx = 0x6ffe979d out of bound!
+ERROR: ram wIdx = 0x6ffe979e out of bound!
+ERROR: ram wIdx = 0x6ffe979f out of bound!
+Warmup finished. The performance counters will be dumped and then reset.
+ERROR: ram wIdx = 0x6ffe9780 out of bound!
+ERROR: ram wIdx = 0x6ffe9781 out of bound!
+ERROR: ram wIdx = 0x6ffe9782 out of bound!
+ERROR: ram wIdx = 0x6ffe9783 out of bound!
+ERROR: ram wIdx = 0x6ffe9784 out of bound!
+ERROR: ram wIdx = 0x6ffe9785 out of bound!
+ERROR: ram wIdx = 0x6ffe9786 out of bound!
+ERROR: ram wIdx = 0x6ffe9787 out of bound!
+ERROR: ram wIdx = 0x6ffe97d8 out of bound!
+ERROR: ram wIdx = 0x6ffe97d9 out of bound!
+ERROR: ram wIdx = 0x6ffe97da out of bound!
+ERROR: ram wIdx = 0x6ffe97db out of bound!
+ERROR: ram wIdx = 0x6ffe97dc out of bound!
+ERROR: ram wIdx = 0x6ffe97dd out of bound!
+ERROR: ram wIdx = 0x6ffe97de out of bound!
+ERROR: ram wIdx = 0x6ffe97df out of bound!
+[FORK_INFO pid(3197073)] clear processes...
+Core 0: [33mEXCEEDING CYCLE/INSTR LIMIT at pc = 0x26632c
+[0m[35minstrCnt = 40,000,000, cycleCnt = 9,562,579, IPC = 4.182972
+[0m[34mSeed=3165 Guest cycle spent: 9,562,583 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 3,440,773ms
+[0m

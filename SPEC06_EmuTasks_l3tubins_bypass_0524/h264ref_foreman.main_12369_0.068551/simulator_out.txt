@@ -1,0 +1,593 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 7312
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/h264ref_foreman.main/12369/_12369_0.068551_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(938776)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+Warmup finished. The performance counters will be dumped and then reset.
+ERROR: ram wIdx = 0x6ffbfca0 out of bound!
+ERROR: ram wIdx = 0x6ffbfca1 out of bound!
+ERROR: ram wIdx = 0x6ffbfca2 out of bound!
+ERROR: ram wIdx = 0x6ffbfca3 out of bound!
+ERROR: ram wIdx = 0x6ffbfca4 out of bound!
+ERROR: ram wIdx = 0x6ffbfca5 out of bound!
+ERROR: ram wIdx = 0x6ffbfca6 out of bound!
+ERROR: ram wIdx = 0x6ffbfca7 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf8 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf9 out of bound!
+ERROR: ram wIdx = 0x6ffbfafa out of bound!
+ERROR: ram wIdx = 0x6ffbfafb out of bound!
+ERROR: ram wIdx = 0x6ffbfafc out of bound!
+ERROR: ram wIdx = 0x6ffbfafd out of bound!
+ERROR: ram wIdx = 0x6ffbfafe out of bound!
+ERROR: ram wIdx = 0x6ffbfaff out of bound!
+ERROR: ram wIdx = 0x6ffbfbe8 out of bound!
+ERROR: ram wIdx = 0x6ffbfbe9 out of bound!
+ERROR: ram wIdx = 0x6ffbfbea out of bound!
+ERROR: ram wIdx = 0x6ffbfbeb out of bound!
+ERROR: ram wIdx = 0x6ffbfbec out of bound!
+ERROR: ram wIdx = 0x6ffbfbed out of bound!
+ERROR: ram wIdx = 0x6ffbfbee out of bound!
+ERROR: ram wIdx = 0x6ffbfbef out of bound!
+ERROR: ram wIdx = 0x6ffbfae8 out of bound!
+ERROR: ram wIdx = 0x6ffbfae9 out of bound!
+ERROR: ram wIdx = 0x6ffbfaea out of bound!
+ERROR: ram wIdx = 0x6ffbfaeb out of bound!
+ERROR: ram wIdx = 0x6ffbfaec out of bound!
+ERROR: ram wIdx = 0x6ffbfaed out of bound!
+ERROR: ram wIdx = 0x6ffbfaee out of bound!
+ERROR: ram wIdx = 0x6ffbfaef out of bound!
+ERROR: ram wIdx = 0x6ffbfaf0 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf1 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf2 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf3 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf4 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf5 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf6 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf7 out of bound!
+ERROR: ram wIdx = 0x6ffbfb00 out of bound!
+ERROR: ram wIdx = 0x6ffbfb01 out of bound!
+ERROR: ram wIdx = 0x6ffbfb02 out of bound!
+ERROR: ram wIdx = 0x6ffbfb03 out of bound!
+ERROR: ram wIdx = 0x6ffbfb04 out of bound!
+ERROR: ram wIdx = 0x6ffbfb05 out of bound!
+ERROR: ram wIdx = 0x6ffbfb06 out of bound!
+ERROR: ram wIdx = 0x6ffbfb07 out of bound!
+ERROR: ram wIdx = 0x6ffbfb20 out of bound!
+ERROR: ram wIdx = 0x6ffbfb21 out of bound!
+ERROR: ram wIdx = 0x6ffbfb22 out of bound!
+ERROR: ram wIdx = 0x6ffbfb23 out of bound!
+ERROR: ram wIdx = 0x6ffbfb24 out of bound!
+ERROR: ram wIdx = 0x6ffbfb25 out of bound!
+ERROR: ram wIdx = 0x6ffbfb26 out of bound!
+ERROR: ram wIdx = 0x6ffbfb27 out of bound!
+ERROR: ram wIdx = 0x6ffbfb28 out of bound!
+ERROR: ram wIdx = 0x6ffbfb29 out of bound!
+ERROR: ram wIdx = 0x6ffbfb2a out of bound!
+ERROR: ram wIdx = 0x6ffbfb2b out of bound!
+ERROR: ram wIdx = 0x6ffbfb2c out of bound!
+ERROR: ram wIdx = 0x6ffbfb2d out of bound!
+ERROR: ram wIdx = 0x6ffbfb2e out of bound!
+ERROR: ram wIdx = 0x6ffbfb2f out of bound!
+ERROR: ram wIdx = 0x6ffbfc08 out of bound!
+ERROR: ram wIdx = 0x6ffbfc09 out of bound!
+ERROR: ram wIdx = 0x6ffbfc0a out of bound!
+ERROR: ram wIdx = 0x6ffbfc0b out of bound!
+ERROR: ram wIdx = 0x6ffbfc0c out of bound!
+ERROR: ram wIdx = 0x6ffbfc0d out of bound!
+ERROR: ram wIdx = 0x6ffbfc0e out of bound!
+ERROR: ram wIdx = 0x6ffbfc0f out of bound!
+ERROR: ram wIdx = 0x6ffbfbc0 out of bound!
+ERROR: ram wIdx = 0x6ffbfbc1 out of bound!
+ERROR: ram wIdx = 0x6ffbfbc2 out of bound!
+ERROR: ram wIdx = 0x6ffbfbc3 out of bound!
+ERROR: ram wIdx = 0x6ffbfbc4 out of bound!
+ERROR: ram wIdx = 0x6ffbfbc5 out of bound!
+ERROR: ram wIdx = 0x6ffbfbc6 out of bound!
+ERROR: ram wIdx = 0x6ffbfbc7 out of bound!
+ERROR: ram wIdx = 0x6ffbfbc8 out of bound!
+ERROR: ram wIdx = 0x6ffbfbc9 out of bound!
+ERROR: ram wIdx = 0x6ffbfbca out of bound!
+ERROR: ram wIdx = 0x6ffbfbcb out of bound!
+ERROR: ram wIdx = 0x6ffbfbcc out of bound!
+ERROR: ram wIdx = 0x6ffbfbcd out of bound!
+ERROR: ram wIdx = 0x6ffbfbce out of bound!
+ERROR: ram wIdx = 0x6ffbfbcf out of bound!
+ERROR: ram wIdx = 0x6ffbfbd0 out of bound!
+ERROR: ram wIdx = 0x6ffbfbd1 out of bound!
+ERROR: ram wIdx = 0x6ffbfbd2 out of bound!
+ERROR: ram wIdx = 0x6ffbfbd3 out of bound!
+ERROR: ram wIdx = 0x6ffbfbd4 out of bound!
+ERROR: ram wIdx = 0x6ffbfbd5 out of bound!
+ERROR: ram wIdx = 0x6ffbfbd6 out of bound!
+ERROR: ram wIdx = 0x6ffbfbd7 out of bound!
+ERROR: ram wIdx = 0x6ffbfbe0 out of bound!
+ERROR: ram wIdx = 0x6ffbfbe1 out of bound!
+ERROR: ram wIdx = 0x6ffbfbe2 out of bound!
+ERROR: ram wIdx = 0x6ffbfbe3 out of bound!
+ERROR: ram wIdx = 0x6ffbfbe4 out of bound!
+ERROR: ram wIdx = 0x6ffbfbe5 out of bound!
+ERROR: ram wIdx = 0x6ffbfbe6 out of bound!
+ERROR: ram wIdx = 0x6ffbfbe7 out of bound!
+ERROR: ram wIdx = 0x6ffbfc00 out of bound!
+ERROR: ram wIdx = 0x6ffbfc01 out of bound!
+ERROR: ram wIdx = 0x6ffbfc02 out of bound!
+ERROR: ram wIdx = 0x6ffbfc03 out of bound!
+ERROR: ram wIdx = 0x6ffbfc04 out of bound!
+ERROR: ram wIdx = 0x6ffbfc05 out of bound!
+ERROR: ram wIdx = 0x6ffbfc06 out of bound!
+ERROR: ram wIdx = 0x6ffbfc07 out of bound!
+ERROR: ram wIdx = 0x6ffbfb18 out of bound!
+ERROR: ram wIdx = 0x6ffbfb19 out of bound!
+ERROR: ram wIdx = 0x6ffbfb1a out of bound!
+ERROR: ram wIdx = 0x6ffbfb1b out of bound!
+ERROR: ram wIdx = 0x6ffbfb1c out of bound!
+ERROR: ram wIdx = 0x6ffbfb1d out of bound!
+ERROR: ram wIdx = 0x6ffbfb1e out of bound!
+ERROR: ram wIdx = 0x6ffbfb1f out of bound!
+ERROR: ram wIdx = 0x6ffbfac0 out of bound!
+ERROR: ram wIdx = 0x6ffbfac1 out of bound!
+ERROR: ram wIdx = 0x6ffbfac2 out of bound!
+ERROR: ram wIdx = 0x6ffbfac3 out of bound!
+ERROR: ram wIdx = 0x6ffbfac4 out of bound!
+ERROR: ram wIdx = 0x6ffbfac5 out of bound!
+ERROR: ram wIdx = 0x6ffbfac6 out of bound!
+ERROR: ram wIdx = 0x6ffbfac7 out of bound!
+ERROR: ram wIdx = 0x6ffbfb48 out of bound!
+ERROR: ram wIdx = 0x6ffbfb49 out of bound!
+ERROR: ram wIdx = 0x6ffbfb4a out of bound!
+ERROR: ram wIdx = 0x6ffbfb4b out of bound!
+ERROR: ram wIdx = 0x6ffbfb4c out of bound!
+ERROR: ram wIdx = 0x6ffbfb4d out of bound!
+ERROR: ram wIdx = 0x6ffbfb4e out of bound!
+ERROR: ram wIdx = 0x6ffbfb4f out of bound!
+ERROR: ram wIdx = 0x6ffbfc18 out of bound!
+ERROR: ram wIdx = 0x6ffbfc19 out of bound!
+ERROR: ram wIdx = 0x6ffbfc1a out of bound!
+ERROR: ram wIdx = 0x6ffbfc1b out of bound!
+ERROR: ram wIdx = 0x6ffbfc1c out of bound!
+ERROR: ram wIdx = 0x6ffbfc1d out of bound!
+ERROR: ram wIdx = 0x6ffbfc1e out of bound!
+ERROR: ram wIdx = 0x6ffbfc1f out of bound!
+ERROR: ram wIdx = 0x6ffbfc38 out of bound!
+ERROR: ram wIdx = 0x6ffbfc39 out of bound!
+ERROR: ram wIdx = 0x6ffbfc3a out of bound!
+ERROR: ram wIdx = 0x6ffbfc3b out of bound!
+ERROR: ram wIdx = 0x6ffbfc3c out of bound!
+ERROR: ram wIdx = 0x6ffbfc3d out of bound!
+ERROR: ram wIdx = 0x6ffbfc3e out of bound!
+ERROR: ram wIdx = 0x6ffbfc3f out of bound!
+ERROR: ram wIdx = 0x6ffbfbf0 out of bound!
+ERROR: ram wIdx = 0x6ffbfbf1 out of bound!
+ERROR: ram wIdx = 0x6ffbfbf2 out of bound!
+ERROR: ram wIdx = 0x6ffbfbf3 out of bound!
+ERROR: ram wIdx = 0x6ffbfbf4 out of bound!
+ERROR: ram wIdx = 0x6ffbfbf5 out of bound!
+ERROR: ram wIdx = 0x6ffbfbf6 out of bound!
+ERROR: ram wIdx = 0x6ffbfbf7 out of bound!
+ERROR: ram wIdx = 0x6ffbfbf8 out of bound!
+ERROR: ram wIdx = 0x6ffbfbf9 out of bound!
+ERROR: ram wIdx = 0x6ffbfbfa out of bound!
+ERROR: ram wIdx = 0x6ffbfbfb out of bound!
+ERROR: ram wIdx = 0x6ffbfbfc out of bound!
+ERROR: ram wIdx = 0x6ffbfbfd out of bound!
+ERROR: ram wIdx = 0x6ffbfbfe out of bound!
+ERROR: ram wIdx = 0x6ffbfbff out of bound!
+ERROR: ram wIdx = 0x6ffbfc30 out of bound!
+ERROR: ram wIdx = 0x6ffbfc31 out of bound!
+ERROR: ram wIdx = 0x6ffbfc32 out of bound!
+ERROR: ram wIdx = 0x6ffbfc33 out of bound!
+ERROR: ram wIdx = 0x6ffbfc34 out of bound!
+ERROR: ram wIdx = 0x6ffbfc35 out of bound!
+ERROR: ram wIdx = 0x6ffbfc36 out of bound!
+ERROR: ram wIdx = 0x6ffbfc37 out of bound!
+ERROR: ram wIdx = 0x6ffbfc90 out of bound!
+ERROR: ram wIdx = 0x6ffbfc91 out of bound!
+ERROR: ram wIdx = 0x6ffbfc92 out of bound!
+ERROR: ram wIdx = 0x6ffbfc93 out of bound!
+ERROR: ram wIdx = 0x6ffbfc94 out of bound!
+ERROR: ram wIdx = 0x6ffbfc95 out of bound!
+ERROR: ram wIdx = 0x6ffbfc96 out of bound!
+ERROR: ram wIdx = 0x6ffbfc97 out of bound!
+ERROR: ram wIdx = 0x6ffbfb10 out of bound!
+ERROR: ram wIdx = 0x6ffbfb11 out of bound!
+ERROR: ram wIdx = 0x6ffbfb12 out of bound!
+ERROR: ram wIdx = 0x6ffbfb13 out of bound!
+ERROR: ram wIdx = 0x6ffbfb14 out of bound!
+ERROR: ram wIdx = 0x6ffbfb15 out of bound!
+ERROR: ram wIdx = 0x6ffbfb16 out of bound!
+ERROR: ram wIdx = 0x6ffbfb17 out of bound!
+ERROR: ram wIdx = 0x6ffbfbb0 out of bound!
+ERROR: ram wIdx = 0x6ffbfbb1 out of bound!
+ERROR: ram wIdx = 0x6ffbfbb2 out of bound!
+ERROR: ram wIdx = 0x6ffbfbb3 out of bound!
+ERROR: ram wIdx = 0x6ffbfbb4 out of bound!
+ERROR: ram wIdx = 0x6ffbfbb5 out of bound!
+ERROR: ram wIdx = 0x6ffbfbb6 out of bound!
+ERROR: ram wIdx = 0x6ffbfbb7 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf0 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf1 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf2 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf3 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf4 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf5 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf6 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf7 out of bound!
+ERROR: ram wIdx = 0x6ffbfb98 out of bound!
+ERROR: ram wIdx = 0x6ffbfb99 out of bound!
+ERROR: ram wIdx = 0x6ffbfb9a out of bound!
+ERROR: ram wIdx = 0x6ffbfb9b out of bound!
+ERROR: ram wIdx = 0x6ffbfb9c out of bound!
+ERROR: ram wIdx = 0x6ffbfb9d out of bound!
+ERROR: ram wIdx = 0x6ffbfb9e out of bound!
+ERROR: ram wIdx = 0x6ffbfb9f out of bound!
+ERROR: ram wIdx = 0x6ffbfb20 out of bound!
+ERROR: ram wIdx = 0x6ffbfb21 out of bound!
+ERROR: ram wIdx = 0x6ffbfb22 out of bound!
+ERROR: ram wIdx = 0x6ffbfb23 out of bound!
+ERROR: ram wIdx = 0x6ffbfb24 out of bound!
+ERROR: ram wIdx = 0x6ffbfb25 out of bound!
+ERROR: ram wIdx = 0x6ffbfb26 out of bound!
+ERROR: ram wIdx = 0x6ffbfb27 out of bound!
+ERROR: ram wIdx = 0x6ffbfad8 out of bound!
+ERROR: ram wIdx = 0x6ffbfad9 out of bound!
+ERROR: ram wIdx = 0x6ffbfada out of bound!
+ERROR: ram wIdx = 0x6ffbfadb out of bound!
+ERROR: ram wIdx = 0x6ffbfadc out of bound!
+ERROR: ram wIdx = 0x6ffbfadd out of bound!
+ERROR: ram wIdx = 0x6ffbfade out of bound!
+ERROR: ram wIdx = 0x6ffbfadf out of bound!
+ERROR: ram wIdx = 0x6ffbfae8 out of bound!
+ERROR: ram wIdx = 0x6ffbfae9 out of bound!
+ERROR: ram wIdx = 0x6ffbfaea out of bound!
+ERROR: ram wIdx = 0x6ffbfaeb out of bound!
+ERROR: ram wIdx = 0x6ffbfaec out of bound!
+ERROR: ram wIdx = 0x6ffbfaed out of bound!
+ERROR: ram wIdx = 0x6ffbfaee out of bound!
+ERROR: ram wIdx = 0x6ffbfaef out of bound!
+ERROR: ram wIdx = 0x6ffbfaf8 out of bound!
+ERROR: ram wIdx = 0x6ffbfaf9 out of bound!
+ERROR: ram wIdx = 0x6ffbfafa out of bound!
+ERROR: ram wIdx = 0x6ffbfafb out of bound!
+ERROR: ram wIdx = 0x6ffbfafc out of bound!
+ERROR: ram wIdx = 0x6ffbfafd out of bound!
+ERROR: ram wIdx = 0x6ffbfafe out of bound!
+ERROR: ram wIdx = 0x6ffbfaff out of bound!
+ERROR: ram wIdx = 0x6ffbfd20 out of bound!
+ERROR: ram wIdx = 0x6ffbfd21 out of bound!
+ERROR: ram wIdx = 0x6ffbfd22 out of bound!
+ERROR: ram wIdx = 0x6ffbfd23 out of bound!
+ERROR: ram wIdx = 0x6ffbfd24 out of bound!
+ERROR: ram wIdx = 0x6ffbfd25 out of bound!
+ERROR: ram wIdx = 0x6ffbfd26 out of bound!
+ERROR: ram wIdx = 0x6ffbfd27 out of bound!
+ERROR: ram wIdx = 0x6ffbfb68 out of bound!
+ERROR: ram wIdx = 0x6ffbfb69 out of bound!
+ERROR: ram wIdx = 0x6ffbfb6a out of bound!
+ERROR: ram wIdx = 0x6ffbfb6b out of bound!
+ERROR: ram wIdx = 0x6ffbfb6c out of bound!
+ERROR: ram wIdx = 0x6ffbfb6d out of bound!
+ERROR: ram wIdx = 0x6ffbfb6e out of bound!
+ERROR: ram wIdx = 0x6ffbfb6f out of bound!
+ERROR: ram wIdx = 0x6ffbfb38 out of bound!
+ERROR: ram wIdx = 0x6ffbfb39 out of bound!
+ERROR: ram wIdx = 0x6ffbfb3a out of bound!
+ERROR: ram wIdx = 0x6ffbfb3b out of bound!
+ERROR: ram wIdx = 0x6ffbfb3c out of bound!
+ERROR: ram wIdx = 0x6ffbfb3d out of bound!
+ERROR: ram wIdx = 0x6ffbfb3e out of bound!
+ERROR: ram wIdx = 0x6ffbfb3f out of bound!
+ERROR: ram wIdx = 0x6ffbfb78 out of bound!
+ERROR: ram wIdx = 0x6ffbfb79 out of bound!
+ERROR: ram wIdx = 0x6ffbfb7a out of bound!
+ERROR: ram wIdx = 0x6ffbfb7b out of bound!
+ERROR: ram wIdx = 0x6ffbfb7c out of bound!
+ERROR: ram wIdx = 0x6ffbfb7d out of bound!
+ERROR: ram wIdx = 0x6ffbfb7e out of bound!
+ERROR: ram wIdx = 0x6ffbfb7f out of bound!
+ERROR: ram wIdx = 0x6ffbfb90 out of bound!
+ERROR: ram wIdx = 0x6ffbfb91 out of bound!
+ERROR: ram wIdx = 0x6ffbfb92 out of bound!
+ERROR: ram wIdx = 0x6ffbfb93 out of bound!
+ERROR: ram wIdx = 0x6ffbfb94 out of bound!
+ERROR: ram wIdx = 0x6ffbfb95 out of bound!
+ERROR: ram wIdx = 0x6ffbfb96 out of bound!
+ERROR: ram wIdx = 0x6ffbfb97 out of bound!
+ERROR: ram wIdx = 0x6ffbfb50 out of bound!
+ERROR: ram wIdx = 0x6ffbfb51 out of bound!
+ERROR: ram wIdx = 0x6ffbfb52 out of bound!
+ERROR: ram wIdx = 0x6ffbfb53 out of bound!
+ERROR: ram wIdx = 0x6ffbfb54 out of bound!
+ERROR: ram wIdx = 0x6ffbfb55 out of bound!
+ERROR: ram wIdx = 0x6ffbfb56 out of bound!
+ERROR: ram wIdx = 0x6ffbfb57 out of bound!
+ERROR: ram wIdx = 0x6ffbfb40 out of bound!
+ERROR: ram wIdx = 0x6ffbfb41 out of bound!
+ERROR: ram wIdx = 0x6ffbfb42 out of bound!
+ERROR: ram wIdx = 0x6ffbfb43 out of bound!
+ERROR: ram wIdx = 0x6ffbfb44 out of bound!
+ERROR: ram wIdx = 0x6ffbfb45 out of bound!
+ERROR: ram wIdx = 0x6ffbfb46 out of bound!
+ERROR: ram wIdx = 0x6ffbfb47 out of bound!
+cacheid=1,idtfr=0,realpaddr=0x809d7920: Refill test failed!
+addr: 809d7900
+Gold: 000000000000000000000000000000000000000000000000000000000000000d00000000000000a4000000000000000400000000000682040000000000001311
+Core: 000000000000000000000000000000000000000000000000000000000000000a0000000000000099000000000000000400000000000682040000000000001311
+
+============== Commit Group Trace (Core 0) ==============
+commit group [00]: pc 000009d62a cmtcnt 6
+commit group [01]: pc 000009d63a cmtcnt 6
+commit group [02]: pc 000009d660 cmtcnt 6
+commit group [03]: pc 000009defe cmtcnt 6
+commit group [04]: pc 000009dfb6 cmtcnt 5
+commit group [05]: pc 000009df2e cmtcnt 2
+commit group [06]: pc 000009df36 cmtcnt 3
+commit group [07]: pc 000009df3e cmtcnt 6
+commit group [08]: pc 000009df52 cmtcnt 6
+commit group [09]: pc 000009df64 cmtcnt 4
+commit group [10]: pc 000009df70 cmtcnt 2
+commit group [11]: pc 000009df1a cmtcnt 3
+commit group [12]: pc 000009df24 cmtcnt 5
+commit group [13]: pc 000009df36 cmtcnt 6 <--
+commit group [14]: pc 00000267ae cmtcnt 6
+commit group [15]: pc 000009d61e cmtcnt 6
+
+============== Commit Instr Trace ==============
+[00] commit pc 000000000009df42 inst 0305b803 wen 1 dst 16 data 0000000000000099 idx 0e0 (03) ld      a6, 48(a1)
+[01] commit pc 000000000009df46 inst 03878693 wen 1 dst 13 data 000000000029c8f8 idx 0e1 addi    a3, a5, 56 <--
+[02] commit pc 000000000009df3e inst 0106b023 wen 0 dst 00 data 000000000009df7a idx 0c2 (03) sd      a6, 0(a3)
+[03] commit pc 000000000009df42 inst 0305b803 wen 1 dst 16 data 00000000011f47a0 idx 0c3 (4b) ld      a6, 48(a1)
+[04] commit pc 000000000009df46 inst 03878693 wen 1 dst 13 data 000000000029c8b8 idx 0c4 addi    a3, a5, 56
+[05] commit pc 000000000009df4a inst 00e53023 wen 0 dst 00 data 000000000009df7a idx 0c5 (04) sd      a4, 0(a0)
+[06] commit pc 000000000009df4c inst 0385b703 wen 1 dst 14 data 00000000011f1fe0 idx 0c6 (4c) ld      a4, 56(a1)
+[07] commit pc 000000000009df4e inst 04078793 wen 1 dst 15 data 000000000029c8c0 idx 0c7 addi    a5, a5, 64
+[08] commit pc 000000000009df52 inst 0106b023 wen 0 dst 00 data 000000000009df7a idx 0c8 (05) sd      a6, 0(a3)
+[09] commit pc 000000000009df56 inst ff860613 wen 1 dst 12 data 0000000000000008 idx 0c9 addi    a2, a2, -8
+[10] commit pc 000000000009df58 inst 00078513 wen 1 dst 10 data 000000000029c8c0 idx 0ca mv      a0, a5
+[11] commit pc 000000000009df5a inst 04058593 wen 1 dst 11 data 0000000000af08f0 idx 0cb addi    a1, a1, 64
+[12] commit pc 000000000009df5e inst 00060c63 wen 0 dst 24 data 000000000009df7a idx 0cc beqz    a2, pc + 24
+[13] commit pc 000000000009df60 inst 0005b803 wen 1 dst 16 data 0000000000000000 idx 0cd (4d) ld      a6, 0(a1)
+[14] commit pc 000000000009df64 inst 00878693 wen 1 dst 13 data 000000000029c8c8 idx 0ce addi    a3, a5, 8
+[15] commit pc 000000000009df68 inst 00e53023 wen 0 dst 00 data 000000000009df7a idx 0cf (06) sd      a4, 0(a0)
+[16] commit pc 000000000009df6a inst 0085b703 wen 1 dst 14 data 0000000000000000 idx 0d0 (4e) ld      a4, 8(a1)
+[17] commit pc 000000000009df6c inst 01078513 wen 1 dst 10 data 000000000029c8d0 idx 0d1 addi    a0, a5, 16
+[18] commit pc 000000000009df70 inst 0106b023 wen 0 dst 00 data 000000000009df7a idx 0d2 (07) sd      a6, 0(a3)
+[19] commit pc 000000000009df74 inst fa7ff06f wen 0 dst 00 data 000000000009df7a idx 0d3 j       pc - 0x5a
+[20] commit pc 000000000009df1a inst 0105b803 wen 1 dst 16 data 0000000000000000 idx 0d4 (4f) ld      a6, 16(a1)
+[21] commit pc 000000000009df1e inst 01878693 wen 1 dst 13 data 000000000029c8d8 idx 0d5 addi    a3, a5, 24
+[22] commit pc 000000000009df22 inst 00e53023 wen 0 dst 00 data 000000000009df7a idx 0d6 (08) sd      a4, 0(a0)
+[23] commit pc 000000000009df24 inst 0185b703 wen 1 dst 14 data 0000000000000000 idx 0d7 (00) ld      a4, 24(a1)
+[24] commit pc 000000000009df26 inst 02078513 wen 1 dst 10 data 000000000029c8e0 idx 0d8 addi    a0, a5, 32
+[25] commit pc 000000000009df2a inst 0106b023 wen 0 dst 00 data 000000000009df76 idx 0d9 (09) sd      a6, 0(a3)
+[26] commit pc 000000000009df2e inst 0205b803 wen 1 dst 16 data 0000000000000000 idx 0da (01) ld      a6, 32(a1)
+[27] commit pc 000000000009df32 inst 02878693 wen 1 dst 13 data 000000000029c8e8 idx 0db addi    a3, a5, 40
+[28] commit pc 000000000009df36 inst 00e53023 wen 0 dst 00 data 000000000009df76 idx 0dc (0a) sd      a4, 0(a0)
+[29] commit pc 000000000009df38 inst 0285b703 wen 1 dst 14 data 000000000000000a idx 0dd (02) ld      a4, 40(a1)
+[30] commit pc 000000000009df3a inst 03078513 wen 1 dst 10 data 000000000029c8f0 idx 0de addi    a0, a5, 48
+[31] commit pc 000000000009df3e inst 0106b023 wen 0 dst 00 data 000000000009df76 idx 0df (0b) sd      a6, 0(a3)
+
+==============  REF Regs  ==============
+  $0: 0x0000000000000000   ra: 0x000000000009d66e   sp: 0x0000003fffdfe0b0   gp: 0x00000000001190a8 
+  tp: 0x0000000000168760   t0: 0x0000000000000018   t1: 0x00000000000000f0   t2: 0x0000000000000002 
+  s0: 0x0000000000af08c8   s1: 0x0000000000000068   a0: 0x000000000029c8f0   a1: 0x0000000000af08f0 
+  a2: 0x0000000000000008   a3: 0x000000000029c8f8   a4: 0x000000000000000d   a5: 0x000000000029c8c0 
+  a6: 0x00000000000000a4   a7: 0x0000000000051a7b   s2: 0x000000000029c8a0   s3: 0x000000000029c8a0 
+  s4: 0x000000000000001d   s5: 0x0000000000000001   s6: 0x000000000029cf40   s7: 0x0000000000e631a0 
+  s8: 0x000000000029c950   s9: 0x0000000000e62bb0  s10: 0x00000000011f1fe0  s11: 0x0000000000000014 
+  t3: 0x0000000000000004   t4: 0x0000000000000004   t5: 0x0000000000e5b4ec   t6: 0x0000000000000001 
+ ft0: 0x3f81111167a4d017  ft1: 0xbff0000000000000  ft2: 0x3fdffffffffffdbd  ft3: 0xbd0cf79abc9e3b3a 
+ ft4: 0x3fe999999959554e  ft5: 0x3fadcc6cdfe0d5ec  ft6: 0x0000000000000000  ft7: 0x0000000000000000 
+ fs0: 0x403a0b8ae22a764a  fs1: 0x401469ebdeb742a5  fa0: 0x401469ebdeb742a5  fa1: 0x3fdffb122a0037e9 
+ fa2: 0xbf5d9303fea2fc0d  fa3: 0xbf5d8c2fc54b6a58  fa4: 0x3fe0000000000000  fa5: 0x411469eddeb742a5 
+ fa6: 0x0000000000000000  fa7: 0x0000000000000000  fs2: 0x0000000000000000  fs3: 0x46293e5939a08cea 
+ fs4: 0x4008000000000000  fs5: 0x0000000000000000  fs6: 0x0000000000000000  fs7: 0x0000000000000000 
+ fs8: 0x0000000000000000  fs9: 0x0000000000000000 fs10: 0x0000000000000000 fs11: 0x0000000000000000 
+ ft8: 0x0000000000000000  ft9: 0x0000000000000000 ft10: 0x0000000000000000 ft11: 0x0000000000000000 
+pc: 0x000000000009df4a mstatus: 0x8000000a000060aa mcause: 0x0000000000000009 mepc: 0x000000000009df1a
+                       sstatus: 0x8000000200006022 scause: 0x0000000000000008 sepc: 0x00000000000a06c4
+satp: 0x8000000000080278
+mip: 0x0000000000000000 mie: 0x000000000000022a mscratch: 0x00000000800abdc0 sscratch: 0xffffffe079b73640
+mideleg: 0x0000000000000222 medeleg: 0x000000000000b109
+mtval: 0x0000000000000000 stval: 0x0000000000000000 mtvec: 0x00000000800a0004 stvec: 0xffffffe000fadcc8
+privilege mode:0  pmp: below
+ 0: cfg:0x00 addr:0x0000000020028000| 1: cfg:0x08 addr:0x000000002002d000
+ 2: cfg:0x1f addr:0x00000003ffffffff| 3: cfg:0x00 addr:0x0000000000000000
+ 4: cfg:0x00 addr:0x0000000000000000| 5: cfg:0x00 addr:0x0000000000000000
+ 6: cfg:0x00 addr:0x0000000000000000| 7: cfg:0x00 addr:0x0000000000000000
+ 8: cfg:0x00 addr:0x0000000000000000| 9: cfg:0x00 addr:0x0000000000000000
+10: cfg:0x00 addr:0x0000000000000000|11: cfg:0x00 addr:0x0000000000000000
+12: cfg:0x00 addr:0x0000000000000000|13: cfg:0x00 addr:0x0000000000000000
+14: cfg:0x00 addr:0x0000000000000000|15: cfg:0x00 addr:0x0000000000000000
+fb92 out of bound!
+ERROR: ram wIdx = 0x6ffbfb93 out of bound!
+ERROR: ram wIdx = 0x6ffbfb94 out of bound!
+ERROR: ram wIdx = 0x6ffbfb95 out of bound!
+ERROR: ram wIdx = 0x6ffbfb96 out of bound!
+ERROR: ram wIdx = 0x6ffbfb97 out of bound!
+ERROR: ram wIdx = 0x6ffbfb50 out of bound!
+ERROR: ram wIdx = 0x6ffbfb51 out of bound!
+ERROR: ram wIdx = 0x6ffbfb52 out of bound!
+ERROR: ram wIdx = 0x6ffbfb53 out of bound!
+ERROR: ram wIdx = 0x6ffbfb54 out of bound!
+ERROR: ram wIdx = 0x6ffbfb55 out of bound!
+ERROR: ram wIdx = 0x6ffbfb56 out of bound!
+ERROR: ram wIdx = 0x6ffbfb57 out of bound!
+ERROR: ram wIdx = 0x6ffbfb40 out of bound!
+ERROR: ram wIdx = 0x6ffbfb41 out of bound!
+ERROR: ram wIdx = 0x6ffbfb42 out of bound!
+ERROR: ram wIdx = 0x6ffbfb43 out of bound!
+ERROR: ram wIdx = 0x6ffbfb44 out of bound!
+ERROR: ram wIdx = 0x6ffbfb45 out of bound!
+ERROR: ram wIdx = 0x6ffbfb46 out of bound!
+ERROR: ram wIdx = 0x6ffbfb47 out of bound!
+[FORK_INFO pid(983558)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(983558)] dump wave to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-05-25@00:02:16_8609754.fst...
+fb92 out of bound!
+ERROR: ram wIdx = 0x6ffbfb93 out of bound!
+ERROR: ram wIdx = 0x6ffbfb94 out of bound!
+ERROR: ram wIdx = 0x6ffbfb95 out of bound!
+ERROR: ram wIdx = 0x6ffbfb96 out of bound!
+ERROR: ram wIdx = 0x6ffbfb97 out of bound!
+ERROR: ram wIdx = 0x6ffbfb50 out of bound!
+ERROR: ram wIdx = 0x6ffbfb51 out of bound!
+ERROR: ram wIdx = 0x6ffbfb52 out of bound!
+ERROR: ram wIdx = 0x6ffbfb53 out of bound!
+ERROR: ram wIdx = 0x6ffbfb54 out of bound!
+ERROR: ram wIdx = 0x6ffbfb55 out of bound!
+ERROR: ram wIdx = 0x6ffbfb56 out of bound!
+ERROR: ram wIdx = 0x6ffbfb57 out of bound!
+ERROR: ram wIdx = 0x6ffbfb40 out of bound!
+ERROR: ram wIdx = 0x6ffbfb41 out of bound!
+ERROR: ram wIdx = 0x6ffbfb42 out of bound!
+ERROR: ram wIdx = 0x6ffbfb43 out of bound!
+ERROR: ram wIdx = 0x6ffbfb44 out of bound!
+ERROR: ram wIdx = 0x6ffbfb45 out of bound!
+ERROR: ram wIdx = 0x6ffbfb46 out of bound!
+ERROR: ram wIdx = 0x6ffbfb47 out of bound!
+cacheid=1,idtfr=0,realpaddr=0x809d7920: Refill test failed!
+addr: 809d7900
+Gold: 000000000000000000000000000000000000000000000000000000000000000d00000000000000a4000000000000000400000000000682040000000000001311
+Core: 000000000000000000000000000000000000000000000000000000000000000a0000000000000099000000000000000400000000000682040000000000001311
+
+============== Commit Group Trace (Core 0) ==============
+commit group [00]: pc 000009d62a cmtcnt 6
+commit group [01]: pc 000009d63a cmtcnt 6
+commit group [02]: pc 000009d660 cmtcnt 6
+commit group [03]: pc 000009defe cmtcnt 6
+commit group [04]: pc 000009dfb6 cmtcnt 5
+commit group [05]: pc 000009df2e cmtcnt 2
+commit group [06]: pc 000009df36 cmtcnt 3
+commit group [07]: pc 000009df3e cmtcnt 6
+commit group [08]: pc 000009df52 cmtcnt 6
+commit group [09]: pc 000009df64 cmtcnt 4
+commit group [10]: pc 000009df70 cmtcnt 2
+commit group [11]: pc 000009df1a cmtcnt 3
+commit group [12]: pc 000009df24 cmtcnt 5
+commit group [13]: pc 000009df36 cmtcnt 6 <--
+commit group [14]: pc 00000267ae cmtcnt 6
+commit group [15]: pc 000009d61e cmtcnt 6
+
+============== Commit Instr Trace ==============
+[00] commit pc 000000000009df42 inst 0305b803 wen 1 dst 16 data 0000000000000099 idx 0e0 (03) ld      a6, 48(a1)
+[01] commit pc 000000000009df46 inst 03878693 wen 1 dst 13 data 000000000029c8f8 idx 0e1 addi    a3, a5, 56 <--
+[02] commit pc 000000000009df3e inst 0106b023 wen 0 dst 00 data 000000000009df7a idx 0c2 (03) sd      a6, 0(a3)
+[03] commit pc 000000000009df42 inst 0305b803 wen 1 dst 16 data 00000000011f47a0 idx 0c3 (4b) ld      a6, 48(a1)
+[04] commit pc 000000000009df46 inst 03878693 wen 1 dst 13 data 000000000029c8b8 idx 0c4 addi    a3, a5, 56
+[05] commit pc 000000000009df4a inst 00e53023 wen 0 dst 00 data 000000000009df7a idx 0c5 (04) sd      a4, 0(a0)
+[06] commit pc 000000000009df4c inst 0385b703 wen 1 dst 14 data 00000000011f1fe0 idx 0c6 (4c) ld      a4, 56(a1)
+[07] commit pc 000000000009df4e inst 04078793 wen 1 dst 15 data 000000000029c8c0 idx 0c7 addi    a5, a5, 64
+[08] commit pc 000000000009df52 inst 0106b023 wen 0 dst 00 data 000000000009df7a idx 0c8 (05) sd      a6, 0(a3)
+[09] commit pc 000000000009df56 inst ff860613 wen 1 dst 12 data 0000000000000008 idx 0c9 addi    a2, a2, -8
+[10] commit pc 000000000009df58 inst 00078513 wen 1 dst 10 data 000000000029c8c0 idx 0ca mv      a0, a5
+[11] commit pc 000000000009df5a inst 04058593 wen 1 dst 11 data 0000000000af08f0 idx 0cb addi    a1, a1, 64
+[12] commit pc 000000000009df5e inst 00060c63 wen 0 dst 24 data 000000000009df7a idx 0cc beqz    a2, pc + 24
+[13] commit pc 000000000009df60 inst 0005b803 wen 1 dst 16 data 0000000000000000 idx 0cd (4d) ld      a6, 0(a1)
+[14] commit pc 000000000009df64 inst 00878693 wen 1 dst 13 data 000000000029c8c8 idx 0ce addi    a3, a5, 8
+[15] commit pc 000000000009df68 inst 00e53023 wen 0 dst 00 data 000000000009df7a idx 0cf (06) sd      a4, 0(a0)
+[16] commit pc 000000000009df6a inst 0085b703 wen 1 dst 14 data 0000000000000000 idx 0d0 (4e) ld      a4, 8(a1)
+[17] commit pc 000000000009df6c inst 01078513 wen 1 dst 10 data 000000000029c8d0 idx 0d1 addi    a0, a5, 16
+[18] commit pc 000000000009df70 inst 0106b023 wen 0 dst 00 data 000000000009df7a idx 0d2 (07) sd      a6, 0(a3)
+[19] commit pc 000000000009df74 inst fa7ff06f wen 0 dst 00 data 000000000009df7a idx 0d3 j       pc - 0x5a
+[20] commit pc 000000000009df1a inst 0105b803 wen 1 dst 16 data 0000000000000000 idx 0d4 (4f) ld      a6, 16(a1)
+[21] commit pc 000000000009df1e inst 01878693 wen 1 dst 13 data 000000000029c8d8 idx 0d5 addi    a3, a5, 24
+[22] commit pc 000000000009df22 inst 00e53023 wen 0 dst 00 data 000000000009df7a idx 0d6 (08) sd      a4, 0(a0)
+[23] commit pc 000000000009df24 inst 0185b703 wen 1 dst 14 data 0000000000000000 idx 0d7 (00) ld      a4, 24(a1)
+[24] commit pc 000000000009df26 inst 02078513 wen 1 dst 10 data 000000000029c8e0 idx 0d8 addi    a0, a5, 32
+[25] commit pc 000000000009df2a inst 0106b023 wen 0 dst 00 data 000000000009df76 idx 0d9 (09) sd      a6, 0(a3)
+[26] commit pc 000000000009df2e inst 0205b803 wen 1 dst 16 data 0000000000000000 idx 0da (01) ld      a6, 32(a1)
+[27] commit pc 000000000009df32 inst 02878693 wen 1 dst 13 data 000000000029c8e8 idx 0db addi    a3, a5, 40
+[28] commit pc 000000000009df36 inst 00e53023 wen 0 dst 00 data 000000000009df76 idx 0dc (0a) sd      a4, 0(a0)
+[29] commit pc 000000000009df38 inst 0285b703 wen 1 dst 14 data 000000000000000a idx 0dd (02) ld      a4, 40(a1)
+[30] commit pc 000000000009df3a inst 03078513 wen 1 dst 10 data 000000000029c8f0 idx 0de addi    a0, a5, 48
+[31] commit pc 000000000009df3e inst 0106b023 wen 0 dst 00 data 000000000009df76 idx 0df (0b) sd      a6, 0(a3)
+
+==============  REF Regs  ==============
+  $0: 0x0000000000000000   ra: 0x000000000009d66e   sp: 0x0000003fffdfe0b0   gp: 0x00000000001190a8 
+  tp: 0x0000000000168760   t0: 0x0000000000000018   t1: 0x00000000000000f0   t2: 0x0000000000000002 
+  s0: 0x0000000000af08c8   s1: 0x0000000000000068   a0: 0x000000000029c8f0   a1: 0x0000000000af08f0 
+  a2: 0x0000000000000008   a3: 0x000000000029c8f8   a4: 0x000000000000000d   a5: 0x000000000029c8c0 
+  a6: 0x00000000000000a4   a7: 0x0000000000051a7b   s2: 0x000000000029c8a0   s3: 0x000000000029c8a0 
+  s4: 0x000000000000001d   s5: 0x0000000000000001   s6: 0x000000000029cf40   s7: 0x0000000000e631a0 
+  s8: 0x000000000029c950   s9: 0x0000000000e62bb0  s10: 0x00000000011f1fe0  s11: 0x0000000000000014 
+  t3: 0x0000000000000004   t4: 0x0000000000000004   t5: 0x0000000000e5b4ec   t6: 0x0000000000000001 
+ ft0: 0x3f81111167a4d017  ft1: 0xbff0000000000000  ft2: 0x3fdffffffffffdbd  ft3: 0xbd0cf79abc9e3b3a 
+ ft4: 0x3fe999999959554e  ft5: 0x3fadcc6cdfe0d5ec  ft6: 0x0000000000000000  ft7: 0x0000000000000000 
+ fs0: 0x403a0b8ae22a764a  fs1: 0x401469ebdeb742a5  fa0: 0x401469ebdeb742a5  fa1: 0x3fdffb122a0037e9 
+ fa2: 0xbf5d9303fea2fc0d  fa3: 0xbf5d8c2fc54b6a58  fa4: 0x3fe0000000000000  fa5: 0x411469eddeb742a5 
+ fa6: 0x0000000000000000  fa7: 0x0000000000000000  fs2: 0x0000000000000000  fs3: 0x46293e5939a08cea 
+ fs4: 0x4008000000000000  fs5: 0x0000000000000000  fs6: 0x0000000000000000  fs7: 0x0000000000000000 
+ fs8: 0x0000000000000000  fs9: 0x0000000000000000 fs10: 0x0000000000000000 fs11: 0x0000000000000000 
+ ft8: 0x0000000000000000  ft9: 0x0000000000000000 ft10: 0x0000000000000000 ft11: 0x0000000000000000 
+pc: 0x000000000009df4a mstatus: 0x8000000a000060aa mcause: 0x0000000000000009 mepc: 0x000000000009df1a
+                       sstatus: 0x8000000200006022 scause: 0x0000000000000008 sepc: 0x00000000000a06c4
+satp: 0x8000000000080278
+mip: 0x0000000000000000 mie: 0x000000000000022a mscratch: 0x00000000800abdc0 sscratch: 0xffffffe079b73640
+mideleg: 0x0000000000000222 medeleg: 0x000000000000b109
+mtval: 0x0000000000000000 stval: 0x0000000000000000 mtvec: 0x00000000800a0004 stvec: 0xffffffe000fadcc8
+privilege mode:0  pmp: below
+ 0: cfg:0x00 addr:0x0000000020028000| 1: cfg:0x08 addr:0x000000002002d000
+ 2: cfg:0x1f addr:0x00000003ffffffff| 3: cfg:0x00 addr:0x0000000000000000
+ 4: cfg:0x00 addr:0x0000000000000000| 5: cfg:0x00 addr:0x0000000000000000
+ 6: cfg:0x00 addr:0x0000000000000000| 7: cfg:0x00 addr:0x0000000000000000
+ 8: cfg:0x00 addr:0x0000000000000000| 9: cfg:0x00 addr:0x0000000000000000
+10: cfg:0x00 addr:0x0000000000000000|11: cfg:0x00 addr:0x0000000000000000
+12: cfg:0x00 addr:0x0000000000000000|13: cfg:0x00 addr:0x0000000000000000
+14: cfg:0x00 addr:0x0000000000000000|15: cfg:0x00 addr:0x0000000000000000
+priviledgeMode: 0
+     a4 different at pc = 0x000009df36, right= 0x000000000000000d, wrong = 0x000000000000000a
+     a6 different at pc = 0x000009df36, right= 0x00000000000000a4, wrong = 0x0000000000000099
+Core 0: [31mABORT at pc = 0x9d682
+[0m[35minstrCnt = 36,447,018, cycleCnt = 8,615,759, IPC = 4.230274
+[0m[34mSeed=7312 Guest cycle spent: 8,615,762 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 2,903,394ms
+[0mpriviledgeMode: 0
+     a4 different at pc = 0x000009df36, right= 0x000000000000000d, wrong = 0x000000000000000a
+     a6 different at pc = 0x000009df36, right= 0x00000000000000a4, wrong = 0x0000000000000099
+Core 0: [31mABORT at pc = 0x9d682
+[0m[35minstrCnt = 36,447,018, cycleCnt = 8,615,759, IPC = 4.230274
+[0m[34mSeed=7312 Guest cycle spent: 8,615,762 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 2,903,488ms
+[0m

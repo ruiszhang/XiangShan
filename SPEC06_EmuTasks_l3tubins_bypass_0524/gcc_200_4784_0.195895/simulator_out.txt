@@ -1,0 +1,86 @@
+emu compiled at May 24 2024, 17:42:27
+Using seed = 5246
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_trainOnL1PF0 = 0
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+enableTP0 = 1
+enableL3StreamPrefetch0 = 0
+ColdDownThreshold_0 = 12
+enableDynamicPrefetcher0 = 1
+nMaxPrefetchEntry0 = 14
+always_update0 = 1
+tp_throttleCycles0 = 4
+tp_trainOnVaddr0 = 0
+StoreWaitThreshold_0 = 0
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+tp_recordThres0 = 16
+enableL1StreamPrefetcher0 = 1
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+depth0 = 32
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/gcc_200/4784/_4784_0.195895_.gz
+Gzip file detected and loading image from extracted gz file
+The reference model is /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(3186191)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+[FORK_INFO pid(3215906)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(3215906)] dump wave to /nfs/home/zhangruisi/myXiangShan5/xs-env/XiangShan/build/2024-05-24@20:58:16_4579602.fst...
+The first instruction of core 0 has commited. Difftest enabled. 
+cacheid=1,idtfr=0,realpaddr=0x808477e0: Refill test failed!
+addr: 808477c0
+Gold: 000000000000000500000000000000010000000006e9e14000000000001625fc00000000002e0d2000000000000000400000000000000001000000000000003f
+Core: 0000000000000001000000000015cd82000000000000006b00000000001642880000000000000005000000000000006b000000000000006b000000000000004c
+cacheid=1,idtfr=0,realpaddr=0x808477a0: Refill test failed!
+addr: 80847780
+Gold: 00000000067cce60000000000000000100000000002e2e9000000000000000050000000000000040000000000000000500000000000000010000000000000059
+Core: 000000000000000500000000000000420000000000000002000000000000006500000000002e0d20000000000000004200000000067a6af000000000067a6ae0
+cacheid=1,idtfr=0,realpaddr=0x808477e0: Refill test failed!
+addr: 808477c0
+Gold: 000000000000000500000000000000010000000006e9e14000000000001625fc00000000002e0d2000000000000000400000000000000001000000000000003f
+Core: 0000000000000001000000000015cd82000000000000006b00000000001642880000000000000005000000000000006b000000000000006b000000000000004c
+Core 0: [31mABORT at pc = 0x1608ba
+[0m[35minstrCnt = 7,170,864, cycleCnt = 4,583,580, IPC = 1.564468
+[0m[34mSeed=5246 Guest cycle spent: 4,583,583 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 1,563,038ms
+[0mThe first instruction of core 0 has commited. Difftest enabled. 
+cacheid=1,idtfr=0,realpaddr=0x808477e0: Refill test failed!
+addr: 808477c0
+Gold: 000000000000000500000000000000010000000006e9e14000000000001625fc00000000002e0d2000000000000000400000000000000001000000000000003f
+Core: 0000000000000001000000000015cd82000000000000006b00000000001642880000000000000005000000000000006b000000000000006b000000000000004c
+cacheid=1,idtfr=0,realpaddr=0x808477a0: Refill test failed!
+addr: 80847780
+Gold: 00000000067cce60000000000000000100000000002e2e9000000000000000050000000000000040000000000000000500000000000000010000000000000059
+Core: 000000000000000500000000000000420000000000000002000000000000006500000000002e0d20000000000000004200000000067a6af000000000067a6ae0
+cacheid=1,idtfr=0,realpaddr=0x808477e0: Refill test failed!
+addr: 808477c0
+Gold: 000000000000000500000000000000010000000006e9e14000000000001625fc00000000002e0d2000000000000000400000000000000001000000000000003f
+Core: 0000000000000001000000000015cd82000000000000006b00000000001642880000000000000005000000000000006b000000000000006b000000000000004c
+Core 0: [31mABORT at pc = 0x1608ba
+[0m[35minstrCnt = 7,170,864, cycleCnt = 4,583,580, IPC = 1.564468
+[0m[34mSeed=5246 Guest cycle spent: 4,583,583 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 1,563,165ms
+[0m
