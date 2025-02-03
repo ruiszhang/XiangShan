@@ -773,10 +773,11 @@ class DCache()(implicit p: Parameters) extends LazyModule with HasDCacheParamete
   val reqFields: Seq[BundleFieldBase] = Seq(
     PrefetchField(),
     ReqSourceField(),
-    UCField(),
     VaddrField(VAddrBits - blockOffBits),
   ) ++ cacheParams.aliasBitsOpt.map(AliasField)
-  val echoFields: Seq[BundleFieldBase] = Nil
+  val echoFields: Seq[BundleFieldBase] = Seq(
+    UCField()
+  )
 
   val clientParameters = TLMasterPortParameters.v1(
     Seq(TLMasterParameters.v1(

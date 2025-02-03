@@ -85,6 +85,7 @@ class L2Top()(implicit p: Parameters) extends LazyModule
   // channel C alone requires another buffer
   val noBufParam = BufferParams.none
   val chnC_buffer = LazyModule(new TLBuffer(noBufParam, noBufParam, BufferParams.default, noBufParam, noBufParam))
+//  val chnC_buffer = LazyModule(new TLBuffer())
 
   val clint_int_node = IntIdentityNode()
   val debug_int_node = IntIdentityNode()

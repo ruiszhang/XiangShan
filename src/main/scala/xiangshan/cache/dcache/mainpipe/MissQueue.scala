@@ -450,7 +450,7 @@ class MissEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModule {
     error := false.B
     prefetch := input_req_is_prefetch && !io.miss_req_pipe_reg.prefetch_late_en(io.req.bits, io.req.valid)
     access := false.B
-    UC := 0.U
+    UC := Mux(prefetch, 0.U, 1.U)
     secondary_fired := false.B
   }
 

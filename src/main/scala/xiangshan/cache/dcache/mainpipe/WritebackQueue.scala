@@ -327,7 +327,7 @@ class WritebackEntry(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
   io.mem_release.bits  := Mux(req.voluntary,
     Mux(req.hasData, voluntaryReleaseData, voluntaryRelease),
     Mux(req.hasData, probeResponseData, probeResponse))
-  io.mem_release.bits.user.lift(UCKey).foreach(_ := req.UC)
+  io.mem_release.bits.echo.lift(UCKey).foreach(_ := req.UC)
 
   when (io.mem_release.fire) { remain_clr := PriorityEncoderOH(remain_dup_1) }
 
@@ -582,7 +582,7 @@ class WritebackQueue(edge: TLEdgeOut)(implicit p: Parameters) extends DCacheModu
   // assign default values to output signals
   io.mem_release.valid := false.B
   io.mem_release.bits  := DontCare
-  io.mem_release.bits.user.lift(UCKey).foreach(_ := io.req.bits.UC)
+  io.mem_release.bits.echo.lift(UCKey).foreach(_ := io.req.bits.UC)
   io.mem_grant.ready   := false.B
 
   // dalay data write in miss queue release update for 1 cycle
