@@ -1,0 +1,9 @@
+[NEMU] ptw: level 2, vaddr 0x18d0e, pg_base 0x802f8000, p_pte 0x802f8000, pte.val 0x200bd001
+[NEMU] ptw: level 1, vaddr 0x18d0e, pg_base 0x802f4000, p_pte 0x802f4000, pte.val 0x200bd401
+[NEMU] ptw: level 0, vaddr 0x18d0e, pg_base 0x802f5000, p_pte 0x802f50c0, pte.val 0x3e1f5c5b
+[NEMU] mmu_read: vaddr 0x18d0e, paddr 0xf87d7d0e, rdata 0x2198
+(403853) [NEMU] pc = 0x18d0e inst 2198
+[NEMU] ptw: level 2, vaddr 0x20107ad110, pg_base 0x802f8000, p_pte 0x802f8400, pte.val 0x200be801
+[NEMU] ptw: level 1, vaddr 0x20107ad110, pg_base 0x802fa000, p_pte 0x802fa418, pte.val 0x200dc801
+[NEMU] ptw: level 0, vaddr 0x20107ad110, pg_base 0x80372000, p_pte 0x80372d68, pte.val 0x3ade88d7
+[NEMU] mmu_read: vaddr 0x20107ad110, paddr 0xeb7a2110, rdata 0x3fe9ac405b64ac56

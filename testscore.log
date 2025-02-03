@@ -1,0 +1,60 @@
+=================== Coverage ==================
+                      lbm coverage: 0.40
+               libquantum coverage: 0.36
+                      mcf coverage: 0.14
+                     milc coverage: 0.33
+                  omnetpp coverage: 0.36
+            soplex_pds-50 coverage: 0.30
+               soplex_ref coverage: 0.33
+                  sphinx3 coverage: 0.33
+
+==================== Score ===================
+            lbm: 80.056, 26.685
+     libquantum: 129.907, 43.302
+            mcf: 180.837, 60.279
+           milc: 28.958,  9.653
+        omnetpp: 38.476, 12.825
+         soplex: 50.274, 16.758
+        sphinx3: 56.289, 18.763
+SPEC2006@3GHz: 66.791
+SPEC2006/GHz:  22.264
+
+********* SPECINT 2006 *********
+  400.perlbench: N/A
+      401.bzip2: N/A
+        403.gcc: N/A
+        429.mcf: 180.837, 60.279
+      445.gobmk: N/A
+      456.hmmer: N/A
+      458.sjeng: N/A
+ 462.libquantum: 129.907, 43.302
+    464.h264ref: N/A
+    471.omnetpp: 38.476, 12.825
+      473.astar: N/A
+  483.xalancbmk: N/A
+SPECint2006@3GHz:  3.136
+SPECint2006/GHz:   1.045
+
+********* SPECFP  2006 *********
+     410.bwaves: N/A
+     416.gamess: N/A
+       433.milc: 28.958,  9.653
+     434.zeusmp: N/A
+    435.gromacs: N/A
+  436.cactusADM: N/A
+   437.leslie3d: N/A
+       444.namd: N/A
+     447.dealII: N/A
+     450.soplex: 50.274, 16.758
+     453.povray: N/A
+   454.Calculix: N/A
+   459.GemsFDTD: N/A
+      465.tonto: N/A
+        470.lbm: 80.056, 26.685
+        481.wrf: N/A
+    482.sphinx3: 56.289, 18.763
+SPECfp2006@3GHz:  2.518
+SPECfp2006/GHz:  0.839
+
+Number of Checkpoints: 17
+SPEC CPU Version: SPEC CPU2006, rv64gcb

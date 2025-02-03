@@ -1,0 +1,5 @@
+mkdir -p build
+Tue, 09 Jul 2024 13:41:04 +0800
+time -a -o ./build/time.log mill -i xiangshan[chisel3].test.runMain top.SimTop    \
+	-td build --config DefaultConfig --infer-rw --repl-seq-mem -c:top.SimTop:-o:build/SimTop.v.conf --gen-mem-verilog full                          \
+	--num-cores 1 --with-dramsim3 --with-chiseldb --with-constantin --enable-difftest

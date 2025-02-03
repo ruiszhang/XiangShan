@@ -1,0 +1,129 @@
+['astar_biglakes', 'astar_rivers', 'bwaves', 'bzip2_chicken', 'bzip2_chicken', 'bzip2_combined', 'bzip2_combined', 'bzip2_html', 'bzip2_html', 'bzip2_liberty', 'bzip2_program', 'bzip2_program', 'bzip2_program', 'bzip2_source', 'cactusADM', 'calculix', 'calculix', 'calculix', 'dealII', 'dealII', 'dealII', 'gamess_cytosine', 'gamess_cytosine', 'gamess_cytosine', 'gamess_cytosine', 'gamess_gradient', 'gamess_gradient', 'gamess_gradient', 'gamess_triazolium', 'gamess_triazolium', 'gamess_triazolium', 'gamess_triazolium', 'gcc_166', 'gcc_166', 'gcc_200', 'gcc_200', 'gcc_cpdecl', 'gcc_cpdecl', 'gcc_expr2', 'gcc_expr2', 'gcc_expr', 'gcc_expr', 'gcc_expr', 'gcc_g23', 'gcc_g23', 'gcc_s04', 'gcc_s04', 'gcc_scilab', 'gcc_scilab', 'gcc_typeck', 'gcc_typeck', 'GemsFDTD', 'GemsFDTD', 'gobmk_13x13', 'gobmk_13x13', 'gobmk_13x13', 'gobmk_nngs', 'gobmk_nngs', 'gobmk_nngs', 'gobmk_score2', 'gobmk_score2', 'gobmk_score2', 'gobmk_trevorc', 'gobmk_trevorc', 'gobmk_trevorc', 'gobmk_trevorc', 'gobmk_trevord', 'gobmk_trevord', 'gobmk_trevord', 'gromacs', 'gromacs', 'gromacs', 'gromacs', 'h264ref_foreman.baseline', 'h264ref_foreman.baseline', 'h264ref_foreman.baseline', 'h264ref_foreman.main', 'h264ref_foreman.main', 'h264ref_foreman.main', 'h264ref_foreman.main', 'h264ref_sss', 'h264ref_sss', 'h264ref_sss', 'h264ref_sss', 'hmmer_nph3', 'hmmer_nph3', 'hmmer_retro', 'hmmer_retro', 'hmmer_retro', 'hmmer_retro', 'lbm', 'leslie3d', 'leslie3d', 'libquantum', 'libquantum', 'mcf', 'mcf', 'mcf', 'milc', 'milc', 'milc', 'namd', 'namd', 'namd', 'namd', 'namd', 'namd', 'omnetpp', 'perlbench_checkspam', 'perlbench_checkspam', 'perlbench_checkspam', 'perlbench_diffmail', 'perlbench_splitmail', 'povray', 'povray', 'povray', 'povray', 'sjeng', 'sjeng', 'sjeng', 'soplex_pds-50', 'soplex_pds-50', 'soplex_pds-50', 'soplex_pds-50', 'soplex_ref', 'sphinx3', 'sphinx3', 'sphinx3', 'sphinx3', 'tonto', 'tonto', 'tonto', 'tonto', 'wrf', 'wrf', 'wrf', 'wrf', 'xalancbmk', 'xalancbmk', 'xalancbmk', 'xalancbmk', 'xalancbmk', 'xalancbmk', 'zeusmp', 'zeusmp', 'zeusmp', 'zeusmp', 'zeusmp']
+=================== Coverage ==================
+           astar_biglakes coverage: 0.39
+             astar_rivers coverage: 0.36
+                   bwaves coverage: 0.71
+            bzip2_chicken coverage: 0.45
+           bzip2_combined coverage: 0.34
+               bzip2_html coverage: 0.46
+            bzip2_liberty coverage: 0.33
+            bzip2_program coverage: 0.37
+             bzip2_source coverage: 0.31
+                cactusADM coverage: 0.67
+                 calculix coverage: 0.39
+                   dealII coverage: 0.33
+          gamess_cytosine coverage: 0.31
+          gamess_gradient coverage: 0.30
+        gamess_triazolium coverage: 0.37
+                  gcc_166 coverage: 0.31
+                  gcc_200 coverage: 0.31
+               gcc_cpdecl coverage: 0.33
+                gcc_expr2 coverage: 0.32
+                 gcc_expr coverage: 0.43
+                  gcc_g23 coverage: 0.31
+                  gcc_s04 coverage: 0.32
+               gcc_scilab coverage: 0.30
+               gcc_typeck coverage: 0.38
+                 GemsFDTD coverage: 0.47
+              gobmk_13x13 coverage: 0.34
+               gobmk_nngs coverage: 0.36
+             gobmk_score2 coverage: 0.32
+            gobmk_trevorc coverage: 0.34
+            gobmk_trevord coverage: 0.34
+                  gromacs coverage: 0.33
+ h264ref_foreman.baseline coverage: 0.31
+     h264ref_foreman.main coverage: 0.31
+              h264ref_sss coverage: 0.31
+               hmmer_nph3 coverage: 0.47
+              hmmer_retro coverage: 0.39
+                      lbm coverage: 0.40
+                 leslie3d coverage: 0.36
+               libquantum coverage: 0.36
+                      mcf coverage: 0.40
+                     milc coverage: 0.33
+                     namd coverage: 0.33
+                  omnetpp coverage: 0.36
+      perlbench_checkspam coverage: 0.37
+       perlbench_diffmail coverage: 0.59
+      perlbench_splitmail coverage: 0.48
+                   povray coverage: 0.31
+                    sjeng coverage: 0.39
+            soplex_pds-50 coverage: 0.30
+               soplex_ref coverage: 0.33
+                  sphinx3 coverage: 0.33
+                    tonto coverage: 0.35
+                      wrf coverage: 0.34
+                xalancbmk coverage: 0.32
+                   zeusmp coverage: 0.35
+
+==================== Score ===================
+          astar: 53.743, 17.914
+         bwaves: 52.718, 17.573
+          bzip2: 25.653,  8.551
+      cactusADM: 44.639, 14.880
+       calculix: 16.486,  5.495
+         dealII: 55.327, 18.442
+         gamess: 44.330, 14.777
+            gcc: 50.972, 16.991
+       GemsFDTD: 27.317,  9.106
+          gobmk: 30.764, 10.255
+        gromacs: 29.343,  9.781
+        h264ref: 56.794, 18.931
+          hmmer: 38.927, 12.976
+            lbm: 79.936, 26.645
+       leslie3d: 42.669, 14.223
+     libquantum: 129.324, 43.108
+            mcf: 54.364, 18.121
+           milc: 28.558,  9.519
+           namd: 37.486, 12.495
+        omnetpp: 35.259, 11.753
+      perlbench: 35.875, 11.958
+         povray: 51.535, 17.178
+          sjeng: 31.416, 10.472
+         soplex: 49.273, 16.424
+        sphinx3: 54.520, 18.173
+          tonto: 30.360, 10.120
+            wrf: 29.851,  9.950
+      xalancbmk: 66.845, 22.282
+         zeusmp: 45.749, 15.250
+SPEC2006@3GHz: 42.268
+SPEC2006/GHz:  14.089
+
+********* SPECINT 2006 *********
+  400.perlbench: 35.875, 11.958
+      401.bzip2: 25.653,  8.551
+        403.gcc: 50.972, 16.991
+        429.mcf: 54.364, 18.121
+      445.gobmk: 30.764, 10.255
+      456.hmmer: 38.927, 12.976
+      458.sjeng: 31.416, 10.472
+ 462.libquantum: 129.324, 43.108
+    464.h264ref: 56.794, 18.931
+    471.omnetpp: 35.259, 11.753
+      473.astar: 53.743, 17.914
+  483.xalancbmk: 66.845, 22.282
+SPECint2006@3GHz: 45.979
+SPECint2006/GHz:  15.326
+
+********* SPECFP  2006 *********
+     410.bwaves: 52.718, 17.573
+     416.gamess: 44.330, 14.777
+       433.milc: 28.558,  9.519
+     434.zeusmp: 45.749, 15.250
+    435.gromacs: 29.343,  9.781
+  436.cactusADM: 44.639, 14.880
+   437.leslie3d: 42.669, 14.223
+       444.namd: 37.486, 12.495
+     447.dealII: 55.327, 18.442
+     450.soplex: 49.273, 16.424
+     453.povray: 51.535, 17.178
+   454.Calculix: 16.486,  5.495
+   459.GemsFDTD: 27.317,  9.106
+      465.tonto: 30.360, 10.120
+        470.lbm: 79.936, 26.645
+        481.wrf: 29.851,  9.950
+    482.sphinx3: 54.520, 18.173
+SPECfp2006@3GHz: 39.831
+SPECfp2006/GHz: 13.277
+
+Number of Checkpoints: 148

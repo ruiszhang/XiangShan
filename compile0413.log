@@ -1,0 +1,9 @@
+make -C ./difftest emu SIM_TOP=SimTop DESIGN_DIR=/nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan NUM_CORES=1
+make[1]: Entering directory '/nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/difftest'
+make[2]: Entering directory '/nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/difftest'
+Sat, 13 Apr 2024 23:09:49 +0800
+time -a -o /nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/build/time.log make -s VM_PARALLEL_BUILDS=1 OPT_FAST="-O3" -C /nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/build/emu-compile -f VSimTop.mk 
+make[3]: Entering directory '/nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/build/emu-compile'
+make[3]: Leaving directory '/nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/build/emu-compile'
+make[2]: Leaving directory '/nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/difftest'
+make[1]: Leaving directory '/nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/difftest'

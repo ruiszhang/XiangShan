@@ -1,0 +1,240 @@
+emu compiled at Jun 21 2024, 13:09:45
+Using seed = 9363
+Using simulated 32768B flash
+isWriteICacheTable0 = 0
+isWriteFetchToIBufferTable0 = 0
+isWriteIfuWbToFtqTable0 = 0
+isWritePrefetchPtrTable0 = 0
+isWriteFTQTable0 = 0
+isWriteBankConflictTable0 = 0
+depth0 = 32
+enableDynamicPrefetcher0 = 1
+StoreWaitThreshold_0 = 0
+nMaxPrefetchEntry0 = 14
+isWriteL1MissQMissTable0 = 0
+isWriteLoadMissTable0 = 0
+isFirstHitWrite0 = 0
+isWriteLoadAccessTable0 = 0
+isWriteL2TlbPrefetchTable0 = 0
+isWriteL1TlbTable0 = 0
+isWritePageCacheTable0 = 0
+isWritePTWTable0 = 0
+isWriteL2TlbMissQueueTable0 = 0
+always_update0 = 1
+l1_stride_ratio0 = 2
+l2_stride_ratio0 = 5
+l2DepthRatio0 = 2
+l3DepthRatio0 = 3
+enableL3StreamPrefetch0 = 0
+enableL1StreamPrefetcher0 = 1
+ColdDownThreshold_0 = 12
+ForceWriteUpper_0 = 60
+ForceWriteLower_0 = 55
+StoreBufferThreshold_0 = 7
+StoreBufferBase_0 = 4
+CorrectMissTrain0 = 0
+isWriteInstInfoTable0 = 0
+enableTP0 = 1
+tp_throttleCycles0 = 4
+tp_hitAsTrigger0 = 1
+tp_triggerThres0 = 1
+tp_recordThres0 = 16
+tp_trainOnVaddr0 = 0
+tp_trainOnL1PF0 = 0
+Using simulated 8192MB RAM
+The image is /nfs/home/share/jiaxiaoyu/simpoint_checkpoint_archive/spec06_rv64gcb_O3_20m_gcc12.2.0-intFpcOff-jeMalloc/checkpoint-0-0-0/soplex_pds-50/6802/_6802_0.083868_.gz
+Gzip file detected and loading image from extracted gz file
+DRAMsim3 memory system initialized.
+The reference model is /nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/ready-to-run/riscv64-nemu-interpreter-so
+[FORK_INFO pid(400931)] enable fork debugging...
+The first instruction of core 0 has commited. Difftest enabled. 
+No instruction of core 0 commits for 15000 cycles, maybe get stuck
+(please also check whether a fence.i instruction requires more than 15000 cycles to flush the icache)
+Let REF run one more instruction.
+
+============== Commit Group Trace (Core 0) ==============
+commit group [00]: pc 00000339b0 cmtcnt 1
+commit group [01]: pc 00000339b4 cmtcnt 6
+commit group [02]: pc 00000339d0 cmtcnt 6
+commit group [03]: pc 00000339e4 cmtcnt 6
+commit group [04]: pc 00000339aa cmtcnt 1
+commit group [05]: pc 00000339ae cmtcnt 1
+commit group [06]: pc 00000339b0 cmtcnt 1
+commit group [07]: pc 00000339b4 cmtcnt 3 <--
+commit group [08]: pc 00000339a8 cmtcnt 2
+commit group [09]: pc 00000339ae cmtcnt 1
+commit group [10]: pc 00000339b0 cmtcnt 1
+commit group [11]: pc 00000339b4 cmtcnt 6
+commit group [12]: pc 00000339d0 cmtcnt 6
+commit group [13]: pc 00000339e4 cmtcnt 6
+commit group [14]: pc 00000339aa cmtcnt 1
+commit group [15]: pc 00000339ae cmtcnt 1
+
+============== Commit Instr Trace ==============
+[00] commit pc 00000000000339a2 inst 00450513 wen 1 dst 10 data 0000002004fce878 idx 080 addi    a0, a0, 4
+[01] commit pc 00000000000339a4 inst e8a881e3 wen 0 dst 03 data 00000000000339ec idx 081 beq     a7, a0, pc - 382
+[02] commit pc 00000000000339a8 inst 00052603 wen 1 dst 12 data 000000000000328e idx 082 (3c) lw      a2, 0(a0)
+[03] commit pc 00000000000339aa inst 215665b3 wen 1 dst 11 data 0000002009f6f3b0 idx 083 sh3add  a1, a2, s5
+[04] commit pc 00000000000339ae inst 0005b787 wen 1 dst 15 data bff0000000000000 idx 084 (3d) fld     fa5, 0(a1)
+[05] commit pc 00000000000339b0 inst a2e79853 wen 1 dst 16 data 0000000000000001 idx 085 flt.d   a6, fa5, fa4
+[06] commit pc 00000000000339b4 inst fe0801e3 wen 0 dst 03 data 00000000000339ec idx 086 beqz    a6, pc - 30
+[07] commit pc 00000000000339b8 inst 20664633 wen 1 dst 12 data 0000002001adf238 idx 087 sh2add  a2, a2, t1
+[08] commit pc 00000000000339bc inst 00140e1b wen 1 dst 28 data 00000000000002ed idx 088 addiw   t3, s0, 1
+[09] commit pc 00000000000339c0 inst 00062803 wen 1 dst 16 data 000000000000798d idx 089 (3e) lw      a6, 0(a2)
+[10] commit pc 00000000000339c4 inst 00041463 wen 0 dst 08 data 00000000000339ec idx 08a bnez    s0, pc + 8
+[11] commit pc 00000000000339cc inst fff4059b wen 1 dst 11 data 00000000000002eb idx 08b addiw   a1, s0, -1
+[12] commit pc 00000000000339d0 inst 00040613 wen 1 dst 12 data 00000000000002ec idx 08c mv      a2, s0
+[13] commit pc 00000000000339d2 inst 4015d41b wen 1 dst 08 data 0000000000000175 idx 08d sraiw   s0, a1, 1
+[14] commit pc 00000000000339d6 inst 216445b3 wen 1 dst 11 data 0000002004fce294 idx 08e sh2add  a1, s0, s6
+[15] commit pc 00000000000339da inst 0005a583 wen 1 dst 11 data 0000000000008548 idx 08f (3f) lw      a1, 0(a1)
+[16] commit pc 00000000000339dc inst 21664633 wen 1 dst 12 data 0000002004fce870 idx 090 sh2add  a2, a2, s6
+[17] commit pc 00000000000339e0 inst ff05c4e3 wen 0 dst 09 data 00000000000339ec idx 091 blt     a1, a6, pc - 24
+[18] commit pc 00000000000339e4 inst 01062023 wen 0 dst 00 data 00000000000339ec idx 092 (23) sw      a6, 0(a2)
+[19] commit pc 00000000000339e8 inst 000e0413 wen 1 dst 08 data 00000000000002ed idx 093 mv      s0, t3
+[20] commit pc 00000000000339ea inst fb9ff06f wen 0 dst 00 data 00000000000339ec idx 094 j       pc - 0x48
+[21] commit pc 00000000000339a2 inst 00450513 wen 1 dst 10 data 0000002004fce87c idx 095 addi    a0, a0, 4
+[22] commit pc 00000000000339a4 inst e8a881e3 wen 0 dst 03 data 00000000000339ec idx 096 beq     a7, a0, pc - 382
+[23] commit pc 00000000000339a8 inst 00052603 wen 1 dst 12 data 0000000000003290 idx 097 (41) lw      a2, 0(a0)
+[24] commit pc 00000000000339aa inst 215665b3 wen 1 dst 11 data 0000002009f6f3c0 idx 098 sh3add  a1, a2, s5
+[25] commit pc 00000000000339ae inst 0005b787 wen 1 dst 15 data bff0000000000000 idx 099 (42) fld     fa5, 0(a1)
+[26] commit pc 00000000000339b0 inst a2e79853 wen 1 dst 16 data 0000000000000001 idx 09a flt.d   a6, fa5, fa4
+[27] commit pc 00000000000339b4 inst fe0801e3 wen 0 dst 03 data 00000000000339ec idx 09b beqz    a6, pc - 30
+[28] commit pc 00000000000339b8 inst 20664633 wen 1 dst 12 data 0000002001adf240 idx 09c sh2add  a2, a2, t1
+[29] commit pc 00000000000339bc inst 00140e1b wen 1 dst 28 data 00000000000002ee idx 09d addiw   t3, s0, 1 <--
+[30] commit pc 00000000000339e8 inst 000e0413 wen 1 dst 08 data 00000000000002ec idx 07e mv      s0, t3
+[31] commit pc 00000000000339ea inst fb9ff06f wen 0 dst 00 data 00000000000339ec idx 07f j       pc - 0x48
+
+==============  REF Regs  ==============
+  $0: 0x0000000000000000   ra: 0x00000020012d92a8   sp: 0x0000003fff8689b0   gp: 0x00000000001d3f18 
+  tp: 0x0000000000227760   t0: 0x0000002002c82a80   t1: 0x0000002001ad2800   t2: 0x00000020012d9290 
+  s0: 0x00000000000002ed   s1: 0x0000002009f04cc0   a0: 0x0000002004fce87c   a1: 0x0000002009f6f3c0 
+  a2: 0x0000002001adf240   a3: 0x0000002004c03180   a4: 0x0000002000b35080   a5: 0x000000000000000b 
+  a6: 0x000000000000798c   a7: 0x0000002004fcfcf8   s2: 0x00000020007a2100   s3: 0x0000002000e74280 
+  s4: 0x0000003fff869530   s5: 0x0000002009f55f40   s6: 0x0000002004fcdcc0   s7: 0x00000020017823c0 
+  s8: 0x0000002001787010   s9: 0x0000000000000000  s10: 0x0000000000000001  s11: 0x000000200056f080 
+  t3: 0x00000000000002ee   t4: 0x000000000001c808   t5: 0x0000002001742fec   t6: 0x0000002009bd4280 
+ ft0: 0x4086940000000000  ft1: 0x3ff0000000000000  ft2: 0x2b2bff2ee48e0530  ft3: 0xbddb7cdfd9d7bdbb 
+ ft4: 0x54b249ad2594c37d  ft5: 0xd4b249ad2594c37d  ft6: 0x4024000000000000  ft7: 0x40f86a0000000000 
+ fs0: 0x3c670ef54646d497  fs1: 0x3c670ef54646d497  fa0: 0x2b2bff2ee48e0530  fa1: 0x0000000000000000 
+ fa2: 0xc086940000000000  fa3: 0x3fc999999999999a  fa4: 0xbc670ef54646d497  fa5: 0xbff0000000000000 
+ fa6: 0x40c3880000000000  fa7: 0x3c670ef54646d497  fs2: 0x54b249ad2594c37d  fs3: 0x3f847ae147ae147b 
+ fs4: 0xd4b249ad2594c37d  fs5: 0x0000000000000000  fs6: 0x0000000000000000  fs7: 0x0000000000000000 
+ fs8: 0x0000000000000000  fs9: 0x0000000000000000 fs10: 0x0000000000000000 fs11: 0x0000000000000000 
+ ft8: 0x0000000000000000  ft9: 0x0000000000000000 ft10: 0x0000000000000000 ft11: 0x0000000000000000 
+pc: 0x00000000000339c4 mstatus: 0x8000000a000060aa mcause: 0x0000000000000009 mepc: 0x0000000000035770
+                       sstatus: 0x8000000200006022 scause: 0x0000000000000008 sepc: 0x0000002000000820
+satp: 0x80000000000f59ab
+mip: 0x0000000000000000 mie: 0x000000000000022a mscratch: 0x00000000800abdc0 sscratch: 0xffffffe079b73640
+mideleg: 0x0000000000000222 medeleg: 0x000000000000b109
+mtval: 0x0000000000000000 stval: 0x0000000000000000 mtvec: 0x00000000800a0004 stvec: 0xffffffe000cefcc8
+privilege mode:0  pmp: below
+ 0: cfg:0x00 addr:0x0000000020028000| 1: cfg:0x08 addr:0x000000002002d000
+ 2: cfg:0x1f addr:0x00000003ffffffff| 3: cfg:0x00 addr:0x0000000000000000
+ 4: cfg:0x00 addr:0x0000000000000000| 5: cfg:0x00 addr:0x0000000000000000
+ 6: cfg:0x00 addr:0x0000000000000000| 7: cfg:0x00 addr:0x0000000000000000
+ 8: cfg:0x00 addr:0x0000000000000000| 9: cfg:0x00 addr:0x0000000000000000
+10: cfg:0x00 addr:0x0000000000000000|11: cfg:0x00 addr:0x0000000000000000
+12: cfg:0x00 addr:0x0000000000000000|13: cfg:0x00 addr:0x0000000000000000
+14: cfg:0x00 addr:0x0000000000000000|15: cfg:0x00 addr:0x0000000000000000
+The first instruction of core 0 has commited. Difftest enabled. 
+[FORK_INFO pid(406275)] the oldest checkpoint start to dump wave and dump nemu log...
+[FORK_INFO pid(406275)] dump wave to /nfs/home/zhangruisi/myXiangShan4/xs-env/XiangShan/build/2024-06-25@23:08:02_422650.fst...
+No instruction of core 0 commits for 15000 cycles, maybe get stuck
+(please also check whether a fence.i instruction requires more than 15000 cycles to flush the icache)
+Let REF run one more instruction.
+
+============== Commit Group Trace (Core 0) ==============
+commit group [00]: pc 00000339b0 cmtcnt 1
+commit group [01]: pc 00000339b4 cmtcnt 6
+commit group [02]: pc 00000339d0 cmtcnt 6
+commit group [03]: pc 00000339e4 cmtcnt 6
+commit group [04]: pc 00000339aa cmtcnt 1
+commit group [05]: pc 00000339ae cmtcnt 1
+commit group [06]: pc 00000339b0 cmtcnt 1
+commit group [07]: pc 00000339b4 cmtcnt 3 <--
+commit group [08]: pc 00000339a8 cmtcnt 2
+commit group [09]: pc 00000339ae cmtcnt 1
+commit group [10]: pc 00000339b0 cmtcnt 1
+commit group [11]: pc 00000339b4 cmtcnt 6
+commit group [12]: pc 00000339d0 cmtcnt 6
+commit group [13]: pc 00000339e4 cmtcnt 6
+commit group [14]: pc 00000339aa cmtcnt 1
+commit group [15]: pc 00000339ae cmtcnt 1
+
+============== Commit Instr Trace ==============
+[00] commit pc 00000000000339a2 inst 00450513 wen 1 dst 10 data 0000002004fce878 idx 080 addi    a0, a0, 4
+[01] commit pc 00000000000339a4 inst e8a881e3 wen 0 dst 03 data 00000000000339ec idx 081 beq     a7, a0, pc - 382
+[02] commit pc 00000000000339a8 inst 00052603 wen 1 dst 12 data 000000000000328e idx 082 (3c) lw      a2, 0(a0)
+[03] commit pc 00000000000339aa inst 215665b3 wen 1 dst 11 data 0000002009f6f3b0 idx 083 sh3add  a1, a2, s5
+[04] commit pc 00000000000339ae inst 0005b787 wen 1 dst 15 data bff0000000000000 idx 084 (3d) fld     fa5, 0(a1)
+[05] commit pc 00000000000339b0 inst a2e79853 wen 1 dst 16 data 0000000000000001 idx 085 flt.d   a6, fa5, fa4
+[06] commit pc 00000000000339b4 inst fe0801e3 wen 0 dst 03 data 00000000000339ec idx 086 beqz    a6, pc - 30
+[07] commit pc 00000000000339b8 inst 20664633 wen 1 dst 12 data 0000002001adf238 idx 087 sh2add  a2, a2, t1
+[08] commit pc 00000000000339bc inst 00140e1b wen 1 dst 28 data 00000000000002ed idx 088 addiw   t3, s0, 1
+[09] commit pc 00000000000339c0 inst 00062803 wen 1 dst 16 data 000000000000798d idx 089 (3e) lw      a6, 0(a2)
+[10] commit pc 00000000000339c4 inst 00041463 wen 0 dst 08 data 00000000000339ec idx 08a bnez    s0, pc + 8
+[11] commit pc 00000000000339cc inst fff4059b wen 1 dst 11 data 00000000000002eb idx 08b addiw   a1, s0, -1
+[12] commit pc 00000000000339d0 inst 00040613 wen 1 dst 12 data 00000000000002ec idx 08c mv      a2, s0
+[13] commit pc 00000000000339d2 inst 4015d41b wen 1 dst 08 data 0000000000000175 idx 08d sraiw   s0, a1, 1
+[14] commit pc 00000000000339d6 inst 216445b3 wen 1 dst 11 data 0000002004fce294 idx 08e sh2add  a1, s0, s6
+[15] commit pc 00000000000339da inst 0005a583 wen 1 dst 11 data 0000000000008548 idx 08f (3f) lw      a1, 0(a1)
+[16] commit pc 00000000000339dc inst 21664633 wen 1 dst 12 data 0000002004fce870 idx 090 sh2add  a2, a2, s6
+[17] commit pc 00000000000339e0 inst ff05c4e3 wen 0 dst 09 data 00000000000339ec idx 091 blt     a1, a6, pc - 24
+[18] commit pc 00000000000339e4 inst 01062023 wen 0 dst 00 data 00000000000339ec idx 092 (23) sw      a6, 0(a2)
+[19] commit pc 00000000000339e8 inst 000e0413 wen 1 dst 08 data 00000000000002ed idx 093 mv      s0, t3
+[20] commit pc 00000000000339ea inst fb9ff06f wen 0 dst 00 data 00000000000339ec idx 094 j       pc - 0x48
+[21] commit pc 00000000000339a2 inst 00450513 wen 1 dst 10 data 0000002004fce87c idx 095 addi    a0, a0, 4
+[22] commit pc 00000000000339a4 inst e8a881e3 wen 0 dst 03 data 00000000000339ec idx 096 beq     a7, a0, pc - 382
+[23] commit pc 00000000000339a8 inst 00052603 wen 1 dst 12 data 0000000000003290 idx 097 (41) lw      a2, 0(a0)
+[24] commit pc 00000000000339aa inst 215665b3 wen 1 dst 11 data 0000002009f6f3c0 idx 098 sh3add  a1, a2, s5
+[25] commit pc 00000000000339ae inst 0005b787 wen 1 dst 15 data bff0000000000000 idx 099 (42) fld     fa5, 0(a1)
+[26] commit pc 00000000000339b0 inst a2e79853 wen 1 dst 16 data 0000000000000001 idx 09a flt.d   a6, fa5, fa4
+[27] commit pc 00000000000339b4 inst fe0801e3 wen 0 dst 03 data 00000000000339ec idx 09b beqz    a6, pc - 30
+[28] commit pc 00000000000339b8 inst 20664633 wen 1 dst 12 data 0000002001adf240 idx 09c sh2add  a2, a2, t1
+[29] commit pc 00000000000339bc inst 00140e1b wen 1 dst 28 data 00000000000002ee idx 09d addiw   t3, s0, 1 <--
+[30] commit pc 00000000000339e8 inst 000e0413 wen 1 dst 08 data 00000000000002ec idx 07e mv      s0, t3
+[31] commit pc 00000000000339ea inst fb9ff06f wen 0 dst 00 data 00000000000339ec idx 07f j       pc - 0x48
+
+==============  REF Regs  ==============
+  $0: 0x0000000000000000   ra: 0x00000020012d92a8   sp: 0x0000003fff8689b0   gp: 0x00000000001d3f18 
+  tp: 0x0000000000227760   t0: 0x0000002002c82a80   t1: 0x0000002001ad2800   t2: 0x00000020012d9290 
+  s0: 0x00000000000002ed   s1: 0x0000002009f04cc0   a0: 0x0000002004fce87c   a1: 0x0000002009f6f3c0 
+  a2: 0x0000002001adf240   a3: 0x0000002004c03180   a4: 0x0000002000b35080   a5: 0x000000000000000b 
+  a6: 0x000000000000798c   a7: 0x0000002004fcfcf8   s2: 0x00000020007a2100   s3: 0x0000002000e74280 
+  s4: 0x0000003fff869530   s5: 0x0000002009f55f40   s6: 0x0000002004fcdcc0   s7: 0x00000020017823c0 
+  s8: 0x0000002001787010   s9: 0x0000000000000000  s10: 0x0000000000000001  s11: 0x000000200056f080 
+  t3: 0x00000000000002ee   t4: 0x000000000001c808   t5: 0x0000002001742fec   t6: 0x0000002009bd4280 
+ ft0: 0x4086940000000000  ft1: 0x3ff0000000000000  ft2: 0x2b2bff2ee48e0530  ft3: 0xbddb7cdfd9d7bdbb 
+ ft4: 0x54b249ad2594c37d  ft5: 0xd4b249ad2594c37d  ft6: 0x4024000000000000  ft7: 0x40f86a0000000000 
+ fs0: 0x3c670ef54646d497  fs1: 0x3c670ef54646d497  fa0: 0x2b2bff2ee48e0530  fa1: 0x0000000000000000 
+ fa2: 0xc086940000000000  fa3: 0x3fc999999999999a  fa4: 0xbc670ef54646d497  fa5: 0xbff0000000000000 
+ fa6: 0x40c3880000000000  fa7: 0x3c670ef54646d497  fs2: 0x54b249ad2594c37d  fs3: 0x3f847ae147ae147b 
+ fs4: 0xd4b249ad2594c37d  fs5: 0x0000000000000000  fs6: 0x0000000000000000  fs7: 0x0000000000000000 
+ fs8: 0x0000000000000000  fs9: 0x0000000000000000 fs10: 0x0000000000000000 fs11: 0x0000000000000000 
+ ft8: 0x0000000000000000  ft9: 0x0000000000000000 ft10: 0x0000000000000000 ft11: 0x0000000000000000 
+pc: 0x00000000000339c4 mstatus: 0x8000000a000060aa mcause: 0x0000000000000009 mepc: 0x0000000000035770
+                       sstatus: 0x8000000200006022 scause: 0x0000000000000008 sepc: 0x0000002000000820
+satp: 0x80000000000f59ab
+mip: 0x0000000000000000 mie: 0x000000000000022a mscratch: 0x00000000800abdc0 sscratch: 0xffffffe079b73640
+mideleg: 0x0000000000000222 medeleg: 0x000000000000b109
+mtval: 0x0000000000000000 stval: 0x0000000000000000 mtvec: 0x00000000800a0004 stvec: 0xffffffe000cefcc8
+privilege mode:0  pmp: below
+ 0: cfg:0x00 addr:0x0000000020028000| 1: cfg:0x08 addr:0x000000002002d000
+ 2: cfg:0x1f addr:0x00000003ffffffff| 3: cfg:0x00 addr:0x0000000000000000
+ 4: cfg:0x00 addr:0x0000000000000000| 5: cfg:0x00 addr:0x0000000000000000
+ 6: cfg:0x00 addr:0x0000000000000000| 7: cfg:0x00 addr:0x0000000000000000
+ 8: cfg:0x00 addr:0x0000000000000000| 9: cfg:0x00 addr:0x0000000000000000
+10: cfg:0x00 addr:0x0000000000000000|11: cfg:0x00 addr:0x0000000000000000
+12: cfg:0x00 addr:0x0000000000000000|13: cfg:0x00 addr:0x0000000000000000
+14: cfg:0x00 addr:0x0000000000000000|15: cfg:0x00 addr:0x0000000000000000
+priviledgeMode: 0
+Core 0: [31mABORT at pc = 0x339d6
+[0m[35minstrCnt = 263,870, cycleCnt = 428,477, IPC = 0.615832
+[0m[34mSeed=9363 Guest cycle spent: 428,480 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 240,670ms
+[0mpriviledgeMode: 0
+Core 0: [31mABORT at pc = 0x339d6
+[0m[35minstrCnt = 263,870, cycleCnt = 428,477, IPC = 0.615832
+[0m[34mSeed=9363 Guest cycle spent: 428,480 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 240,778ms
+[0m
