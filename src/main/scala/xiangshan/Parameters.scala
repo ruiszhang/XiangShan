@@ -170,7 +170,8 @@ case class XSCoreParameters
     LduCnt = 3,
     StuCnt = 3
   ),
-  prefetcher: Option[PrefetcherParams] = Some(SMSParams()),
+  // prefetcher: Option[PrefetcherParams] = Some(SMSParams()),
+  prefetcher: Option[PrefetcherParams] = None,
   LoadPipelineWidth: Int = 3,
   StorePipelineWidth: Int = 3,
   VecMemSrcInWidth: Int = 2,

@@ -253,7 +253,8 @@ class WithNKBL2
         )),
         reqField = Seq(utility.ReqSourceField(), huancun.PCField(p.VAddrBits)),
         echoField = Seq(huancun.DirtyField()),
-        prefetch = Some(coupledL2.prefetch.PrefetchReceiverParams()),
+        // prefetch = Some(coupledL2.prefetch.PrefetchReceiverParams()),
+        prefetch = None,
         enablePerf = !site(DebugOptionsKey).FPGAPlatform,
         elaboratedTopDown = !site(DebugOptionsKey).FPGAPlatform
       )),
@@ -291,8 +292,10 @@ class WithNKBL3(n: Int, ways: Int = 8, inclusive: Boolean = true, banks: Int = 1
         tagECC = Some("secded"),
         dataECC = Some("secded"),
         simulation = !site(DebugOptionsKey).FPGAPlatform,
-        prefetch = Some(huancun.prefetch.L3PrefetchReceiverParams()),
-        tpmeta = Some(huancun.prefetch.DefaultTPmetaParameters())
+        // prefetch = Some(huancun.prefetch.L3PrefetchReceiverParams()),
+        // tpmeta = Some(huancun.prefetch.DefaultTPmetaParameters())
+        prefetch = None,
+        tpmeta = None
       ))
     )
 })
@@ -347,7 +350,7 @@ class FuzzConfig(dummy: Int = 0) extends Config(
 )
 
 class DefaultConfig(n: Int = 1) extends Config(
-  new WithNKBL3(16 * 1024, inclusive = false, banks = 4, ways = 16)
+  new WithNKBL3(4 * 1024, inclusive = false, banks = 4, ways = 16)
     ++ new WithNKBL2(2 * 512, inclusive = true, banks = 4)
     ++ new WithNKBL1D(64, ways = 4)
     ++ new BaseConfig(n)
