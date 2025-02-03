@@ -1,0 +1,65 @@
+=================== Coverage ==================
+                  gcc_166 coverage: 0.31
+                  gcc_200 coverage: 0.31
+               gcc_cpdecl coverage: 0.33
+                 gcc_expr coverage: 0.43
+                gcc_expr2 coverage: 0.32
+                  gcc_g23 coverage: 0.31
+                  gcc_s04 coverage: 0.32
+               gcc_scilab coverage: 0.30
+               gcc_typeck coverage: 0.38
+                 GemsFDTD coverage: 0.47
+                      mcf coverage: 0.40
+                     milc coverage: 0.33
+                  omnetpp coverage: 0.36
+                   zeusmp coverage: 0.35
+
+==================== Score ===================
+            gcc: 50.845, 16.948
+       GemsFDTD: 28.412,  9.471
+            mcf: 56.868, 18.956
+           milc: 29.081,  9.694
+        omnetpp: 35.973, 11.991
+         zeusmp: 46.852, 15.617
+SPEC2006@3GHz: 39.886
+SPEC2006/GHz:  13.295
+
+********* SPECINT 2006 *********
+  400.perlbench: N/A
+      401.bzip2: N/A
+        403.gcc: 50.845, 16.948
+        429.mcf: 56.868, 18.956
+      445.gobmk: N/A
+      456.hmmer: N/A
+      458.sjeng: N/A
+ 462.libquantum: N/A
+    464.h264ref: N/A
+    471.omnetpp: 35.973, 11.991
+      473.astar: N/A
+  483.xalancbmk: N/A
+SPECint2006@3GHz:  2.619
+SPECint2006/GHz:   0.873
+
+********* SPECFP  2006 *********
+     410.bwaves: N/A
+     416.gamess: N/A
+       433.milc: 29.081,  9.694
+     434.zeusmp: 46.852, 15.617
+    435.gromacs: N/A
+  436.cactusADM: N/A
+   437.leslie3d: N/A
+       444.namd: N/A
+     447.dealII: N/A
+     450.soplex: N/A
+     453.povray: N/A
+   454.Calculix: N/A
+   459.GemsFDTD: 28.412,  9.471
+      465.tonto: N/A
+        470.lbm: N/A
+        481.wrf: N/A
+    482.sphinx3: N/A
+SPECfp2006@3GHz:  1.862
+SPECfp2006/GHz:  0.621
+
+Number of Checkpoints: 33
+SPEC CPU Version: SPEC CPU2006, rv64gcb
